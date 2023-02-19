@@ -19,11 +19,14 @@ const onSelect = ({ lvl, idx }: any) => {
 
 <style>
 .background {
+    position: absolute;
     background-color: #0c0c0d;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 body {

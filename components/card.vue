@@ -12,10 +12,10 @@
       </defs>
     </svg>
     <svg
+      height="100%"
       :class="{ card: true, 'hover': onHover }"
       xmlns="http://www.w3.org/2000/svg"
-      :height="size + 'em'"
-      viewBox="-24 -24 297.933 274.75"
+      viewBox="-25 -35 300 300"
       :stroke="gradientUrl"
       stroke-width="3"
       @mouseenter="() => onHover = true"
@@ -26,7 +26,7 @@
       <image
         v-if="item.background"
         clip-path="url(#image)"
-        :height="item.background.height ?? '91%'"
+        :height="item.background.height ?? '84%'"
         :xlink:href="item.background.src"
         preserveAspectRatio="xMidYMin slice"
         :x="item.background.x"
@@ -91,7 +91,7 @@ const glows = computed(() => props.item.colors?.glow?.map(
 .wrapper {
   display: flex;
   justify-content: center;
-  position: absolute;
+  height: 100%;
 }
 
 .hover {
