@@ -1,0 +1,144 @@
+<template>
+  <div class="wrapper" :style="{ 'z-index': lvl }">
+    <Gradient :lvl="lvl.toString()" :idx="idx.toString()" :primary="primary" :secondary="secondary" />
+    <Gradient :lvl="lvl.toString()" :idx="idx + 'hover'" :primary="secondary" :secondary="hover" />
+    <Glow v-if="glows" :lvl="lvl" :idx="idx" :glows="glows" :size=".015" />
+
+    <svg style="position: absolute">
+      <defs>
+        <clipPath id="image" width="100%">
+          <Path />
+        </clipPath>
+      </defs>
+    </svg>
+    <svg
+      :class="{ card: true, 'hover': onHover }"
+      xmlns="http://www.w3.org/2000/svg"
+      :height="size + 'em'"
+      viewBox="-24 -24 297.933 274.75"
+      :stroke="gradientUrl"
+      stroke-width="3"
+      @mouseenter="() => onHover = true"
+      @mouseleave="() => onHover = false"
+    >
+      <Path fill="url(#gradient00)" :filter="filter" />
+
+      <image
+        v-if="item.background"
+        clip-path="url(#image)"
+        :height="item.background.height ?? '91%'"
+        :xlink:href="item.background.src"
+        preserveAspectRatio="xMidYMin slice"
+        :x="item.background.x"
+        :y="item.background.y"
+      />
+      <Icon
+        v-if="item.icon"
+        :class="{'hover': onHover}"
+        :name="item.icon?.key"
+        :size="item.icon?.size ?? '4em'"
+        x="32%"
+        y="27%"
+      />
+      <text
+        class="label"
+        :fill="item.label.color ?? 'white'"
+        :filter="`drop-shadow(0 0 1px ${item.colors?.primary})`"
+        stroke-width="13"
+        :font-size="item.label.size ?? '.85em'"
+        text-anchor="middle"
+        x="42%"
+        :y="item.label.bottom ?? '60%'"
+      >
+        {{ item.label.name }}
+      </text>
+    </svg>
+  </div>
+</template>
+<script lang="ts" setup>
+
+import { computed, ref } from 'vue'
+import { CItem } from '../types/tree'
+
+const props = defineProps({
+  item: { type: CItem, default: { label: '' } },
+  lvl: { type: Number, default: 20 },
+  idx: { type: Number, default: 0 },
+  size: { type: Number, default: 20 }
+})
+const primary = computed(() => props.item.colors?.primary ?? '#101010')
+const secondary = computed(() => props.item.colors?.secondary ?? '#202020')
+const hover = computed(() => props.item.colors?.hover ?? '#404040')
+const gradientHover = computed(() => `url(#gradient${props.lvl}${props.idx}hover)`)
+const gradientUrl = computed(() => `url(#gradient${props.lvl}${props.idx})`)
+const filter = computed(() => `url(#shadow${props.lvl}${props.idx})`)
+const onHover = ref(false)
+
+const glows = computed(() => props.item.colors?.glow?.map(
+  ({ color, blur }) =>
+    ({
+      array: [
+        parseInt(color.substring(1, 2), 16) / 10,
+        parseInt(color.substring(3, 4), 16) / 10,
+        parseInt(color.substring(5, 6), 16) / 10
+      ],
+      blur
+    })
+))
+</script>
+
+<style>
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.hover {
+  stroke: v-bind(gradientHover);
+  transition: all .2s;
+}
+
+.hover > path {
+  fill: url(#gradient01) !important;
+  transition: all .2s;
+}
+
+.hover.icon > path {
+  fill: v-bind(gradientHover) !important;
+  transition: all .2s;
+}
+
+.card {
+  position: relative;
+  transition: opacity .5s;
+  display: flex;
+  justify-content: center;
+  transition: all .2s;
+}
+.icon > * {
+  stroke: none;
+  fill: v-bind(gradientUrl) !important;
+}
+
+.label {
+  stroke: none;
+  bottom: 3em;
+}
+
+.path {
+  animation: draw 20s infinite;
+  animation-timing-function: linear;
+}
+.path-01 {
+  animation-delay: 0s;
+}
+@keyframes draw {
+  0% {
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}
+</style>

@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.1.0",
+    "@types/d3": "^7.4.0",
+    "nuxt": "^3.2.0",
+    "nuxt-icon": "^0.2.11"
+  },
+  "dependencies": {
+    "@nuxt/webpack-builder": "^3.2.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/tailwindcss": "^6.4.0",
+    "d3": "^7.8.2"
+  }
+}
