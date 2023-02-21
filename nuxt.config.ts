@@ -4,5 +4,10 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon'
   ],
-  vite: false
+  imports: {
+    dirs: [
+      'types/**/*.ts',
+      'types/*.ts'
+    ]
+  }
 })

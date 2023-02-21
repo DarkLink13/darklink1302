@@ -1,8 +1,7 @@
 <template>
-  <div class="wrapper" :style="{ 'z-index': lvl }">
+  <div class="wrapper" :style="{ 'z-index': lvl, cursor: 'pointer' }">
     <Gradient :lvl="lvl.toString()" :idx="idx.toString()" :primary="primary" :secondary="secondary" />
     <Gradient :lvl="lvl.toString()" :idx="idx + 'hover'" :primary="secondary" :secondary="hover" />
-    <Glow v-if="glows" :lvl="lvl" :idx="idx" :glows="glows" :size=".015" />
 
     <svg style="position: absolute">
       <defs>
@@ -21,6 +20,7 @@
       @mouseenter="() => onHover = true"
       @mouseleave="() => onHover = false"
     >
+
       <Path fill="url(#gradient00)" :filter="filter" />
 
       <image
@@ -37,7 +37,7 @@
         :class="{'hover': onHover}"
         :name="item.icon?.key"
         :size="item.icon?.size ?? '4em'"
-        x="32%"
+        x="31%"
         y="27%"
       />
       <text
@@ -48,7 +48,7 @@
         :font-size="item.label.size ?? '.85em'"
         text-anchor="middle"
         x="42%"
-        :y="item.label.bottom ?? '60%'"
+        :y="item.label.bottom ?? '55%'"
       >
         {{ item.label.name }}
       </text>
@@ -57,34 +57,19 @@
 </template>
 <script lang="ts" setup>
 
-import { computed, ref } from 'vue'
-import { CItem } from '../types/tree'
-
 const props = defineProps({
-  item: { type: CItem, default: { label: '' } },
+  item: { type: CNodeItem, default: { label: '' } },
   lvl: { type: Number, default: 20 },
   idx: { type: Number, default: 0 },
-  size: { type: Number, default: 20 }
+  size: { type: Number, default: 20 },
+  filter: { type: String, default: '' }
 })
 const primary = computed(() => props.item.colors?.primary ?? '#101010')
 const secondary = computed(() => props.item.colors?.secondary ?? '#202020')
 const hover = computed(() => props.item.colors?.hover ?? '#404040')
 const gradientHover = computed(() => `url(#gradient${props.lvl}${props.idx}hover)`)
 const gradientUrl = computed(() => `url(#gradient${props.lvl}${props.idx})`)
-const filter = computed(() => `url(#shadow${props.lvl}${props.idx})`)
 const onHover = ref(false)
-
-const glows = computed(() => props.item.colors?.glow?.map(
-  ({ color, blur }) =>
-    ({
-      array: [
-        parseInt(color.substring(1, 2), 16) / 10,
-        parseInt(color.substring(3, 4), 16) / 10,
-        parseInt(color.substring(5, 6), 16) / 10
-      ],
-      blur
-    })
-))
 </script>
 
 <style>

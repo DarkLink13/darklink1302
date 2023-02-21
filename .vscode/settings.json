@@ -2,6 +2,7 @@
     "nuxt.isNuxtApp": false,
     "prettier.requireConfig": true,
     "editor.codeActionsOnSave": {
+        "source.fixAll": false,
         "source.fixAll.eslint": true
     },
 }
