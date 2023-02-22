@@ -1,6 +1,6 @@
 import { INode } from '~~/types/core'
 
-export const AugeTec: INode = {
+export const AugeTec: INode = new CNode({
   item: {
     type: NodeItemType.Work,
     label: { name: 'Auge Tec' },
@@ -95,4 +95,4 @@ export const AugeTec: INode = {
       ]
     }
   ]
-}
+})

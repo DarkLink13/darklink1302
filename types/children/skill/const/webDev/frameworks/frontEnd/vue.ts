@@ -1,6 +1,6 @@
 import { INode } from '~~/types/core'
 
-export const Nuxt: INode = {
+export const Nuxt: INode = new CNode({
   item: {
     type: NodeItemType.Skill,
 
@@ -8,9 +8,9 @@ export const Nuxt: INode = {
     background: { src: '/assets/nuxt2.png', ...IconDefault },
     colors: { primary: '#2b475e', secondary: '#078876', hover: '#00c68f' }
   }
-}
+})
 
-export const VueJS: INode = {
+export const VueJS: INode = new CNode({
   item: {
     type: NodeItemType.Skill,
 
@@ -18,9 +18,9 @@ export const VueJS: INode = {
     background: { src: '/assets/vuejs.png', ...IconDefault },
     colors: { primary: '#2b475e', secondary: '#078876', hover: '#00c68f' }
   }
-}
+})
 
-export const Vuetify: INode = {
+export const Vuetify: INode = new CNode({
   item: {
     type: NodeItemType.Skill,
 
@@ -28,4 +28,4 @@ export const Vuetify: INode = {
     background: { src: '/assets/vuetify.png', ...IconDefault },
     colors: { primary: '#1867c0', secondary: '#1697f6', hover: '#aeddff' }
   }
-}
+})

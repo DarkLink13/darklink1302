@@ -1,6 +1,6 @@
 import { INode } from '~~/types/core'
 
-export const IntellisysDCorp: INode = {
+export const IntellisysDCorp: INode = new CNode({
   item: {
     type: NodeItemType.Work,
     label: { name: 'Intellisys D Corp' },
@@ -27,4 +27,4 @@ export const IntellisysDCorp: INode = {
       ]
     }
   ]
-}
+})

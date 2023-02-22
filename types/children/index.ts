@@ -1,6 +1,6 @@
 import { INode } from '../core'
 
-export const Children: (INode | undefined)[] = [
+export const Children: INode[] = [
   Work,
   Skill,
   Like,

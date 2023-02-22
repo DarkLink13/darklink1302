@@ -1,5 +1,5 @@
 <template>
-  <svg style="position:absolute">
+  <svg style="position:absolute;z-index: -20;">
     <defs>
       <linearGradient :id="`gradient${lvl}${idx}`" x1="100%" y1="100%" x2="0%" y2="0%">
         <stop offset="0%" :stop-color="primary" />

@@ -6,22 +6,23 @@ export const IDjango: INodeItem = {
   background: { src: '/assets/django.png', ...IconDefault },
   colors: { primary: '#0a2f20', secondary: '#356357', hover: '#a2d9a9' }
 }
-export const Django: INode = {
+
+export const Django: INode = new CNode({
   item: IDjango
-}
-export const DjangoRestFramework: INode = {
+})
+export const DjangoRestFramework: INode = new CNode({
   item: {
     type: NodeItemType.Skill,
     label: { name: 'DjangoRestFramework' },
     background: { src: '/assets/djangorestframework.png', ...IconDefault },
     colors: { primary: '#2c2c2c', secondary: '#7f2d2d', hover: '#d7d7d7' }
   }
-}
-export const Pandas: INode = {
+})
+export const Pandas: INode = new CNode({
   item: {
     type: NodeItemType.Skill,
     label: { name: 'Pandas' },
     background: { src: '/assets/pandas.png', ...IconDefault },
     colors: { primary: '#130754', secondary: '#e70488', hover: '#ffca00' }
   }
-}
+})

@@ -1,6 +1,6 @@
-import { INode } from './core'
-
-export const Tree: INode = {
-  item: Me,
-  children: Children
-}
+export const Tree = new CNode(
+  {
+    item: Me,
+    children: Children
+  }
+)

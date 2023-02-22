@@ -1,6 +1,6 @@
 import { INode } from '../../../core'
 
-export const Like: INode = {
+export const Like: INode = new CNode({
   item: {
     type: NodeItemType.Root,
     label: { name: 'Likes' },
@@ -19,4 +19,4 @@ export const Like: INode = {
     LikeMusic,
     LikePainting
   ]
-}
+})

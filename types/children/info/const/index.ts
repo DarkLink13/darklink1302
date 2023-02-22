@@ -1,6 +1,6 @@
 import { INode } from '../../../core'
 
-export const Info: INode = {
+export const Info: INode = new CNode({
   item: {
     type: NodeItemType.Root,
     label: { name: 'Info' },
@@ -11,4 +11,4 @@ export const Info: INode = {
       hover: '#95813c'
     }
   }
-}
+})

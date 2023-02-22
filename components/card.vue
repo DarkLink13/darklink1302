@@ -1,5 +1,8 @@
 <template>
-  <div class="wrapper" :style="{ 'z-index': lvl, cursor: 'pointer' }">
+  <div
+    class="wrapper"
+    :style="{ zIndex: lvl }"
+  >
     <Gradient :lvl="lvl.toString()" :idx="idx.toString()" :primary="primary" :secondary="secondary" />
     <Gradient :lvl="lvl.toString()" :idx="idx + 'hover'" :primary="secondary" :secondary="hover" />
 
@@ -12,16 +15,20 @@
     </svg>
     <svg
       height="100%"
+      width="100%"
       :class="{ card: true, 'hover': onHover }"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="-25 -35 300 300"
+      viewBox="-20 -28 290 292"
       :stroke="gradientUrl"
       stroke-width="3"
-      @mouseenter="() => onHover = true"
+      @mouseover="() => onHover = true"
       @mouseleave="() => onHover = false"
     >
 
-      <Path fill="url(#gradient00)" :filter="filter" />
+      <Path
+        fill="url(#gradient00)"
+        :filter="filter"
+      />
 
       <image
         v-if="item.background"
@@ -74,9 +81,12 @@ const onHover = ref(false)
 
 <style>
 .wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   height: 100%;
+  width: 100%;
 }
 
 .hover {
@@ -100,6 +110,9 @@ const onHover = ref(false)
   display: flex;
   justify-content: center;
   transition: all .2s;
+}
+.card path :hover {
+
 }
 .icon > * {
   stroke: none;
