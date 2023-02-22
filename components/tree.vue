@@ -66,52 +66,50 @@ const goBack = () => { emit('goBack') }
 // @ts-ignore
 watch(() => props.item, (newVal: INode) => {
   // @ts-ignore
-  _item.value = {
+  _item.value = Object.assign({}, {
     ...newVal,
     style: {
-      width: props.lvl === props.current ? '24%' : '90%',
+      width: props.lvl === props.current ? '100%' : '90%',
       position: 'relative'
-      // visibility: props.lvl < 18 ?
     }
-  }
+  })
 })
 // @ts-ignore
 watch(() => props.children, (newVal: INode[]) => {
   // @ts-ignore
-  _children.value = (newVal.length && newVal?.map((child, index) => ({
+  Object.assign(_children.value, (newVal.length && newVal?.map((child, index) => ({
     ...child,
     style: {
-      transform: `translate(${useSin(index)}%, ${useCos(index)}%)`,
+      transform: useMove(index),
       opacity: props.lvl !== props.current ? 0 : 1,
       visibility: props.lvl !== props.current ? 'hidden' : 'visible',
       position: 'absolute',
-      width: '24.166%',
+      width: '100%',
       height: '100%',
       zIndex: props.lvl - 1
     }
-  }))) || []
+  }))) || [])
 })
 onMounted(() => {
-  _item.value = {
+  _item.value = Object.assign({}, {
     ...props.item,
     style: {
-      width: props.lvl === props.current ? '24%' : '90%',
+      width: props.lvl === props.current ? '100%' : '90%',
       position: 'relative'
-      // visibility: props.lvl < 18 ?
     }
-  }
-  _children.value = (props.children.length && props.children?.map((child, index) => ({
+  })
+  Object.assign(_children.value, (props.children.length && props.children?.map((child, index) => ({
     ...child,
     style: {
-      transform: `translate(${useSin(index)}%, ${useCos(index)}%)`,
+      transform: useMove(index),
       opacity: props.lvl !== props.current ? 0 : 1,
       visibility: props.lvl !== props.current ? 'hidden' : 'visible',
       position: 'absolute',
-      width: '24.166%',
+      width: '100%',
       height: '100%',
       zIndex: props.lvl - 1
     }
-  }))) || []
+  }))) || [])
 })
 const emit = defineEmits(['goBack', 'goChildren'])
 
@@ -127,21 +125,18 @@ const goChildren = (idx: number) => {
 
   _item.value && (_item.value.style.opacity = 0)
   _item.value && (_item.value.style.transform = transform)
-
   _children.value[idx].style.transform = 'none'
-  _children.value[idx].style.width = '100%'
 
   _children.value[idx].children?.forEach((child) => {
-    if (child && child.style) {
-      child.style.transform += transform ?? ''
-      child.style.width = '24.166%'
-      child.style.opacity = 1
-      child.style.visibility = 'visible'
-    }
+    !child && (child = { style: {} })
+    !(child.style) && (child.style = {})
+    child.style.transform += transform ?? ''
+    child.style.opacity = 1
+    child.style.visibility = 'visible'
   })
   setTimeout(() => {
     emit('goChildren', idx)
-  }, 1000)
+  }, 500)
 }
 
 </script>
@@ -160,11 +155,11 @@ const goChildren = (idx: number) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 30%;
   height: 100%;
   position: relative;
 }
 .nodes div {
-  transition: transform 1s ease, width 1s ease, opacity 1s ease;
+  transition: transform .5s ease, width .5s ease, opacity .5s ease;
 }
 </style>
