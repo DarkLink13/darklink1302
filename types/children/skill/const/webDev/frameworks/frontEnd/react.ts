@@ -1,6 +1,6 @@
 import { INode } from '~~/types/core'
 
-export const React: INode = new CNode({
+export const React: INode = {
   item: {
     type: NodeItemType.Skill,
 
@@ -8,4 +8,4 @@ export const React: INode = new CNode({
     background: { src: '/assets/react.png', ...IconDefault },
     colors: { primary: '#212121', secondary: '#00d2f7', hover: '#5ed3f3' }
   }
-})
+}

@@ -1,5 +1,5 @@
 import { INode } from '../../../core'
 
-export const LikePainting: INode = new CNode({
+export const LikePainting: INode = {
   item: { type: NodeItemType.Like, label: { name: 'Painting' } }
-})
+}

@@ -1,6 +1,6 @@
 import { INode } from '../../../core'
 
-export const Contact: INode = new CNode({
+export const Contact: INode = {
   item: {
     type: NodeItemType.Root,
     label: { name: 'Contact' },
@@ -15,4 +15,4 @@ export const Contact: INode = new CNode({
     ContactEmail,
     ContactPhoneNumber
   ]
-})
+}

@@ -4,7 +4,7 @@ export * from './algorithmDev'
 export * from './graphicDesigner'
 export * from './webDev'
 
-export const Skill: INode = new CNode({
+export const Skill: INode = {
   item: {
     type: NodeItemType.Root,
     label: { name: 'Skills' },
@@ -22,4 +22,4 @@ export const Skill: INode = new CNode({
     AlgorithmDev,
     GraphicDesigner
   ]
-})
+}

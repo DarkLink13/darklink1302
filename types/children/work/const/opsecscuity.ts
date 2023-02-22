@@ -1,6 +1,6 @@
 import { INode } from '~~/types/core'
 
-export const OpsecSecurity: INode = new CNode({
+export const OpsecSecurity: INode = {
   item: {
     type: NodeItemType.Work,
     label: { name: 'Opsec Security' },
@@ -37,4 +37,4 @@ export const OpsecSecurity: INode = new CNode({
       ]
     }
   ]
-})
+}

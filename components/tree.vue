@@ -1,35 +1,33 @@
 <template>
-  <div class="nodes">
+  <div class="parent">
     <Card
       v-if="_item"
-      filter="url(#glow00)"
+      :class="{ move: isMoving }"
+      :filter="lvl === current && !isMoving ? 'url(#glow00)' : 'none'"
       :item="_item"
       :lvl="lvl"
       :size="30"
       :idx="idx"
       :hover="onHover"
       :style="_item.style"
-      @click.stop="selectNode()"
+      @click="selectNode()"
     />
-    <div class="children" :style="{ zIndex: lvl - 1 }">
+    <div :class="{ fullHeight: lvl === current, children }">
       <div
         v-for="(child, index) in _children"
         :key="'child' + index + lvl"
-        :style="child.style"
+        :style="child && child.style"
+        :class="{ move: isMoving }"
       >
         <Tree
-          filter="url(#glow01)"
+          v-if="child && child.item"
+          class="child"
           :item="child.item"
-          :children="child.children as INode[]"
+          :children="(child.children as INode[])"
           :lvl="lvl - 1"
           :idx="index"
           :current="current"
-          :style=" {
-            display: 'flex',
-            'justify-content': 'center',
-            position: 'relative',
-            width: '100%'
-          }"
+          :set-is-move="isMoving"
           @go-children="goChildren"
           @go-back="goBack"
         />
@@ -39,127 +37,98 @@
 </template>
 
 <script lang="ts" setup>
-import { INode, INodeWrapper, INodeItemWrapper } from '~~/types/core'
+import { INode, INodeWrapper, INodeItemWrapper, INodeItem } from '~~/types/core'
 const onHover = ref(false)
-const props = defineProps({
-  item: { type: CNodeItem, default: new CNodeItem({ label: { name: '' }, type: NodeItemType.Default }) },
-  children: { type: Array<INode | undefined>, default: {}, required: false },
-  lvl: { type: Number, default: 20 },
-  idx: { type: Number, default: 0 },
-  current: { type: Number, default: 20 }
-})
-const _children = ref<INodeWrapper[]>([])
+const moves = [
+  { x: 0, y: -5 },
+  { x: 0, y: -10 },
+  { x: 0, y: 10 },
+  { x: 0, y: 5 },
+  { x: 0, y: 10 },
+  { x: 0, y: -10 },
+  { x: -60, y: -66 }
+]
+const _children = ref<(INodeWrapper | undefined)[]>([])
 const _item = ref<INodeItemWrapper>()
-
-const selectNode = () => {
-  if (props.lvl === props.current) { emit('goBack') } else {
-    _children.value.forEach((child) => {
-      child.style.opacity = 1
-      child.style.visibility = 'visible'
-    })
-    emit('goChildren', props.idx)
-  }
-}
-
-const goBack = () => { emit('goBack') }
-
-// @ts-ignore
-watch(() => props.item, (newVal: INode) => {
-  // @ts-ignore
-  _item.value = Object.assign({}, {
-    ...newVal,
-    style: {
-      width: props.lvl === props.current ? '100%' : '90%',
-      position: 'relative'
-    }
-  })
-})
-// @ts-ignore
-watch(() => props.children, (newVal: INode[]) => {
-  // @ts-ignore
-  Object.assign(_children.value, (newVal.length && newVal?.map((child, index) => ({
-    ...child,
-    style: {
-      transform: useMove(index),
-      opacity: props.lvl !== props.current ? 0 : 1,
-      visibility: props.lvl !== props.current ? 'hidden' : 'visible',
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      zIndex: props.lvl - 1
-    }
-  }))) || [])
-})
-onMounted(() => {
-  _item.value = Object.assign({}, {
-    ...props.item,
-    style: {
-      width: props.lvl === props.current ? '100%' : '90%',
-      position: 'relative'
-    }
-  })
-  Object.assign(_children.value, (props.children.length && props.children?.map((child, index) => ({
-    ...child,
-    style: {
-      transform: useMove(index),
-      opacity: props.lvl !== props.current ? 0 : 1,
-      visibility: props.lvl !== props.current ? 'hidden' : 'visible',
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      zIndex: props.lvl - 1
-    }
-  }))) || [])
-})
+const isMoving = ref(false)
 const emit = defineEmits(['goBack', 'goChildren'])
 
-const goChildren = (idx: number) => {
-  const transform = _children.value[(idx + 3) % 6].style.transform
+const props = defineProps({
+  item: { type: Object as PropType<INodeItem>, default: () => {} },
+  children: { type: Object as PropType<Array<INode | undefined>>, default: () => {} },
+  lvl: { type: Number, default: 20 },
+  idx: { type: Number, default: 0 },
+  current: { type: Number, default: 20 },
+  setIsMove: { type: Boolean, default: false }
+})
+onMounted(() => {
+  _item.value = setItem(props.item, props.lvl, props.current)
+  _children.value = setChildren(props.children, props.lvl, props.current)
+})
 
-  _children.value.forEach((child, index) => {
-    if (index !== idx) {
-      child.style.transform += transform ?? ''
-      child.style.opacity = 0
-    }
-  })
+const selectNode = () =>
+  (props.lvl === props.current) ? useAnimation(isMoving, props.idx, _children, _item, emit, moves) : propagateToParent()
 
-  _item.value && (_item.value.style.opacity = 0)
-  _item.value && (_item.value.style.transform = transform)
-  _children.value[idx].style.transform = 'none'
+const goBack = () =>
+  (isMoving.value = true) &&
+  setTimeout(() => emit('goBack'), 500)
 
-  _children.value[idx].children?.forEach((child) => {
+const propagateToParent = () => {
+  !_children.value && (_children.value = [])
+  Object.values(_children.value).forEach((child) => {
     !child && (child = { style: {} })
-    !(child.style) && (child.style = {})
-    child.style.transform += transform ?? ''
     child.style.opacity = 1
     child.style.visibility = 'visible'
   })
-  setTimeout(() => {
-    emit('goChildren', idx)
-  }, 500)
+  emit('goChildren', props.idx)
 }
+
+watch(() => props.item, (newVal: INodeItem) =>
+  newVal && (_item.value = setItem(newVal, props.lvl, props.current))
+)
+
+watch(() => props.children, (newVal: (INode | undefined)[]) =>
+  newVal && newVal.length && (_children.value = setChildren(newVal, props.lvl, props.current))
+)
+
+watch(() => props.setIsMove, (newVal: boolean) =>
+  (isMoving.value = newVal)
+)
+
+const goChildren = (idx: number) => useAnimation(isMoving, idx, _children, _item, emit, moves, true)
 
 </script>
 
 <style scoped>
+.fullHeight {
+  height: 100% !important;
+}
 .children {
+  z-index:  v-bind(lvl - 1);
   position: absolute;
-  height: 100%;
-  width: 100%;
+  width: 90%;
+  height: 90%;
   display: flex;
   align-content: center;
   justify-content: center;
 }
-.nodes {
+.parent {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30%;
-  height: 100%;
+  height: 30%;
   position: relative;
 }
-.nodes div {
-  transition: transform .5s ease, width .5s ease, opacity .5s ease;
+.parent .move {
+  transition: transform .5s ease, width .5s ease, height .5s ease, opacity .5s ease;
+}
+.child {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 </style>

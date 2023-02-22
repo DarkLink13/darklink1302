@@ -27,21 +27,3 @@ export interface INodeItemWrapper {
   background?: IBackground
   colors?: INodeItemColor
 }
-export class CNodeItem implements INodeItem {
-  type!: NodeItemType
-  label!: INodeItemLabel
-  details?: NodeItemDetails
-  icon?: IIcon
-  description?: string
-  background?: IBackground
-  colors?: INodeItemColor
-  constructor (item: INodeItem) {
-    this.type = item.type
-    this.label = item.label
-    this.background = item.background
-    this.colors = item.colors
-    this.details = item.details
-    this.icon = item.icon
-    this.description = item.description
-  }
-}

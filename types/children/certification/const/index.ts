@@ -1,6 +1,6 @@
 import { INode } from '../../../core'
 
-export const Certification: INode = new CNode({
+export const Certification: INode = {
   item: {
     type: NodeItemType.Root,
     label: { name: 'Certifications' },
@@ -14,4 +14,4 @@ export const Certification: INode = new CNode({
   children: [
     CertificationHackerRank
   ]
-})
+}

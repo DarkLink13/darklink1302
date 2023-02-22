@@ -1,14 +1,10 @@
 <template>
-  <div
-    class="wrapper"
-    :style="{ zIndex: lvl }"
-  >
+  <div class="wrapper">
     <Gradient :lvl="lvl.toString()" :idx="idx.toString()" :primary="primary" :secondary="secondary" />
     <Gradient :lvl="lvl.toString()" :idx="idx + 'hover'" :primary="secondary" :secondary="hover" />
-
-    <svg style="position: absolute">
+    <svg>
       <defs>
-        <clipPath id="image" width="100%">
+        <clipPath id="image">
           <Path />
         </clipPath>
       </defs>
@@ -18,22 +14,19 @@
       width="100%"
       :class="{ card: true, 'hover': onHover }"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="-20 -28 290 292"
+      viewBox="-20 -28 290 290"
       :stroke="gradientUrl"
       stroke-width="3"
       @mouseover="() => onHover = true"
       @mouseleave="() => onHover = false"
     >
 
-      <Path
-        fill="url(#gradient00)"
-        :filter="filter"
-      />
+      <Path fill="url(#gradient00)" :filter="filter" />
 
       <image
         v-if="item.background"
         clip-path="url(#image)"
-        :height="item.background.height ?? '84%'"
+        :height="item.background.height ?? '86%'"
         :xlink:href="item.background.src"
         preserveAspectRatio="xMidYMin slice"
         :x="item.background.x"
@@ -63,9 +56,10 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { INodeItem } from '~~/types/core'
 
 const props = defineProps({
-  item: { type: CNodeItem, default: { label: '' } },
+  item: { type: Object as PropType<INodeItem>, default: () => {} },
   lvl: { type: Number, default: 20 },
   idx: { type: Number, default: 0 },
   size: { type: Number, default: 20 },
@@ -87,8 +81,12 @@ const onHover = ref(false)
   cursor: pointer;
   height: 100%;
   width: 100%;
+  z-index: v-bind(lvl);
 }
 
+.wrapper svg {
+  position: absolute;
+}
 .hover {
   stroke: v-bind(gradientHover);
   transition: all .2s;
@@ -105,7 +103,7 @@ const onHover = ref(false)
 }
 
 .card {
-  position: relative;
+  position: relative !important;
   transition: opacity .5s;
   display: flex;
   justify-content: center;

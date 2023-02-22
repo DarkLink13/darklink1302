@@ -1,4 +1,6 @@
-export const Me = new CNodeItem({
+import { INodeItem } from './core'
+
+export const Me: INodeItem = {
   type: NodeItemType.Default,
   label: {
     name: 'darklink',
@@ -10,4 +12,4 @@ export const Me = new CNodeItem({
     secondary: '#f0e5b1',
     hover: 'white'
   }
-})
+}

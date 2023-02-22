@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="main">
     <Gradient :lvl="'0'" :idx="'0'" primary="#101010" secondary="#151515" />
     <Gradient :lvl="'0'" :idx="'1'" primary="#151515" secondary="#303030" />
     <!-- <Glow :lvl="0" :idx="0" :glows="glowZero" :size=".01" />-->
-    <!-- <Glow :lvl="0" :idx="0" :glows="[{ color: '#d773d6', blur: 1 }, { color: '#2ac7ec', blur: 2 }, { color: '#f0e5b1', blur: 5 }]" :size=".015" /> -->
+    <Glow :lvl="0" :idx="0" :glows="[{ color: '#d773d6', blur: 1 }, { color: '#2ac7ec', blur: 2 }, { color: '#f0e5b1', blur: 5 }]" :size=".015" />
     <Circuit style="position: absolute" />
     <Tree
       :item="tree.item"
@@ -52,7 +52,7 @@ const goChildren = (idx: number) => {
 </script>
 
 <style scoped>
-  .container {
+  .main {
     /* min-height: 550px; */
     min-width: 550px;
     display: flex;
@@ -60,5 +60,6 @@ const goChildren = (idx: number) => {
     align-items: center;
     position: relative;
     perspective: 100px;
+    width: 100%;
 }
 </style>

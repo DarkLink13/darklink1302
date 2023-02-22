@@ -1,5 +1,5 @@
 import { INode } from '../../../core'
 
-export const ContactEmail: INode = new CNode({
+export const ContactEmail: INode = {
   item: { type: NodeItemType.Default, label: { name: 'Email' } }
-})
+}
