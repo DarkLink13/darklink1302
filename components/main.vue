@@ -45,17 +45,13 @@ const rebuildTree = () => {
   item.value = Tree.item || {}
   children.value = Tree.children as INode[] || []
   for (const node of path.value) {
-    if (!node) { continue }
-    children.value = Object.assign({}, (children.value[node]?.children) || Tree.children)
     item.value = Object.assign({}, (children && children.value[node]?.item) || Tree.item)
+    children.value = Object.assign([], (children.value[node]?.children) || Tree.children)
   }
   setStyles()
 }
 const setStyles = () => {
-  item.value.style = {
-    width: '100%',
-    position: 'relative'
-  }
+  item.value.style = { position: 'relative' }
   children.value?.forEach((child, index) => {
     child && (child.style = {
       transform: useMove(index),
@@ -67,8 +63,7 @@ const setStyles = () => {
     })
     child && (child.item.style = {
       width: '90%',
-      height: '90%',
-      position: 'relative'
+      height: '90%'
     })
   })
 }
@@ -80,9 +75,6 @@ onMounted(() => {
 const goBack = (idx: number) => {
   if (isMoving.value) return
   enter.value = true
-  // scaleIdx.value = 0.22
-  // enterIdx.value = 1.05
-  // leaveIdx.value = 0.87
   index.value = (idx + 3) % 6
   path.value.pop()
   setTimeout(() => {
@@ -91,6 +83,7 @@ const goBack = (idx: number) => {
     rebuildTree()
     setTimeout(() => {
       isMoving.value = false
+      index.value = path.value[path.value.length - 1]
     }, 300)
   }, 0)
 }
@@ -98,9 +91,6 @@ const goBack = (idx: number) => {
 const goChildren = (idx: number) => {
   if (isMoving.value) return
   enter.value = false
-  // scaleIdx.value = -0.22
-  // enterIdx.value = 0.87
-  // leaveIdx.value = 1.05
   index.value = idx
   path.value.push(idx)
   setTimeout(() => {
@@ -119,7 +109,6 @@ const goChildren = (idx: number) => {
 
 <style>
   .main {
-    /* min-height: 550px; */
     min-width: 550px;
     display: flex;
     justify-content: center;

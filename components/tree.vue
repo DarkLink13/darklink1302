@@ -53,35 +53,13 @@ const props = defineProps({
 
 const selectNode = () => {
   if (props.lvl === props.current) {
-    // useAnimation(isMoving, props.idx, _children, _item, emit, moves)
-    // isMoving.value = true
-    // const transform = useMove(props.idx, 111, 111)
-
     emit('goBack', props.idx)
-    // if (_item && _item.value) {
-    //   console.log('here')
-    //   _item.value.style.width = _item.value.style.height = '81%'
-    //   _item.value.style.transform = transform
-    // }
-    // setTimeout(() => {
-    //   isMoving.value = false
-    // }, 500)
   } else {
-    propagateToParent()
+    emit('goChildren', props.idx)
   }
 }
 
 const goBack = () => emit('goBack', props.idx)
-
-const propagateToParent = () => {
-  // !_children.value && (_children.value = [])
-  // Object.values(_children.value).forEach((child) => {
-  //   !child && (child = { style: {} })
-  //   child.style.opacity = 1
-  //   child.style.visibility = 'visible'
-  // })
-  emit('goChildren', props.idx)
-}
 
 const goChildren = (idx: number) => emit('goChildren', idx)
 
