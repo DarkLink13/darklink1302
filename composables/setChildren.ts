@@ -1,9 +1,9 @@
 import { CSSProperties } from 'vue'
-import { INode, INodeWrapper } from '~~/types/core'
+import { INode } from '~~/types/core'
 
 export const setChildren =
     (newVal: (INode | undefined)[], lvl: number, current: number):
-    (INodeWrapper | undefined)[] =>
+    (INode | undefined)[] =>
       Object.assign(
         [],
         (newVal && newVal.length && newVal.map((child, index) => ({
@@ -17,6 +17,6 @@ export const setChildren =
             height: '100%',
             zIndex: lvl - 1
           } as CSSProperties
-        } as INodeWrapper
+        } as INode
         ))) || []
       )

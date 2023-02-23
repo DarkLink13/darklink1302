@@ -22,7 +22,6 @@
     >
 
       <Path fill="url(#gradient00)" :filter="filter" />
-
       <image
         v-if="item.background"
         clip-path="url(#image)"
@@ -109,9 +108,7 @@ const onHover = ref(false)
   justify-content: center;
   transition: all .2s;
 }
-.card path :hover {
 
-}
 .icon > * {
   stroke: none;
   fill: v-bind(gradientUrl) !important;

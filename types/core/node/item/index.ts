@@ -11,17 +11,8 @@ export * from './color/glow'
 export interface INodeItem {
   label: INodeItemLabel
   type: NodeItemType
+  style?: CSSProperties
   details?: NodeItemDetails
-  icon?: IIcon
-  description?: string
-  background?: IBackground
-  colors?: INodeItemColor
-}
-export interface INodeItemWrapper {
-  style: CSSProperties
-  type: NodeItemType
-  details?: NodeItemDetails
-  label: INodeItemLabel
   icon?: IIcon
   description?: string
   background?: IBackground

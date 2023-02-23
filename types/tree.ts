@@ -4,6 +4,7 @@ export const Tree: INode =
   {
     item: {
       type: NodeItemType.Default,
+      style: {},
       label: {
         name: 'darklink',
         bottom: '70%'
@@ -15,6 +16,7 @@ export const Tree: INode =
         hover: 'white'
       }
     },
+    style: {},
     children: [
       Work,
       Skill,
