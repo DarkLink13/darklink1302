@@ -117,20 +117,4 @@ const onHover = ref(false)
   stroke: none;
   bottom: 3em;
 }
-
-.path {
-  animation: draw 20s infinite;
-  animation-timing-function: linear;
-}
-.path-01 {
-  animation-delay: 0s;
-}
-@keyframes draw {
-  0% {
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-}
 </style>
