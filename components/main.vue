@@ -62,8 +62,8 @@ const setStyles = () => {
       zIndex: level.value - 1
     })
     child && (child.item.style = {
-      width: '90%',
-      height: '90%'
+      width: '85%',
+      height: '85%'
     })
   })
 }

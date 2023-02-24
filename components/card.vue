@@ -61,7 +61,6 @@ const props = defineProps({
   item: { type: Object as PropType<INodeItem>, default: () => {} },
   lvl: { type: Number, default: 20 },
   idx: { type: Number, default: 0 },
-  size: { type: Number, default: 20 },
   filter: { type: String, default: '' }
 })
 const primary = computed(() => props.item.colors?.primary ?? '#101010')

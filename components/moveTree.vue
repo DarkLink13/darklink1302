@@ -8,12 +8,12 @@ const props = defineProps({
   index: { type: Number, default: 0 },
   enter: { type: Boolean, default: true }
 })
-const enterX = computed(() => useX(props.index, 100 * (0.87 + (0.18 * +props.enter))))
-const enterY = computed(() => useY(props.index, 100 * (0.87 + (0.18 * +props.enter))))
-const leaveX = computed(() => useX((props.index + 3) % 6, 100 * (1.05 - (0.18 * +props.enter))))
-const leaveY = computed(() => useY((props.index + 3) % 6, 100 * (1.05 - (0.18 * +props.enter))))
-const scaleLeaveIdx = computed(() => 1 - (-0.22 + (0.44 * +props.enter)))
-const scaleEnterIdx = computed(() => 1 + (-0.22 + (0.44 * +props.enter)))
+const enterX = computed(() => useX(props.index, 98 * (0.87 + (0.18 * +props.enter))))
+const enterY = computed(() => useY(props.index, 98 * (0.87 + (0.18 * +props.enter))))
+const leaveX = computed(() => useX((props.index + 3) % 6, 98 * (1.05 - (0.18 * +props.enter))))
+const leaveY = computed(() => useY((props.index + 3) % 6, 98 * (1.05 - (0.18 * +props.enter))))
+const scaleLeaveIdx = computed(() => 1 - (-0.19 + (0.38 * +props.enter)))
+const scaleEnterIdx = computed(() => 1 + (-0.19 + (0.38 * +props.enter)))
 </script>
 <style>
 @keyframes move {
