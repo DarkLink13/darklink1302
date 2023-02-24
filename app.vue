@@ -6,7 +6,6 @@
 
 <style>
 .background {
-    /* background: url('/assets/drawingAnimated.svg') no-repeat center; */
     position: absolute;
     overflow: hidden;
     height: 100%;
