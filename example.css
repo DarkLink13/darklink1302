@@ -1,36 +1,38 @@
-circle45 {
-          animation: animatecircle45 infinite linear;
-          animation-delay: random() + s;
-          animation-duration: random() + s;
+#circle41 {
+          animation: animatecircle41 1000.6739595825601ms infinite linear
         }
-        @keyframes animatecircle45 {
-          0% {
-            transform: translate(75.217756px, 59.834839px);
+        @keyframes animatecircle41 {
+          12.0190045678766780% {
+            transform: translate(9.267329px, 67.519878px);
             fill: white;
             opacity: 0;
-          } 23% {
-            transform: translate(77.693961px, 57.358634px);
-            
-            
-          } 32% {
-            
-            
-            opacity: 1;
-          } 73% {
-            transform: translate(85.360927px, 57.358634px);
-            
-            
-          } 77% {
-            
-            
-            opacity: 1;
-          } 97% {
-            transform: translate(87.925813px, 54.793748px);
-            
-            
-          } 100% {
+          } 12.01900456787667810% {
             
             fill: white;
             opacity: 0;
+          } 12.0190045678766782.5% {
+            
+            
+            opacity: 1;
+          } 12.0190045678766783.2% {
+            transform: translate(9.267329px, 79.665939px);
+            
+            
+          } 12.0190045678766785.5% {
+            transform: translate(14.761974px, 85.160579px);
+            
+            
+          } 12.0190045678766786.1% {
+            transform: translate(16.424827px, 86.823429px);
+            
+            
+          } 12.0190045678766787.8% {
+            
+            
+            opacity: 1;
+          } 12.0190045678766789.8% {
+            transform: translate(16.424827px, 101.21073px);
+            
+            
           }
         }
