@@ -1,0 +1,23 @@
+#circle38 {
+    animation: animatecircle38 1075.247664775116ms 1597.2345644527504ms infinite linear
+}
+
+@keyframes animatecircle38 {
+    0% {
+        transform: translate(74.038389px, 50.31595px);
+        fill: white;
+    }
+
+    28% {}
+
+    59% {
+        transform: translate(81.093276px, 43.261063px);
+    }
+
+    73% {}
+
+    100% {
+        transform: translate(87.994797px, 43.261063px);
+        fill: white;
+    }
+}
