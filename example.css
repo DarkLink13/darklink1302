@@ -1,5 +1,5 @@
 #circle45 {
-          animation: animatecircle45 1000.00ms infinite linear
+          animation: animatecircle45 10000.00ms infinite linear
         }
         @keyframes animatecircle45 {
           900.00%, 0% {

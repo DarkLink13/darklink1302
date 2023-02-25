@@ -112,7 +112,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'parent'
     },
     13: {
       transform: {
@@ -160,7 +160,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child4'
     }
   },
   {
@@ -172,7 +172,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child5'
     },
     31: {
       transform: {
@@ -202,7 +202,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'parent'
     }
   },
   {
@@ -213,7 +213,7 @@ export const customAnimation = [
           80.063579
         ]
       },
-      fill: 'primary'
+      fill: 'child1'
     },
     2: {
       opacity: 0
@@ -256,7 +256,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child1'
     }
   },
   {
@@ -267,7 +267,7 @@ export const customAnimation = [
           91.809369
         ]
       },
-      fill: 'primary'
+      fill: 'child1'
     },
     2: {
       opacity: 0
@@ -320,13 +320,13 @@ export const customAnimation = [
           102.08497
         ]
       },
-      fill: 'secondary'
+      fill: 'child6'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child1',
       transform: {
         translate: [
           114.53315,
@@ -348,13 +348,13 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child12'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child1',
       transform: {
         translate: [
           87.747689,
@@ -392,7 +392,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'parent'
     }
   },
   {
@@ -403,7 +403,7 @@ export const customAnimation = [
           39.872115
         ]
       },
-      fill: 'primary'
+      fill: 'child3'
     },
     2: {
       opacity: 0
@@ -432,7 +432,7 @@ export const customAnimation = [
           54.780701
         ]
       },
-      fill: 'secondary'
+      fill: 'parent'
     }
   },
   {
@@ -443,7 +443,7 @@ export const customAnimation = [
           92.028889
         ]
       },
-      fill: 'primary'
+      fill: 'child0'
     },
     12: {
       opacity: 0
@@ -464,7 +464,7 @@ export const customAnimation = [
           92.028889
         ]
       },
-      fill: 'secondary'
+      fill: 'child5'
     }
   },
   {
@@ -475,7 +475,7 @@ export const customAnimation = [
           73.132092
         ]
       },
-      fill: 'primary',
+      fill: 'parent',
       opacity: 0
     },
     23: {
@@ -518,7 +518,7 @@ export const customAnimation = [
           84.038379
         ]
       },
-      fill: 'secondary'
+      fill: 'child5'
     }
   },
   {
@@ -529,7 +529,7 @@ export const customAnimation = [
           32.993083
         ]
       },
-      fill: 'primary'
+      fill: 'child3'
     },
     4: {
       opacity: 0
@@ -566,7 +566,7 @@ export const customAnimation = [
           39.460063
         ]
       },
-      fill: 'secondary'
+      fill: 'child4'
     }
   },
   {
@@ -577,7 +577,7 @@ export const customAnimation = [
           56.756186
         ]
       },
-      fill: 'primary'
+      fill: 'parent'
     },
     6: {
       opacity: 0
@@ -606,7 +606,7 @@ export const customAnimation = [
           46.964509
         ]
       },
-      fill: 'secondary'
+      fill: 'child2'
     }
   },
   {
@@ -617,7 +617,7 @@ export const customAnimation = [
           104.0665
         ]
       },
-      fill: 'primary'
+      fill: 'child11'
     },
     7: {
       opacity: 0
@@ -670,7 +670,7 @@ export const customAnimation = [
           101.06613
         ]
       },
-      fill: 'secondary'
+      fill: 'child16'
     }
   },
   {
@@ -681,7 +681,7 @@ export const customAnimation = [
           53.060288
         ]
       },
-      fill: 'primary'
+      fill: 'child4'
     },
     5: {
       opacity: 0
@@ -732,7 +732,7 @@ export const customAnimation = [
           58.464561
         ]
       },
-      fill: 'secondary'
+      fill: 'child10'
     }
   },
   {
@@ -743,7 +743,7 @@ export const customAnimation = [
           92.422839
         ]
       },
-      fill: 'primary'
+      fill: 'child13'
     },
     4: {
       opacity: 0
@@ -772,7 +772,7 @@ export const customAnimation = [
           88.742029
         ]
       },
-      fill: 'secondary'
+      fill: 'child1'
     }
   },
   {
@@ -783,7 +783,7 @@ export const customAnimation = [
           61.663745
         ]
       },
-      fill: 'primary',
+      fill: 'child7',
       opacity: 0
     },
     29: {
@@ -818,7 +818,7 @@ export const customAnimation = [
           36.648653
         ]
       },
-      fill: 'secondary'
+      fill: 'child14'
     }
   },
   {
@@ -829,7 +829,7 @@ export const customAnimation = [
           15.096231
         ]
       },
-      fill: 'primary'
+      fill: 'child8'
     },
     4: {
       opacity: 0
@@ -850,7 +850,7 @@ export const customAnimation = [
           25.507137
         ]
       },
-      fill: 'secondary'
+      fill: 'child8'
     }
   },
   {
@@ -861,7 +861,7 @@ export const customAnimation = [
           16.477524
         ]
       },
-      fill: 'primary'
+      fill: 'child9'
     },
     4: {
       opacity: 0
@@ -882,7 +882,7 @@ export const customAnimation = [
           25.514768
         ]
       },
-      fill: 'secondary'
+      fill: 'child3'
     }
   },
   {
@@ -894,7 +894,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child4'
     },
     5: {
       transform: {
@@ -934,7 +934,7 @@ export const customAnimation = [
           9.103132
         ]
       },
-      fill: 'secondary'
+      fill: 'child9'
     }
   },
   {
@@ -945,7 +945,7 @@ export const customAnimation = [
           19.224846
         ]
       },
-      fill: 'primary'
+      fill: 'child3'
     },
     8: {
       opacity: 0
@@ -982,7 +982,7 @@ export const customAnimation = [
           8.199408
         ]
       },
-      fill: 'secondary'
+      fill: 'child8'
     }
   },
   {
@@ -993,7 +993,7 @@ export const customAnimation = [
           18.320961
         ]
       },
-      fill: 'primary',
+      fill: 'child8',
       opacity: 0
     },
     29: {
@@ -1028,13 +1028,13 @@ export const customAnimation = [
           27.395181
         ]
       },
-      fill: 'secondary'
+      fill: 'child3'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child3',
       transform: {
         translate: [
           83.759143,
@@ -1058,7 +1058,7 @@ export const customAnimation = [
           30.66717
         ]
       },
-      fill: 'secondary'
+      fill: 'child2'
     }
   },
   {
@@ -1069,7 +1069,7 @@ export const customAnimation = [
           54.325503
         ]
       },
-      fill: 'primary'
+      fill: 'child4'
     },
     3: {
       opacity: 0
@@ -1096,7 +1096,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'parent'
     }
   },
   {
@@ -1107,7 +1107,7 @@ export const customAnimation = [
           76.19481
         ]
       },
-      fill: 'primary'
+      fill: 'parent'
     },
     10: {
       opacity: 0
@@ -1128,13 +1128,13 @@ export const customAnimation = [
           90.042329
         ]
       },
-      fill: 'secondary'
+      fill: 'child0'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child0',
       transform: {
         translate: [
           55.465722,
@@ -1156,7 +1156,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child5'
     }
   },
   {
@@ -1167,7 +1167,7 @@ export const customAnimation = [
           42.938576
         ]
       },
-      fill: 'primary'
+      fill: 'child2'
     },
     9: {
       opacity: 0
@@ -1204,13 +1204,13 @@ export const customAnimation = [
           15.356905
         ]
       },
-      fill: 'secondary'
+      fill: 'child13'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child12',
       transform: {
         translate: [
           69.031227,
@@ -1242,7 +1242,7 @@ export const customAnimation = [
           109.49771
         ]
       },
-      fill: 'secondary'
+      fill: 'child0'
     }
   },
   {
@@ -1254,7 +1254,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child1'
     },
     28: {
       opacity: 1
@@ -1286,13 +1286,13 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child6'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child6',
       transform: {
         translate: [
           114.53315,
@@ -1358,7 +1358,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child13'
     }
   },
   {
@@ -1369,7 +1369,7 @@ export const customAnimation = [
           96.282789
         ]
       },
-      fill: 'primary'
+      fill: 'child0'
     },
     10: {
       opacity: 0
@@ -1406,13 +1406,13 @@ export const customAnimation = [
           92.390379
         ]
       },
-      fill: 'secondary'
+      fill: 'child1'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child0',
       transform: {
         translate: [
           56.746244,
@@ -1474,7 +1474,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child5'
     }
   },
   {
@@ -1486,7 +1486,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child0'
     },
     27: {
       opacity: 1
@@ -1518,7 +1518,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child5'
     }
   },
   {
@@ -1529,7 +1529,7 @@ export const customAnimation = [
           109.92263
         ]
       },
-      fill: 'primary'
+      fill: 'child11'
     },
     2: {
       opacity: 0
@@ -1598,13 +1598,13 @@ export const customAnimation = [
           93.113359
         ]
       },
-      fill: 'secondary'
+      fill: 'child17'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'parent',
       transform: {
         translate: [
           77.2263,
@@ -1650,7 +1650,7 @@ export const customAnimation = [
           73.339866
         ]
       },
-      fill: 'secondary'
+      fill: 'child1'
     }
   },
   {
@@ -1662,7 +1662,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child1'
     },
     11: {
       transform: {
@@ -1712,7 +1712,7 @@ export const customAnimation = [
           55.80761
         ]
       },
-      fill: 'secondary'
+      fill: 'child2'
     }
   },
   {
@@ -1723,7 +1723,7 @@ export const customAnimation = [
           52.036165
         ]
       },
-      fill: 'primary'
+      fill: 'child2'
     },
     2: {
       opacity: 0
@@ -1758,7 +1758,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child7'
     }
   },
   {
@@ -1770,7 +1770,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child6'
     },
     24: {
       transform: {
@@ -1810,19 +1810,19 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child1'
     }
   },
   {
     0: {
       transform: {
         translate: [
-          74.038389,
+          74.03838,
           50.31595
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'parent'
     },
     28: {
       opacity: 1
@@ -1846,21 +1846,22 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child2'
     }
   },
   {
     0: {
-      opacity: 0,
-      fill: 'primary'
-    },
-    2: {
       transform: {
         translate: [
           62.290733,
           54.780701
         ]
-      }
+      },
+      opacity: 0,
+      fill: 'parent'
+    },
+    2: {
+
     },
     33: {
       opacity: 1
@@ -1900,7 +1901,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child3'
     }
   },
   {
@@ -1912,7 +1913,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child16'
     },
     18: {
       opacity: 1
@@ -1952,13 +1953,13 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child4'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'primary',
+      fill: 'child10',
       transform: {
         translate: [
           9.267329,
@@ -2004,7 +2005,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child17'
     }
   },
   {
@@ -2016,7 +2017,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'child0'
     },
     33: {
       opacity: 1
@@ -2032,7 +2033,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'parent'
     }
   },
   {
@@ -2044,7 +2045,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'parent'
     },
     33: {
       opacity: 1
@@ -2068,7 +2069,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child3'
     }
   },
   {
@@ -2079,7 +2080,7 @@ export const customAnimation = [
           67.475124
         ]
       },
-      fill: 'primary'
+      fill: 'child5'
     },
     2: {
       opacity: 0
@@ -2098,7 +2099,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child4'
     }
   },
   {
@@ -2110,7 +2111,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'primary'
+      fill: 'parent'
     },
     23: {
       transform: {
@@ -2142,7 +2143,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'secondary'
+      fill: 'child2'
     }
   }
 ]

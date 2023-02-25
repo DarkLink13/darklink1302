@@ -14,7 +14,7 @@
           animation: animate${id} ${duration.toFixed(2)}ms infinite linear
         }
         @keyframes animate${id} {
-          ${Object.keys(keyframes).map((keyframe: any, index, array) => `${(delay + (parseInt(keyframe)/10)).toFixed(2)}%${array.length - 1 === index ? ', 100%': index === 0 ? ', 0%' : ''} {
+          ${Object.keys(keyframes).map((keyframe: any, index, array) => `${(delay + ((parseInt(keyframe)/10))).toFixed(2)}%${array.length - 1 === index ? ', 100%': index === 0 ? ', 0%' : ''} {
             ${keyframes[keyframe].transform!=undefined ? `transform: translate(${keyframes[keyframe].transform?.translate.join("px, ")}px);` : ''}
             ${keyframes[keyframe].fill!=undefined ? `fill: ${colors!== undefined && colors[keyframes[keyframe].fill] || 'white'};` : ''}
             ${keyframes[keyframe].opacity!=undefined ? `opacity: ${keyframes[keyframe].opacity};` : ''}
@@ -31,11 +31,10 @@ const props = defineProps({
   colors: { type: Object, default: () => {} }
 })
 const duration = ref(10000)
-const delay = ref(900)
+const delay = ref(90)
 onMounted(() => {
-  duration.value = Math.random() * 20000
+  duration.value = Math.random() * 10000 + 10000
   delay.value = Math.random() * 90
 })
-console.log(props.id, props.keyframes)
 const getTransform = computed(() => `translate(${props.keyframes[0].transform?.translate.join(' ')})`)
 </script>
