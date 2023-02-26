@@ -35,14 +35,7 @@ const isMoving = ref(false)
 const enter = ref(false)
 const colors = computed(() => ({
   parent: item.value?.colors?.secondary,
-  ...Object.fromEntries(
-    Array.from({ length: 12 })
-      .map((_, index) => [
-        'child' + index,
-        children.value ? children.value[index]?.item.colors?.secondary : '#202020'
-      ]
-      )
-  )
+  ...(children.value ? Object.fromEntries(children.value.map((child, index) => [index, child?.item.colors?.secondary])) : {})
 } || {}))
 const stepsBackground = computed(() => [{ step: '0%', color: '#070707' }, { step: '100%', color: '#151515' }])
 const stepsHover = computed(() => [{ step: '0%', color: '#151515' }, { step: '100%', color: '#252525' }])

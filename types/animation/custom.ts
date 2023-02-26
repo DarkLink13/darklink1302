@@ -8,7 +8,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child5'
+      fill: '5'
     },
     15: {
       opacity: 1
@@ -52,7 +52,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child1'
+      fill: '1'
     },
     8: {
       transform: {
@@ -160,7 +160,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child4'
+      fill: '4'
     }
   },
   {
@@ -172,7 +172,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child5'
+      fill: '5'
     },
     31: {
       transform: {
@@ -213,7 +213,7 @@ export const customAnimation = [
           80.063579
         ]
       },
-      fill: 'child1'
+      fill: '1'
     },
     2: {
       opacity: 0
@@ -256,7 +256,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child1'
+      fill: '1'
     }
   },
   {
@@ -267,7 +267,7 @@ export const customAnimation = [
           91.809369
         ]
       },
-      fill: 'child1'
+      fill: '1'
     },
     2: {
       opacity: 0
@@ -320,13 +320,13 @@ export const customAnimation = [
           102.08497
         ]
       },
-      fill: 'child6'
+      fill: '6'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child1',
+      fill: '1',
       transform: {
         translate: [
           114.53315,
@@ -348,13 +348,13 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child12'
+      fill: '12'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child1',
+      fill: '1',
       transform: {
         translate: [
           87.747689,
@@ -403,7 +403,7 @@ export const customAnimation = [
           39.872115
         ]
       },
-      fill: 'child3'
+      fill: '3'
     },
     2: {
       opacity: 0
@@ -443,7 +443,7 @@ export const customAnimation = [
           92.028889
         ]
       },
-      fill: 'child0'
+      fill: '0'
     },
     12: {
       opacity: 0
@@ -464,7 +464,7 @@ export const customAnimation = [
           92.028889
         ]
       },
-      fill: 'child5'
+      fill: '5'
     }
   },
   {
@@ -518,7 +518,7 @@ export const customAnimation = [
           84.038379
         ]
       },
-      fill: 'child5'
+      fill: '5'
     }
   },
   {
@@ -529,7 +529,7 @@ export const customAnimation = [
           32.993083
         ]
       },
-      fill: 'child3'
+      fill: '3'
     },
     4: {
       opacity: 0
@@ -566,7 +566,7 @@ export const customAnimation = [
           39.460063
         ]
       },
-      fill: 'child4'
+      fill: '4'
     }
   },
   {
@@ -606,7 +606,7 @@ export const customAnimation = [
           46.964509
         ]
       },
-      fill: 'child2'
+      fill: '2'
     }
   },
   {
@@ -617,7 +617,7 @@ export const customAnimation = [
           104.0665
         ]
       },
-      fill: 'child11'
+      fill: '11'
     },
     7: {
       opacity: 0
@@ -670,7 +670,7 @@ export const customAnimation = [
           101.06613
         ]
       },
-      fill: 'child16'
+      fill: '16'
     }
   },
   {
@@ -681,7 +681,7 @@ export const customAnimation = [
           53.060288
         ]
       },
-      fill: 'child4'
+      fill: '4'
     },
     5: {
       opacity: 0
@@ -732,7 +732,7 @@ export const customAnimation = [
           58.464561
         ]
       },
-      fill: 'child10'
+      fill: '10'
     }
   },
   {
@@ -743,7 +743,7 @@ export const customAnimation = [
           92.422839
         ]
       },
-      fill: 'child13'
+      fill: '13'
     },
     4: {
       opacity: 0
@@ -772,7 +772,7 @@ export const customAnimation = [
           88.742029
         ]
       },
-      fill: 'child1'
+      fill: '1'
     }
   },
   {
@@ -783,7 +783,7 @@ export const customAnimation = [
           61.663745
         ]
       },
-      fill: 'child7',
+      fill: '7',
       opacity: 0
     },
     29: {
@@ -818,7 +818,7 @@ export const customAnimation = [
           36.648653
         ]
       },
-      fill: 'child14'
+      fill: '14'
     }
   },
   {
@@ -829,7 +829,7 @@ export const customAnimation = [
           15.096231
         ]
       },
-      fill: 'child8'
+      fill: '8'
     },
     4: {
       opacity: 0
@@ -850,7 +850,7 @@ export const customAnimation = [
           25.507137
         ]
       },
-      fill: 'child8'
+      fill: '8'
     }
   },
   {
@@ -861,7 +861,7 @@ export const customAnimation = [
           16.477524
         ]
       },
-      fill: 'child9'
+      fill: '9'
     },
     4: {
       opacity: 0
@@ -882,7 +882,7 @@ export const customAnimation = [
           25.514768
         ]
       },
-      fill: 'child3'
+      fill: '3'
     }
   },
   {
@@ -894,7 +894,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child4'
+      fill: '4'
     },
     5: {
       transform: {
@@ -934,7 +934,7 @@ export const customAnimation = [
           9.103132
         ]
       },
-      fill: 'child9'
+      fill: '9'
     }
   },
   {
@@ -945,7 +945,7 @@ export const customAnimation = [
           19.224846
         ]
       },
-      fill: 'child3'
+      fill: '3'
     },
     8: {
       opacity: 0
@@ -982,7 +982,7 @@ export const customAnimation = [
           8.199408
         ]
       },
-      fill: 'child8'
+      fill: '8'
     }
   },
   {
@@ -993,7 +993,7 @@ export const customAnimation = [
           18.320961
         ]
       },
-      fill: 'child8',
+      fill: '8',
       opacity: 0
     },
     29: {
@@ -1028,13 +1028,13 @@ export const customAnimation = [
           27.395181
         ]
       },
-      fill: 'child3'
+      fill: '3'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child3',
+      fill: '3',
       transform: {
         translate: [
           83.759143,
@@ -1058,7 +1058,7 @@ export const customAnimation = [
           30.66717
         ]
       },
-      fill: 'child2'
+      fill: '2'
     }
   },
   {
@@ -1069,7 +1069,7 @@ export const customAnimation = [
           54.325503
         ]
       },
-      fill: 'child4'
+      fill: '4'
     },
     3: {
       opacity: 0
@@ -1128,13 +1128,13 @@ export const customAnimation = [
           90.042329
         ]
       },
-      fill: 'child0'
+      fill: '0'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child0',
+      fill: '0',
       transform: {
         translate: [
           55.465722,
@@ -1156,7 +1156,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child5'
+      fill: '5'
     }
   },
   {
@@ -1167,7 +1167,7 @@ export const customAnimation = [
           42.938576
         ]
       },
-      fill: 'child2'
+      fill: '2'
     },
     9: {
       opacity: 0
@@ -1204,13 +1204,13 @@ export const customAnimation = [
           15.356905
         ]
       },
-      fill: 'child13'
+      fill: '13'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child12',
+      fill: '12',
       transform: {
         translate: [
           69.031227,
@@ -1242,7 +1242,7 @@ export const customAnimation = [
           109.49771
         ]
       },
-      fill: 'child0'
+      fill: '0'
     }
   },
   {
@@ -1254,7 +1254,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child1'
+      fill: '1'
     },
     28: {
       opacity: 1
@@ -1286,13 +1286,13 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child6'
+      fill: '6'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child6',
+      fill: '6',
       transform: {
         translate: [
           114.53315,
@@ -1358,7 +1358,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child13'
+      fill: '13'
     }
   },
   {
@@ -1369,7 +1369,7 @@ export const customAnimation = [
           96.282789
         ]
       },
-      fill: 'child0'
+      fill: '0'
     },
     10: {
       opacity: 0
@@ -1406,13 +1406,13 @@ export const customAnimation = [
           92.390379
         ]
       },
-      fill: 'child1'
+      fill: '1'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child0',
+      fill: '0',
       transform: {
         translate: [
           56.746244,
@@ -1474,7 +1474,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child5'
+      fill: '5'
     }
   },
   {
@@ -1486,7 +1486,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child0'
+      fill: '0'
     },
     27: {
       opacity: 1
@@ -1518,7 +1518,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child5'
+      fill: '5'
     }
   },
   {
@@ -1529,7 +1529,7 @@ export const customAnimation = [
           109.92263
         ]
       },
-      fill: 'child11'
+      fill: '11'
     },
     2: {
       opacity: 0
@@ -1598,7 +1598,7 @@ export const customAnimation = [
           93.113359
         ]
       },
-      fill: 'child17'
+      fill: '17'
     }
   },
   {
@@ -1650,7 +1650,7 @@ export const customAnimation = [
           73.339866
         ]
       },
-      fill: 'child1'
+      fill: '1'
     }
   },
   {
@@ -1662,7 +1662,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child1'
+      fill: '1'
     },
     11: {
       transform: {
@@ -1712,7 +1712,7 @@ export const customAnimation = [
           55.80761
         ]
       },
-      fill: 'child2'
+      fill: '2'
     }
   },
   {
@@ -1723,7 +1723,7 @@ export const customAnimation = [
           52.036165
         ]
       },
-      fill: 'child2'
+      fill: '2'
     },
     2: {
       opacity: 0
@@ -1758,7 +1758,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child7'
+      fill: '7'
     }
   },
   {
@@ -1770,7 +1770,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child6'
+      fill: '6'
     },
     24: {
       transform: {
@@ -1810,7 +1810,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child1'
+      fill: '1'
     }
   },
   {
@@ -1846,7 +1846,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child2'
+      fill: '2'
     }
   },
   {
@@ -1901,7 +1901,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child3'
+      fill: '3'
     }
   },
   {
@@ -1913,7 +1913,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child16'
+      fill: '16'
     },
     18: {
       opacity: 1
@@ -1953,13 +1953,13 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child4'
+      fill: '4'
     }
   },
   {
     0: {
       opacity: 0,
-      fill: 'child10',
+      fill: '10',
       transform: {
         translate: [
           9.267329,
@@ -2005,7 +2005,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child17'
+      fill: '17'
     }
   },
   {
@@ -2017,7 +2017,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child0'
+      fill: '0'
     },
     33: {
       opacity: 1
@@ -2069,7 +2069,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child3'
+      fill: '3'
     }
   },
   {
@@ -2080,7 +2080,7 @@ export const customAnimation = [
           67.475124
         ]
       },
-      fill: 'child5'
+      fill: '5'
     },
     2: {
       opacity: 0
@@ -2099,7 +2099,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child4'
+      fill: '4'
     }
   },
   {
@@ -2143,7 +2143,7 @@ export const customAnimation = [
         ]
       },
       opacity: 0,
-      fill: 'child2'
+      fill: '2'
     }
   }
 ]
