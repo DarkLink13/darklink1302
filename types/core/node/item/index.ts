@@ -10,6 +10,8 @@ export * from './color/glow'
 
 export interface INodeItem {
   label: INodeItemLabel
+  sublabels?: INodeItemLabel[]
+  exp?: number
   type: NodeItemType
   style?: CSSProperties
   details?: NodeItemDetails

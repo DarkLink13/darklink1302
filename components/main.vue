@@ -1,8 +1,7 @@
 <template>
   <div class="main">
-    <Gradient :lvl="'0'" :idx="'0'" primary="#101010" secondary="#151515" />
-    <Gradient :lvl="'0'" :idx="'1'" primary="#151515" secondary="#303030" />
-    <!-- <Glow :lvl="0" :idx="0" :glows="glowZero" :size=".01" />-->
+    <Gradient :lvl="'0'" :idx="'0'" :stops="stepsBackground" />
+    <Gradient :lvl="'0'" :idx="'1'" :stops="stepsHover" />
     <Glow :lvl="0" :idx="0" :glows="[{ color: '#d773d6', blur: 1 }, { color: '#2ac7ec', blur: 2 }, { color: '#f0e5b1', blur: 5 }]" :size=".015" />
     <Circuit style="position: absolute" :colors="colors" />
     <MoveTree
@@ -45,6 +44,8 @@ const colors = computed(() => ({
       )
   )
 } || {}))
+const stepsBackground = computed(() => [{ step: '0%', color: '#070707' }, { step: '100%', color: '#151515' }])
+const stepsHover = computed(() => [{ step: '0%', color: '#151515' }, { step: '100%', color: '#252525' }])
 onMounted(() => {
   rebuildTree()
 })
@@ -75,10 +76,6 @@ const setStyles = () => {
     })
   })
 }
-// onMounted(() => {
-//   nuxtApp.$animation()
-//   nuxtApp.$animationSettings()
-// })
 
 const goBack = (idx: number) => {
   if (isMoving.value) return

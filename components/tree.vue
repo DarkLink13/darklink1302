@@ -6,7 +6,8 @@
       :item="item"
       :lvl="lvl"
       :idx="idx"
-      @click="emit('goBack', props.idx)"
+      :is-parent="true"
+      @click.stop="emit('goBack', props.idx)"
     />
     <div v-if="children && children.length" class="children">
       <div v-for="(child, index) in children" :key="'child' + index + lvl" :style="child && child.style">
@@ -15,7 +16,7 @@
           :item="child?.item"
           :lvl="lvl - 1"
           :idx="index"
-          @click="emit('goChildren', index)"
+          @click.stop="emit('goChildren', index)"
         />
       </div>
     </div>

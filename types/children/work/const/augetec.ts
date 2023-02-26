@@ -4,7 +4,7 @@ export const AugeTec: INode = {
   item: {
     type: NodeItemType.Work,
     label: { name: 'Auge Tec' },
-    background: { src: '/assets/auge.png', ...BackgroundDefault },
+    background: { src: '/assets/auge.png' },
     colors: { primary: '#0c4151', secondary: '#246d5f', hover: '#35973b' }
   },
   children: [
@@ -12,12 +12,12 @@ export const AugeTec: INode = {
       item: {
         type: NodeItemType.Project,
         label: { name: 'Auge CRM' },
-        background: { src: '/assets/auge.png', ...BackgroundDefault },
+        background: { src: '/assets/auge.png' },
         colors: { primary: '#393939', secondary: '#828282', hover: '#c3c3c3' }
       },
       children: [
         {
-          ...FronEndDev,
+          ...FrontEndDev,
           children: [
             {
               ...Nuxt,
@@ -36,12 +36,12 @@ export const AugeTec: INode = {
       item: {
         type: NodeItemType.Project,
         label: { name: 'Auge CS' },
-        background: { src: '/assets/auge.png', ...BackgroundDefault },
+        background: { src: '/assets/auge.png' },
         colors: { primary: '#393939', secondary: '#828282', hover: '#c3c3c3' }
       },
       children: [
         {
-          ...FronEndDev,
+          ...FrontEndDev,
           children: [
             {
               ...Nuxt,
@@ -62,12 +62,12 @@ export const AugeTec: INode = {
       item: {
         type: NodeItemType.Project,
         label: { name: 'EvaluaMax' },
-        background: { src: '/assets/evaluamax.png', ...BackgroundDefault },
+        background: { src: '/assets/evaluamax.png' },
         colors: { primary: '#009192', secondary: '#00d86d', hover: '#009ffd' }
       },
       children: [
         {
-          ...FronEndDev,
+          ...FrontEndDev,
           children: [
             {
               ...Nuxt,
@@ -84,7 +84,7 @@ export const AugeTec: INode = {
       item: {
         type: NodeItemType.Project,
         label: { name: 'MultillantasMX' },
-        background: { src: '/assets/multillantasmax.png', ...BackgroundDefault },
+        background: { src: '/assets/multillantasmax.png' },
         colors: { primary: '#2867ab', secondary: '#c2230d', hover: '#ffffff' }
       },
       children: [
