@@ -132,9 +132,7 @@ const props = defineProps({
   filter: { type: String, default: '' },
   isParent: { type: Boolean, default: false }
 })
-onMounted(() => {
-  console.log(props.item, props.isParent)
-})
+
 // colors
 const primary = computed(() => props.item.colors?.primary ?? '#101010')
 const secondary = computed(() => props.item.colors?.secondary ?? '#202020')

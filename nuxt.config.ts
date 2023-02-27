@@ -23,6 +23,13 @@ export default defineNuxtConfig({
     }
   },
   pwa: {
+    installPrompt: true,
+    registerType: 'autoUpdate',
+    workbox: { navigateFallback: null },
+    devOptions: {
+      enabled: true,
+      type: 'module'
+    },
     includeAssets: ['favicon.svg'],
     manifest: {
       name: 'DarkLink',
