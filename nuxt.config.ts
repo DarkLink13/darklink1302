@@ -13,7 +13,18 @@ export default defineNuxtConfig({
       viewport: 'width=500, initial-scale=1',
       charset: 'utf-16',
       meta: [
-        { name: 'darklink', content: 'darklink dev Portfolio' }
+        { name: 'darklink', content: 'darklink dev Portfolio' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { property: 'og:title', content: 'Elk' },
+        { property: 'og:description', content: 'Brief neuronal connection to me' },
+        { property: 'og:image', content: 'https://www.darkiink.com/assets/avatar.jpg' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image:width', content: '500' },
+        { property: 'og:image:height', content: '500' },
+        { property: 'og:site_name', content: 'DarkLink' },
+        { property: 'og:', content: '' },
+        { property: 'twitter:site', content: '@darklink1302' },
+        { property: 'twitter:card', content: 'summary_large_image' }
       ],
       link: [{
         rel: 'icon',
@@ -36,10 +47,11 @@ export default defineNuxtConfig({
     registerType: 'autoUpdate',
     workbox: { navigateFallback: null },
     devOptions: {
-      enabled: true,
+      enabled: process.env.VITE_DEV_PWA === 'true',
       type: 'module'
     },
     includeAssets: ['favicon.svg'],
+    scope: '/',
     manifest: {
       name: 'DarkLink',
       short_name: 'DarkLink',
