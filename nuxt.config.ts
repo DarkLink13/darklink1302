@@ -22,8 +22,17 @@ export default defineNuxtConfig({
       }]
     }
   },
+  routeRules: {
+    '/manifest.webmanifest': {
+      headers: {
+        'Content-Type': 'application/manifest+json',
+        'Cache-Control': 'public, max-age=0, must-revalidate'
+      }
+    }
+  },
   pwa: {
     installPrompt: true,
+    registerWebManifestInRouteRules: true,
     registerType: 'autoUpdate',
     workbox: { navigateFallback: null },
     devOptions: {
