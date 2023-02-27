@@ -42,16 +42,11 @@ export default defineNuxtConfig({
     }
   },
   pwa: {
-    installPrompt: true,
-    registerWebManifestInRouteRules: true,
     registerType: 'autoUpdate',
-    workbox: { navigateFallback: null },
     devOptions: {
-      enabled: process.env.VITE_DEV_PWA === 'true',
+      enabled: true,
       type: 'module'
     },
-    includeAssets: ['favicon.svg'],
-    scope: '/',
     manifest: {
       name: 'DarkLink',
       short_name: 'DarkLink',
@@ -84,7 +79,15 @@ export default defineNuxtConfig({
           type: 'image/png'
         }
       ]
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}', '*.{js,css,html,png,svg,ico}']
+    },
+    client: {
+      installPrompt: true
     }
+
   },
   imports: {
     dirs: [
