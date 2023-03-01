@@ -6,7 +6,7 @@ export const Hugo: INode = {
     type: NodeItemType.Skill,
 
     label: { name: 'Hugo' },
-    background: { src: '/assets/hugo.png' },
+    background: { src: '/assets/img/hugo.png' },
     colors: { primary: '#bf1678', secondary: '#2f9a9c', hover: '#fcd900' }
   }
 }

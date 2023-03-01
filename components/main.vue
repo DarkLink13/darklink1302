@@ -3,7 +3,7 @@
     <Gradient :lvl="'0'" :idx="'0'" :stops="stepsBackground" />
     <Gradient :lvl="'0'" :idx="'1'" :stops="stepsHover" />
     <Glow :lvl="0" :idx="0" :glows="[{ color: '#d773d6', blur: 1 }, { color: '#2ac7ec', blur: 2 }, { color: '#f0e5b1', blur: 5 }]" :size=".015" />
-    <Circuit style="position: absolute" :colors="colors" />
+    <Circuit style="position: absolute" :colors="colors" :primary="getPrimary" :secondary="getSecondary" />
     <MoveTree
       :index="index"
       :enter="enter"
@@ -25,7 +25,7 @@
 <script lang="ts" setup>
 
 import { INode, INodeItem } from '~~/types/core'
-
+const colorMode = useColorMode()
 const path = ref([] as Array<number>)
 const item = ref(undefined as unknown as INodeItem)
 const children = ref(undefined as unknown as (INode | undefined)[])
@@ -33,12 +33,14 @@ const level = ref(20)
 const index = ref(0)
 const isMoving = ref(false)
 const enter = ref(false)
+const getPrimary = computed(() => colorMode.value === 'light' ? '#DDDDDD' : '#202020')
+const getSecondary = computed(() => colorMode.value === 'light' ? '#DDDDDD20' : '#20202017')
 const colors = computed(() => ({
   parent: item.value?.colors?.secondary,
   ...(children.value ? Object.fromEntries(children.value.map((child, index) => [index, child?.item.colors?.secondary])) : {})
 } || {}))
-const stepsBackground = computed(() => [{ step: '0%', color: '#070707' }, { step: '100%', color: '#151515' }])
-const stepsHover = computed(() => [{ step: '0%', color: '#151515' }, { step: '100%', color: '#252525' }])
+const stepsBackground = computed(() => [{ step: '0%', color: colorMode.value === 'light' ? '#DDDDDD' : '#070707' }, { step: '100%', color: colorMode.value === 'light' ? '#FFFFFF' : '#151515' }])
+const stepsHover = computed(() => [{ step: '0%', color: colorMode.value === 'light' ? '#CCCCCC' : '#151515' }, { step: '100%', color: colorMode.value === 'light' ? '#EEEEEE' : '#252525' }])
 onMounted(() => {
   rebuildTree()
 })
@@ -71,6 +73,7 @@ const setStyles = () => {
 }
 
 const goBack = (idx: number) => {
+  colorMode.preference = 'light'
   if (isMoving.value) return
   enter.value = true
   index.value = (idx + 3) % 6
@@ -87,6 +90,7 @@ const goBack = (idx: number) => {
 }
 
 const goChildren = (idx: number) => {
+  colorMode.preference = 'dark'
   if (isMoving.value) return
   enter.value = false
   index.value = idx

@@ -7,7 +7,7 @@ export const UCI: INode = {
     label: { name: 'Universidad de las Ciencias Informáticas' },
     sublabels: [{ name: '2018-09,2022-01', type: NodeItemLabelType.Date }],
     colors: { primary: '#05235e', secondary: '#2c4e9a', hover: '#2c59e6' },
-    background: { src: '/assets/uci.png' }
+    background: { src: '/assets/img/uci.png' }
   },
   children: [
     {
@@ -15,7 +15,7 @@ export const UCI: INode = {
         type: NodeItemType.Project,
         label: { name: 'APKlis' },
         sublabels: [{ name: '2018-09,2022-01', type: NodeItemLabelType.Date }],
-        background: { src: '/assets/apklis.png' },
+        background: { src: '/assets/img/apklis.png' },
         colors: { primary: '#f15323', secondary: '#ec9107', hover: '#f0e108' }
       },
       children: [

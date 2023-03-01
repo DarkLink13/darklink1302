@@ -5,7 +5,7 @@ export const React: INode = {
     type: NodeItemType.Skill,
 
     label: { name: 'React' },
-    background: { src: '/assets/react.png' },
+    background: { src: '/assets/img/react.png' },
     colors: { primary: '#212121', secondary: '#00d2f7', hover: '#5ed3f3' }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="background dark:bg-black">
     <VitePwaManifest />
     <Main />
   </div>
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0c0c0d;
+    background-color: white;
   }
 
   body {

@@ -227,7 +227,7 @@ const backgroundPosition = computed(() => props.isParent
 }
 
 .label {
-  color: white;
+  color: var(--color);
   stroke: none;
   bottom: 3em;
   line-height: 1.1em;

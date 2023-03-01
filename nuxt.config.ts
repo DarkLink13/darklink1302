@@ -3,10 +3,24 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     'nuxt-icon'
   ],
+  colorMode: {
+    classSuffix: '',
+    preference: 'system',
+    fallback: 'dark'
+  },
+  css: ['/components/main.scss'],
+  postcss: {
+    plugins: {
+      'postcss-import': {},
+      'tailwindcss/nesting': {},
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
   app: {
     head: {
       title: 'DarkLink',
@@ -17,7 +31,7 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
         { property: 'og:title', content: 'Elk' },
         { property: 'og:description', content: 'Brief neuronal connection to me' },
-        { property: 'og:image', content: 'https://www.darkiink.com/assets/avatar.jpg' },
+        { property: 'og:image', content: 'https://www.darkiink.com/assets/img/avatar.jpg' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image:width', content: '500' },
         { property: 'og:image:height', content: '500' },
@@ -82,7 +96,7 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}', '*.{js,css,html,png,svg,ico}']
+      globPatterns: ['../**/*.{js,css,html,png,svg,ico}']
     },
     client: {
       installPrompt: true

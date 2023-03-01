@@ -4,7 +4,7 @@ export const Payever:INode = {
   item: {
     type: NodeItemType.Work,
     label: { name: 'payever' },
-    background: { src: '/assets/payever.png',  },
+    background: { src: '/assets/img/payever.png' },
     colors: { primary: '#333333', secondary: '#888888', hover: '#FFFFFF' }
   },
   children: [
@@ -12,7 +12,7 @@ export const Payever:INode = {
       item: {
         type: NodeItemType.Project,
         label: { name: 'Commerceos' },
-        background: { src: '/assets/commerceos.png',  },
+        background: { src: '/assets/img/commerceos.png' },
         colors: { primary: '#333333', secondary: '#888888', hover: '#FFFFFF' }
       },
       children: [
