@@ -32,7 +32,7 @@
       @mouseleave="() => onHover = false"
     >
 
-      <Path fill="url(#gradient00)" :filter="filter" />
+      <Path :fill="`url(#gradient00${item.mode ?? $colorMode.value})`" :filter="filter" />
       <image
         v-if="item.background"
         clip-path="url(#image)"
@@ -124,7 +124,7 @@
 </template>
 <script lang="ts" setup>
 import { INodeItem } from '~~/types/core'
-
+const colorMode = useColorMode()
 const props = defineProps({
   item: { type: Object as PropType<INodeItem>, default: () => {} },
   lvl: { type: Number, default: 20 },
@@ -138,6 +138,7 @@ const primary = computed(() => props.item.colors?.primary ?? '#101010')
 const secondary = computed(() => props.item.colors?.secondary ?? '#202020')
 const hover = computed(() => props.item.colors?.hover ?? '#404040')
 const gradientHover = computed(() => `url(#gradient${props.lvl}${props.idx}hover)`)
+const gradientHoverMode = computed(() => `url(#gradient01${props.item.mode ?? colorMode.value})`)
 const gradientExp = computed(() => `gradient${props.lvl}${props.idx}exp`)
 const gradientUrl = computed(() => `url(#gradient${props.lvl}${props.idx})`)
 const stopsBackground = computed(() => [{ color: primary.value, offset: '0%' }, { color: secondary.value, offset: '100%' }])
@@ -173,7 +174,10 @@ const textStyle = computed(() =>
         textAnchor: 'middle'
       }
 )
-const labelStyle = computed(() => ({ fontSize: props.item.label.size ?? '.80em' }))
+const labelStyle = computed(() => ({
+  fontSize: props.item.label.size ?? '.80em',
+  ...(props.item.mode !== undefined ? props.item.mode === 'light' ? { color: '#243746' } : { color: '#ebf4f1' } : {})
+}))
 const backgroundPosition = computed(() => props.isParent
   ? { x: props.item.background?.full ? '0' : '22%', y: props.item.background?.full ? '0' : '4%' }
   : { x: '31%', y: '22%' })
@@ -199,7 +203,7 @@ const backgroundPosition = computed(() => props.isParent
 }
 
 .hover > path {
-  fill: url(#gradient01) !important;
+  fill: v-bind(gradientHoverMode) !important;
   transition: all .2s;
 }
 

@@ -19,4 +19,6 @@ export interface INodeItem {
   description?: string
   background?: IBackground
   colors?: INodeItemColor
+  mode?: 'dark' | 'light'
+  action?: (params: any) => void
 }

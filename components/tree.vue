@@ -16,7 +16,7 @@
           :item="child?.item"
           :lvl="lvl - 1"
           :idx="index"
-          @click.stop="emit('goChildren', index)"
+          @click.stop="child.item.action === undefined ? emit('goChildren', index) : child.item.action($colorMode)"
         />
       </div>
     </div>

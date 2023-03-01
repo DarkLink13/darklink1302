@@ -1,4 +1,5 @@
 import { INode } from '../../../core'
+import { Mode } from '../mode'
 
 export const Info: INode = {
   item: {
@@ -10,5 +11,6 @@ export const Info: INode = {
       secondary: '#7b661c',
       hover: '#95813c'
     }
-  }
+  },
+  children: [Mode]
 }
