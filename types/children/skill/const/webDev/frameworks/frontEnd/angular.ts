@@ -3,6 +3,7 @@ import { NodeItemLabelType } from '~~/types/core/node/item/label/type'
 
 export const Angular2: INode = {
   item: {
+    id: 'angular2',
     exp: 60,
     type: NodeItemType.Skill,
     label: { name: 'Angular 2+' },
@@ -14,6 +15,7 @@ export const Angular2: INode = {
 
 export const Nx: INode = {
   item: {
+    id: 'nx',
     exp: 30,
     label: { name: 'Nx' },
     type: NodeItemType.Skill,

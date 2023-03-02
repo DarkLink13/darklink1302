@@ -1,0 +1,32 @@
+{
+    "me": {
+        "certification": {
+            "label": "Certifications"
+        },
+        "contact": {
+            "label": "Contact"
+        },
+        "skill": {
+            "label": "Skills"
+        },
+        "work": {
+            "label": "Works"
+        },
+        "like": {
+            "label": "Likes"
+        },
+        "info": {
+            "label": "Info",
+            "language": {
+                "label": "Language",
+                "es": { "label" : "Spanish" },
+                "en": { "label" : "English" }
+            },
+            "mode": {
+                "label": "Mode",
+                "dark": { "label": "Dark" },
+                "light": { "label": "Light" }
+            }
+        }
+    }
+}

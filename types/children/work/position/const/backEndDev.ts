@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const BackEndDev: INode = {
   item: {
+    id: 'backenddev',
     type: NodeItemType.Position,
     label: { name: 'Back-End Developer' },
     icon: { key: 'mdi:code-json' },

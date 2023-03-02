@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const Cubacitas: INode = {
   item: {
+    id: 'cubacitas',
     type: NodeItemType.Work,
     label: { name: 'Cubacitas' },
     background: { src: '/assets/img/cubacitas.png' },
@@ -9,7 +10,7 @@ export const Cubacitas: INode = {
   },
   children: [
     {
-      item: { type: NodeItemType.Work, label: { name: 'Cubacitas Web' } },
+      item: { id: 'cubacitasweb', type: NodeItemType.Work, label: { name: 'Cubacitas Web' } },
       children: [
         {
           ...FrontEndDev,

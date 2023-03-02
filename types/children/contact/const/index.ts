@@ -2,8 +2,8 @@ import { INode } from '../../../core'
 
 export const Contact: INode = {
   item: {
+    id: 'contact',
     type: NodeItemType.Root,
-    label: { name: 'Contact' },
     icon: { key: 'material-symbols:android-contacts-outline' },
     colors: {
       primary: '#77380c',

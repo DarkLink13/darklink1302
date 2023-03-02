@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const NodeJS: INode = {
   item: {
+    id: 'nodejs',
     type: NodeItemType.Skill,
     label: { name: 'NodeJS' },
     background: { src: '/assets/img/nodejs.png' },
@@ -10,6 +11,7 @@ export const NodeJS: INode = {
 }
 export const ExpressJS: INode = {
   item: {
+    id: 'expressjs',
     type: NodeItemType.Skill,
     label: { name: 'ExpressJS' },
     background: { src: '/assets/img/expressjs.png' },
@@ -18,6 +20,7 @@ export const ExpressJS: INode = {
 }
 export const NestJS: INode = {
   item: {
+    id: 'nestjs',
     type: NodeItemType.Skill,
     label: { name: 'NestJS' },
     background: { src: '/assets/img/nestjs.png' },
@@ -27,6 +30,7 @@ export const NestJS: INode = {
 
 export const Hasura: INode = {
   item: {
+    id: 'hasura',
     type: NodeItemType.Skill,
     label: { name: 'Hasura' },
     background: { src: '/assets/img/hasura.png' },

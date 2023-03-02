@@ -2,8 +2,8 @@ import { INode } from '~~/types/core'
 
 export const Work: INode = {
   item: {
+    id: 'work',
     type: NodeItemType.Root,
-    label: { name: 'Works' },
     icon: {
       key: 'material-symbols:work-outline'
     },

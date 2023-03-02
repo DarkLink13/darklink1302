@@ -48,7 +48,7 @@
     </g>
     <g filter="url(#glowDot)">
       <Circle
-        v-for="(animation, index) of _customAnimation"
+        v-for="(animation, index) of _animations"
         :id="'circle' + index"
         :key="index"
         :keyframes="animation"
@@ -58,14 +58,14 @@
   </svg>
 </template>
 <script lang="ts" setup>
-import { customAnimation } from '~~/types/animation'
+import { animations } from '~~/types/animation'
 const props = defineProps({
   colors: { type: Object, default: () => {} },
   primary: { type: String, default: '#202020' },
   secondary: { type: String, default: '#20202017' }
 })
-const _customAnimation = computed(() =>
-  customAnimation.filter(animation =>
+const _animations = computed(() =>
+  animations.filter(animation =>
     props.colors[animation[0].fill] !== undefined && props.colors[animation[100].fill] !== undefined
   )
 )

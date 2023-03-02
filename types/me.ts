@@ -1,6 +1,7 @@
 import { INodeItem } from './core'
 
 export const Me: INodeItem = {
+  id: 'me',
   type: NodeItemType.Default,
   label: {
     name: 'darklink',

@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const IntellisysDCorp: INode = {
   item: {
+    id: 'intellisysdcorp',
     type: NodeItemType.Work,
     label: { name: 'Intellisys D Corp' },
     colors: { primary: '#73abb3', secondary: '#cfd252', hover: '#f7f7f7' },
@@ -10,6 +11,7 @@ export const IntellisysDCorp: INode = {
   children: [
     {
       item: {
+        id: 'vacunaterd',
         type: NodeItemType.Project,
         label: { name: 'VacunateRD' },
         background: { src: '/assets/img/vacunaterd.png' },

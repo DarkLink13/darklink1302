@@ -1,5 +1,5 @@
 import { INode } from '../../../core'
 
 export const LikeProgramming: INode = {
-  item: { type: NodeItemType.Like, label: { name: 'Programming' } }
+  item: { type: NodeItemType.Like, id: 'programming' }
 }

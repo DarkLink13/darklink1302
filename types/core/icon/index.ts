@@ -3,4 +3,3 @@ export interface IIcon {
   size?: string
   top?: string
 }
-export * from './default'

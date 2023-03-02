@@ -3,6 +3,7 @@ import { INode } from '~~/types/core'
 export const FrontEndDev: INode = {
   item: {
     exp: 85,
+    id: 'frontenddev',
     type: NodeItemType.Position,
     label: { name: 'Front-End Developer' },
     icon: { key: 'mdi:code-tags' },

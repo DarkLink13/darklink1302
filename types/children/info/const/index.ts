@@ -1,10 +1,11 @@
 import { INode } from '../../../core'
+import { Language } from '../lang'
 import { Mode } from '../mode'
 
 export const Info: INode = {
   item: {
+    id: 'info',
     type: NodeItemType.Root,
-    label: { name: 'Info' },
     icon: { key: 'material-symbols:info-outline-rounded' },
     colors: {
       primary: '#604c08',
@@ -12,5 +13,5 @@ export const Info: INode = {
       hover: '#95813c'
     }
   },
-  children: [Mode]
+  children: [undefined, Mode, undefined, undefined, undefined, Language]
 }

@@ -2,9 +2,9 @@ import { INode } from '../../../core'
 
 export const Like: INode = {
   item: {
+    id: 'like',
     type: NodeItemType.Root,
-    label: { name: 'Likes' },
-    icon: { key: 'icon-park-outline:like' },
+    icon: { key: 'ph:heart-bold' },
     colors: {
       primary: '#6d1414',
       secondary: '#952727',

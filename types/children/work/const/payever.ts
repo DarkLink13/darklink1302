@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const Payever:INode = {
   item: {
+    id: 'payever',
     type: NodeItemType.Work,
     label: { name: 'payever' },
     background: { src: '/assets/img/payever.png' },
@@ -10,6 +11,7 @@ export const Payever:INode = {
   children: [
     {
       item: {
+        id: 'commerceos',
         type: NodeItemType.Project,
         label: { name: 'Commerceos' },
         background: { src: '/assets/img/commerceos.png' },

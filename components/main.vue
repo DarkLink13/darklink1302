@@ -12,6 +12,7 @@
     >
       <Tree
         :key="level"
+        :i18n="i18n"
         :item="item"
         :children="children"
         :lvl="level"
@@ -25,10 +26,16 @@
   </div>
 </template>
 <script lang="ts" setup>
-
 import { INode, INodeItem } from '~~/types/core'
+
+const stepsDark = [{ offset: '0%', color: '#070707' }, { offset: '100%', color: '#151515' }]
+const stepsHoverDark = [{ offset: '0%', color: '#151515' }, { offset: '100%', color: '#252525' }]
+const stepsLight = [{ offset: '0%', color: '#DDDDDD' }, { offset: '100%', color: '#FFFFFF' }]
+const stepsHoverLight = [{ offset: '0%', color: '#CCCCCC' }, { offset: '100%', color: '#EEEEEE' }]
+
 const colorMode = useColorMode()
 const path = ref([] as Array<number>)
+const i18n = ref(['me'] as Array<string>)
 const item = ref(undefined as unknown as INodeItem)
 const children = ref(undefined as unknown as (INode | undefined)[])
 const level = ref(20)
@@ -41,10 +48,6 @@ const colors = computed(() => ({
   parent: item.value?.colors?.secondary,
   ...(children.value ? Object.fromEntries(children.value.map((child, index) => [index, child?.item.colors?.secondary])) : {})
 } || {}))
-const stepsDark = [{ step: '0%', color: '#070707' }, { step: '100%', color: '#151515' }]
-const stepsHoverDark = [{ step: '0%', color: '#151515' }, { step: '100%', color: '#252525' }]
-const stepsLight = [{ step: '0%', color: '#DDDDDD' }, { step: '100%', color: '#FFFFFF' }]
-const stepsHoverLight = [{ step: '0%', color: '#CCCCCC' }, { step: '100%', color: '#EEEEEE' }]
 onMounted(() => {
   rebuildTree()
 })
@@ -78,10 +81,12 @@ const setStyles = () => {
 
 const goBack = (idx: number) => {
   if (isMoving.value) return
+  if (!path.value.length) return
   enter.value = true
   index.value = (idx + 3) % 6
   path.value.pop()
-  setTimeout(() => {
+  i18n.value.pop()
+  nextTick(() => {
     isMoving.value = true
     level.value < 20 && level.value++
     rebuildTree()
@@ -89,7 +94,7 @@ const goBack = (idx: number) => {
       isMoving.value = false
       index.value = path.value[path.value.length - 1]
     }, 300)
-  }, 0)
+  })
 }
 
 const goChildren = (idx: number) => {
@@ -97,8 +102,9 @@ const goChildren = (idx: number) => {
   enter.value = false
   index.value = idx
   path.value.push(idx)
-  setTimeout(() => {
+  nextTick(() => {
     item.value = Object.assign({}, children.value && children.value[idx]?.item)
+    i18n.value.push(item.value.id)
     children.value = Object.assign([], children.value && children.value[idx]?.children)
     setStyles()
     isMoving.value = true
@@ -106,7 +112,7 @@ const goChildren = (idx: number) => {
     setTimeout(() => {
       isMoving.value = false
     }, 300)
-  }, 0)
+  })
 }
 
 </script>

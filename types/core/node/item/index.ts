@@ -9,7 +9,8 @@ export * from './type'
 export * from './color/glow'
 
 export interface INodeItem {
-  label: INodeItemLabel
+  id: string
+  label?: INodeItemLabel
   sublabels?: INodeItemLabel[]
   exp?: number
   type: NodeItemType

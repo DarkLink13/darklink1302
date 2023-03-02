@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const AugeTec: INode = {
   item: {
+    id: 'augetec',
     type: NodeItemType.Work,
     label: { name: 'Auge Tec' },
     background: { src: '/assets/img/auge.png' },
@@ -10,6 +11,7 @@ export const AugeTec: INode = {
   children: [
     {
       item: {
+        id: 'augecrm',
         type: NodeItemType.Project,
         label: { name: 'Auge CRM' },
         background: { src: '/assets/img/auge.png' },
@@ -34,6 +36,7 @@ export const AugeTec: INode = {
     },
     {
       item: {
+        id: 'augecs',
         type: NodeItemType.Project,
         label: { name: 'Auge CS' },
         background: { src: '/assets/img/auge.png' },
@@ -60,6 +63,7 @@ export const AugeTec: INode = {
     },
     {
       item: {
+        id: 'evaluamax',
         type: NodeItemType.Project,
         label: { name: 'EvaluaMax' },
         background: { src: '/assets/img/evaluamax.png' },
@@ -82,8 +86,9 @@ export const AugeTec: INode = {
     },
     {
       item: {
+        id: 'mutillantasmax',
         type: NodeItemType.Project,
-        label: { name: 'MultillantasMX' },
+        label: { name: 'MultillantasMax' },
         background: { src: '/assets/img/multillantasmax.png' },
         colors: { primary: '#2867ab', secondary: '#c2230d', hover: '#ffffff' }
       },

@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const OpsecSecurity: INode = {
   item: {
+    id: 'opsecsecurity',
     type: NodeItemType.Work,
     label: { name: 'Opsec Security' },
     background: { src: '/assets/img/opsecsecurity.png' },
@@ -10,6 +11,7 @@ export const OpsecSecurity: INode = {
   children: [
     {
       item: {
+        id: 'insight',
         type: NodeItemType.Project,
         label: { name: 'Insight' },
         background: { src: '/assets/img/opsecsecurity.png' },
@@ -24,6 +26,7 @@ export const OpsecSecurity: INode = {
     },
     {
       item: {
+        id: 'ere',
         type: NodeItemType.Project,
         label: { name: 'eRE' },
         background: { src: '/assets/img/ere.png' },

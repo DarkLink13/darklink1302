@@ -2,8 +2,8 @@ import { INode } from '~~/types/core'
 
 export const Dark: INode = {
   item: {
+    id: 'dark',
     type: NodeItemType.Root,
-    label: { name: 'Dark' },
     icon: { key: 'material-symbols:dark-mode-outline-sharp' },
     colors: {
       primary: '#888888',
@@ -12,6 +12,5 @@ export const Dark: INode = {
     },
     mode: 'dark',
     action: (colorMode: any) => { colorMode.preference = 'dark' }
-  },
-  children: []
+  }
 }

@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const CopSonic: INode = {
   item: {
+    id: 'copsonic',
     type: NodeItemType.Work,
     label: { name: 'CopSonic' },
     background: { src: '/assets/img/copsonic.png' },

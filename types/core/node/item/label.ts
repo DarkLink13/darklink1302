@@ -1,7 +1,7 @@
 import { NodeItemLabelType } from './label/type'
 
 export interface INodeItemLabel {
-  name: string
+  name?: string
   type?: NodeItemLabelType,
   size?: string
   color?: string

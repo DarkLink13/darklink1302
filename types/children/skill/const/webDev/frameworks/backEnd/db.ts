@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const PostgreSQL: INode = {
   item: {
+    id: 'postgresql',
     type: NodeItemType.Skill,
     label: { name: 'PostgreSQL' },
     background: { src: '/assets/img/postgresql.png' },
@@ -10,6 +11,7 @@ export const PostgreSQL: INode = {
 }
 export const Redis: INode = {
   item: {
+    id: 'redis',
     type: NodeItemType.Skill,
     label: { name: 'Redis' },
     background: { src: '/assets/img/redis.png' },
@@ -18,6 +20,7 @@ export const Redis: INode = {
 }
 export const ElasticSearch: INode = {
   item: {
+    id: 'elasticsearch',
     type: NodeItemType.Skill,
     label: { name: 'ElasticSearch' },
     background: { src: '/assets/img/elasticsearch.png' },

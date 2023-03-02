@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const DotNet: INode = {
   item: {
+    id: 'dotnet',
     type: NodeItemType.Skill,
     label: { name: 'ASP.NET Framefork' },
     background: { src: '/assets/img/dotnet.png' },

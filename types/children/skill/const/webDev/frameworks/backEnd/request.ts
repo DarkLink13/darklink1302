@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const GraphQL: INode = {
   item: {
+    id: 'graphql',
     type: NodeItemType.Skill,
     label: { name: 'GraphQL' },
     background: { src: '/assets/img/graphql.png' },
@@ -10,6 +11,7 @@ export const GraphQL: INode = {
 }
 export const Apollo: INode = {
   item: {
+    id: 'apollo',
     type: NodeItemType.Skill,
     label: { name: 'Apollo' },
     background: { src: '/assets/img/apollo.png' },

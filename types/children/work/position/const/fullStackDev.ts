@@ -2,6 +2,7 @@ import { INode } from '~~/types/core'
 
 export const FullStackDev: INode = {
   item: {
+    id: 'fullstackdev',
     type: NodeItemType.Position,
     label: { name: 'Full-Stack Developer' },
     icon: { key: 'ion:code-working' },

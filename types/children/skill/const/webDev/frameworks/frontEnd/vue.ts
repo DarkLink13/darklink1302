@@ -3,6 +3,7 @@ import { NodeItemLabelType } from '~~/types/core/node/item/label/type'
 
 export const Nuxt: INode = {
   item: {
+    id: 'nuxt',
     exp: 75,
     type: NodeItemType.Skill,
     sublabels: [{ name: '4', type: NodeItemLabelType.Since }],
@@ -14,6 +15,7 @@ export const Nuxt: INode = {
 
 export const VueJS: INode = {
   item: {
+    id: 'vuejs',
     exp: 70,
     type: NodeItemType.Skill,
     sublabels: [{ name: '2018-09', type: NodeItemLabelType.Since }],
@@ -25,6 +27,7 @@ export const VueJS: INode = {
 
 export const Vuetify: INode = {
   item: {
+    id: 'vuetify',
     exp: 85,
     type: NodeItemType.Skill,
     sublabels: [{ name: '2020-01', type: NodeItemLabelType.Since }],
@@ -36,6 +39,7 @@ export const Vuetify: INode = {
 
 export const IViewUI: INode = {
   item: {
+    id: 'iviewui',
     exp: 40,
     type: NodeItemType.Skill,
     sublabels: [{ name: '1', type: NodeItemLabelType.Years }],

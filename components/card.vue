@@ -42,7 +42,7 @@
         :x="backgroundPosition.x"
         :y="backgroundPosition.y"
       />
-      <switch v-if="isParent && props.item.description">
+      <switch v-if="hasDescription && props.item.description">
         <foreignObject class="description">
           <p class="description-wrapper" xmlns="http://www.w3.org/1999/xhtml">
             {{ props.item.description }}
@@ -50,7 +50,7 @@
         </foreignObject>
       </switch>
       <g
-        v-if="item.exp && isParent"
+        v-if="hasDescription && item.exp"
         id="g247"
         transform="translate(-18 -27)"
       >
@@ -105,14 +105,14 @@
             xmlns="http://www.w3.org/1999/xhtml"
             class="label"
             :style="labelStyle"
-          > {{ item.label.name }} </p>
+          > {{ item.label?.name ?? $t(`${i18n}.label`) }} </p>
           <p
             v-for="(sublabel, _index) in item.sublabels"
             :key="_index"
             xmlns="http://www.w3.org/1999/xhtml"
             class="label"
             :style="{
-              fontSize: props.item.label.size ?? '.45em',
+              fontSize: props.item.label?.size ?? '.45em',
               color: '#666666'
             }"
           > {{ sublabel?.name }} </p>
@@ -123,16 +123,17 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { CSSProperties } from 'vue'
 import { INodeItem } from '~~/types/core'
 const colorMode = useColorMode()
 const props = defineProps({
   item: { type: Object as PropType<INodeItem>, default: () => {} },
   lvl: { type: Number, default: 20 },
+  i18n: { type: String, default: '' },
   idx: { type: Number, default: 0 },
   filter: { type: String, default: '' },
   isParent: { type: Boolean, default: false }
 })
-
 // colors
 const primary = computed(() => props.item.colors?.primary ?? '#101010')
 const secondary = computed(() => props.item.colors?.secondary ?? '#202020')
@@ -157,25 +158,29 @@ const expDot = computed(() => (
 const hoverShadow = computed(() =>
   onHover.value ? '#252525' : '#151515'
 )
+onMounted(() => {
+  console.log(hasDescription, props.item.description, props.item.exp, props.isParent)
+})
+const hasDescription = computed(() => props.isParent && (props.item.description || props.item.exp))
 const onHover = ref(false)
-const iconPosition = computed(() => props.isParent ? { x: '20%', y: '5%' } : { x: '33%', y: '27%' })
+const iconPosition = computed(() => hasDescription.value ? { x: '20%', y: '5%' } : { x: '33%', y: '27%' })
 const textStyle = computed(() =>
-  props.isParent
+  hasDescription.value
     ? {
-        x: '45%',
-        y: '10%',
-        textAlign: 'left',
-        textAnchor: 'middle'
-      }
+      x: '45%',
+      y: '10%',
+      textAlign: 'left',
+      textAnchor: 'middle'
+    } as CSSProperties
     : {
-        x: '31%',
-        y: props.item.label.bottom ?? '50%',
-        textAlign: 'center',
-        textAnchor: 'middle'
-      }
+      x: '31%',
+      y: props.item.label?.bottom ?? '50%',
+      textAlign: 'center',
+      textAnchor: 'middle'
+    } as CSSProperties
 )
 const labelStyle = computed(() => ({
-  fontSize: props.item.label.size ?? '.80em',
+  fontSize: props.item.label?.size ?? '.80em',
   ...(props.item.mode !== undefined ? props.item.mode === 'light' ? { color: '#243746' } : { color: '#ebf4f1' } : {})
 }))
 const backgroundPosition = computed(() => props.isParent

@@ -6,8 +6,8 @@ export * from './webDev'
 
 export const Skill: INode = {
   item: {
+    id: 'skill',
     type: NodeItemType.Root,
-    label: { name: 'Skills' },
     icon: {
       key: 'carbon:skill-level'
     },

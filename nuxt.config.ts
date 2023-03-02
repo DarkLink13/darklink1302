@@ -5,12 +5,27 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
+    '@nuxtjs/i18n',
     'nuxt-icon'
   ],
   colorMode: {
     classSuffix: '',
     preference: 'system',
     fallback: 'dark'
+  },
+  i18n: {
+    locales: [{
+      code: 'en',
+      iso: 'en-US',
+      file: 'en.json'
+    }, {
+      code: 'es',
+      iso: 'es-ES',
+      file: 'es.json'
+    }],
+    lazy: true,
+    langDir: 'types/i18n',
+    defaultLocale: 'en'
   },
   css: ['/components/main.scss'],
   postcss: {

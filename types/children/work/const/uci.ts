@@ -3,6 +3,7 @@ import { NodeItemLabelType } from '~~/types/core/node/item/label/type'
 
 export const UCI: INode = {
   item: {
+    id: 'uci',
     type: NodeItemType.Work,
     label: { name: 'Universidad de las Ciencias Informáticas' },
     sublabels: [{ name: '2018-09,2022-01', type: NodeItemLabelType.Date }],
@@ -12,6 +13,7 @@ export const UCI: INode = {
   children: [
     {
       item: {
+        id: 'apklis',
         type: NodeItemType.Project,
         label: { name: 'APKlis' },
         sublabels: [{ name: '2018-09,2022-01', type: NodeItemLabelType.Date }],
