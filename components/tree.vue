@@ -46,6 +46,7 @@ const props = defineProps({
 
 <style scoped>
 .children {
+  -webkit-tap-highlight-color: transparent;
   z-index:  v-bind(lvl - 1);
   position: absolute;
   width: 82%;
@@ -55,6 +56,7 @@ const props = defineProps({
   justify-content: center;
 }
 .parent {
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;

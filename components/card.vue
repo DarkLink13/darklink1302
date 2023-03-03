@@ -49,11 +49,7 @@
           </p>
         </foreignObject>
       </switch>
-      <g
-        v-if="hasDescription && item.exp"
-        id="g247"
-        transform="translate(-18 -27)"
-      >
+      <g v-if="hasDescription && item.exp" id="g247" transform="translate(-18 -27)">
         <path
           id="path21"
           :stroke="hover"
@@ -155,12 +151,7 @@ const expDot = computed(() => (
     ? { x: -255 + (props.item?.exp ?? 0) * 1.85, y: -657.5 }
     : { x: -200 + (props.item?.exp ?? 0) * 0.84, y: -590 - ((props.item?.exp ?? 0) * 1.45) }
 ))
-const hoverShadow = computed(() =>
-  onHover.value ? '#252525' : '#151515'
-)
-onMounted(() => {
-  console.log(hasDescription, props.item.description, props.item.exp, props.isParent)
-})
+const hoverShadow = computed(() => onHover.value ? '#252525' : '#151515')
 const hasDescription = computed(() => props.isParent && (props.item.description || props.item.exp))
 const onHover = ref(false)
 const iconPosition = computed(() => hasDescription.value ? { x: '20%', y: '5%' } : { x: '33%', y: '27%' })
@@ -190,6 +181,7 @@ const backgroundPosition = computed(() => props.isParent
 
 <style>
 .wrapper {
+  -webkit-tap-highlight-color: transparent;
   position: relative;
   display: flex;
   justify-content: center;
@@ -202,6 +194,7 @@ const backgroundPosition = computed(() => props.isParent
 .wrapper svg {
   position: absolute;
 }
+
 .hover {
   stroke: v-bind(gradientHover);
   transition: all .2s;
@@ -255,10 +248,12 @@ const backgroundPosition = computed(() => props.isParent
   x: 20%;
   y: 25%;
 }
+
 .description-wrapper {
   overflow: scroll;
   height: 100%;
 }
+
 .description-wrapper::before {
   content:'';
   width:100%;
