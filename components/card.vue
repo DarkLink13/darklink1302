@@ -12,10 +12,10 @@
           v-if="item.exp"
           :id="`${gradientExp}move`"
           :xlink:href="`#${gradientExp}`"
-          x1="38.142242"
-          y1="83.831482"
-          x2="37.567436"
-          y2="61.984924"
+          x1="106.13107"
+          y1="224.09465"
+          x2="238.26868"
+          y2="144.46466"
           gradientUnits="userSpaceOnUse"
         />
       </defs>
@@ -49,44 +49,14 @@
           </p>
         </foreignObject>
       </switch>
-      <g v-if="hasDescription && item.exp" id="g247" transform="translate(-18 -27)">
-        <path
-          id="path21"
-          :stroke="hover"
-          style="display:inline;fill:none;fill-opacity:1;stroke-width:1.5px;stroke-dasharray:none;stroke-opacity:1"
-          d="m 35.965912,120.30093 c 0.01238,-0.74292 -0.579793,-1.35524 -1.322708,-1.36771 -0.743127,-0.0124 -1.355536,0.5801 -1.367724,1.32322 -0.01209,0.74293 0.580317,1.35502 1.323237,1.3672 0.742721,0.0121 1.354724,-0.58 1.367195,-1.32271 z"
-          transform="matrix(7.3776504,0,0,7.3776504,-154.93859,-669.14742)"
-        />
-        <path
-          id="path19"
-          :stroke="primary"
-          style="display:inline;fill:none;fill-opacity:1;stroke-width:1.5px;stroke-dasharray:none;stroke-opacity:1"
-          d="m 36.97212,61.193857 c -0.637375,-0.382295 -1.463982,-0.17539 -1.846095,0.46209 -0.38194,0.637338 -0.174946,1.463635 0.462354,1.845639 0.637192,0.38219 1.463563,0.175513 1.845821,-0.461636 0.382302,-0.637366 0.175386,-1.463978 -0.46208,-1.846093 z"
-          transform="matrix(3.6888252,6.3892327,-6.3892327,3.6888252,317,-321.17512)"
-        />
-        <path
-          id="path17"
-          :stroke="item.exp === 100 ? hover : primary"
-          style="display:inline;fill:none;fill-opacity:1;stroke-width:1.5px;stroke-dasharray:none;stroke-opacity:1"
-          d="m 36.97212,61.193857 c -0.637375,-0.382295 -1.463982,-0.17539 -1.846095,0.46209 -0.38194,0.637338 -0.174946,1.463635 0.462354,1.845639 0.637192,0.38219 1.463563,0.175513 1.845821,-0.461636 0.382302,-0.637366 0.175386,-1.463978 -0.46208,-1.846093 z"
-          transform="matrix(3.6888252,6.3892327,-6.3892327,3.6888252,497.91808,-321.17512)"
-        />
-        <path
-          id="path15"
-          :stroke="`url(#${gradientExp}move)`"
-          style="fill:none;fill-opacity:1;stroke-width:1.5px;stroke-dasharray:none;stroke-opacity:1;"
-          d="m 36.949864,82.573515 5.081692,-8.782465 c 0.314647,-0.54379 0.318071,-1.216099 7.36e-4,-1.758325 l -5.20411,-8.892188"
-          transform="matrix(3.6888252,6.3892327,-6.3892327,3.6888252,497.91808,-321.17512)"
-        />
-        <path
-          id="path23"
-          :fill="hover"
-          filter="url(#glowDot)"
-          style="display:inline;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.41853px;stroke-dasharray:none;stroke-opacity:1"
-          d="m 48.167642,118.44044 a 0.85207003,0.85207003 0 0 1 -0.286079,1.16721 0.85207003,0.85207003 0 0 1 -1.168734,-0.27978 0.85207003,0.85207003 0 0 1 0.273471,-1.17023 0.85207003,0.85207003 0 0 1 1.171684,0.26716"
-          :transform="`matrix(7.3776504,0,0,7.3776504,${expDot.x},${expDot.y})`"
-        />
-      </g>
+      <Exp
+        v-if="hasDescription && item.exp"
+        :gradient="`url(#${gradientExp}move)`"
+        :primary="primary"
+        :hover="hover"
+        :secondary="secondary"
+        :exp="item.exp"
+      />
       <Icon
         v-if="item.icon"
         :class="{'hover': onHover }"
@@ -146,15 +116,10 @@ const stopsExp = computed(() => [
   { color: primary.value, offset: ((props.item.exp ?? 50) + 1) + '%', opacity: '1' },
   { color: primary.value, offset: '100%', opacity: '1' }
 ])
-const expDot = computed(() => (
-  ((props.item?.exp ?? 0) < 50)
-    ? { x: -255 + (props.item?.exp ?? 0) * 1.85, y: -657.5 }
-    : { x: -200 + (props.item?.exp ?? 0) * 0.84, y: -590 - ((props.item?.exp ?? 0) * 1.45) }
-))
-const hoverShadow = computed(() => onHover.value ? '#252525' : '#151515')
+
 const hasDescription = computed(() => props.isParent && (props.item.description || props.item.exp))
 const onHover = ref(false)
-const iconPosition = computed(() => hasDescription.value ? { x: '20%', y: '5%' } : { x: '33%', y: '27%' })
+const iconPosition = computed(() => hasDescription.value ? { x: '20%', y: '5%' } : { x: '32%', y: '27%' })
 const textStyle = computed(() =>
   hasDescription.value
     ? {
@@ -172,11 +137,16 @@ const textStyle = computed(() =>
 )
 const labelStyle = computed(() => ({
   fontSize: props.item.label?.size ?? '.80em',
-  ...(props.item.mode !== undefined ? props.item.mode === 'light' ? { color: '#243746' } : { color: '#ebf4f1' } : {})
+  ...(props.item.label?.color !== undefined ? { color: props.item.label?.color } : {})
 }))
-const backgroundPosition = computed(() => props.isParent
-  ? { x: props.item.background?.full ? '0' : '22%', y: props.item.background?.full ? '0' : '4%' }
-  : { x: '31%', y: '22%' })
+const backgroundPosition = computed(() =>
+
+  props.item.background?.full
+    ? { x: 0, y: 0 }
+    : hasDescription.value
+      ? { x: '22%', y: '4%' }
+      : { x: props.isParent ? '33%' : '31%', y: props.isParent ? '27%' : '22%' }
+)
 </script>
 
 <style>
@@ -240,7 +210,7 @@ const backgroundPosition = computed(() => props.isParent
 }
 
 .description {
-  color: white;
+  color: var(--color);
   font-size: .50em;
   text-justify: distribute;
   width: 45%;
@@ -250,8 +220,19 @@ const backgroundPosition = computed(() => props.isParent
 }
 
 .description-wrapper {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: var(--bg);
+  border: 1px solid v-bind(primary);
+  -webkit-border-radius: 6px;
 }
 
 .description-wrapper::before {
@@ -261,6 +242,5 @@ const backgroundPosition = computed(() => props.isParent
   position:absolute;
   left:0;
   top:0;
-  background: linear-gradient(transparent 50px, v-bind(hoverShadow));
 }
 </style>

@@ -4,6 +4,7 @@ export const Me: INodeItem = {
   id: 'me',
   type: NodeItemType.Default,
   label: {
+    color: 'white',
     name: 'darklink',
     bottom: '70%'
   },

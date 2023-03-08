@@ -3,6 +3,7 @@ import { INode } from '~~/types/core'
 export const Light: INode = {
   item: {
     id: 'light',
+    label: { color: '#243746' },
     type: NodeItemType.Root,
     icon: { key: 'material-symbols:light-mode-outline-sharp' },
     colors: {
