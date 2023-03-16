@@ -3,6 +3,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   modules: [
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxtjs/i18n',

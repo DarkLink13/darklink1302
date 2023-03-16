@@ -10,7 +10,29 @@
             "label": "Skills"
         },
         "work": {
-            "label": "Works"
+            "label": "Works",
+            "uci": {
+                "label": "University of Informatic Sciences",
+                "description": "The University of Informatic Sciences (Spanish: Universidad de las Ciencias Informáticas; UCI, also known as the University of Information Sciences and University of Informatics Sciences) is a Cuban university research center based in the ward of Wajay, Boyeros municipal borough, Havana\nThe UCI has a particular curriculum among other universities in the country. Students follow the principle of linking work and study, which places an emphasis on production as part of the learning process. From the second or third year of study students can be linked to productive projects that contribute to the economy.",
+                "apklis": {
+                    "description": "Apklis, also known as the Cuban Play Store, is an online application store developed by the UCI for Android devices.\nIt has its web version and also its application version for android.\nIt is designed to download all Cuban applications and the most from the rest of the world using the ETECSA data network, Nauta or other national navigation means.\nIt has a wide catalog of games, as well as useful applications, from social networks, photo editors, among others.",
+                    "frontenddev": {
+                        "label": "Senior Front-End Developer",
+                        "description": "I participated in the first version of the administration, providing better usability by 10% for end users.\nI created the second version of the administration using the same stack of the web application, improving the front-office - back-office interaction and deployment. I made improvements to the web client, improving usability by 15% using more attractive and intuitive graphic resources for the end user.\nI developed the payment module on the web client side and on the administration side for the sellers.\nI developed the third version of the administration, improving the usability of the site by more than 50% using modern frameworks and best practices, improving more than 50% of the backend response time, reducing the number of requests.\n Front-End Team Lead."
+                    },
+                    "backenddev": {
+                        "label": "Senior Back-End Developer",
+                        "description": "I improved the response time of the application by more than 50%, reducing the amount of unnecessary data volume that is exchanged from the backend. Improve overall application performance by increasing search and index system modeling by more than 50%. I Developed the payment system providing fail-safe solutions to an asynchronous banking system. Back-End Team Lear, Software Architect, Database Designer, Senior"
+                    },
+                    "devops": {
+                        "label": "Senior DevOps Collaborator",
+                        "description": "I helped with the deployment configuration, continuous integration, I improved the performance of the application using containers and load balancers, through the use of script I was able to optimize processes and access different third-party services"
+                    }
+                }
+            },
+            "opsecsecurity": {
+                "description": ""
+            }
         },
         "like": {
             "label": "Likes"
@@ -28,5 +50,30 @@
                 "light": { "label": "Light" }
             }
         }
+    },
+    "npre": {
+        "country": {
+            "title": "Country: ",
+            "de": "Germany",
+            "cu": "Cuba",
+            "us": "United States",
+            "pr": "Puerto Rico",
+            "dr": "Dominican Republic",
+            "fr": "France",
+            "mx": "Mexico"
+        },
+        "workType" :{
+            "hybrid": "Hybrid",
+            "remote": "Remote",
+            "onsite": "OnSite"
+        },
+        "workSchedule" :{
+            "fulltime": "Full Time",
+            "parttime": "Part Time",
+            "flexible": "Flexible"
+        },
+        "since": "Since",
+        "versions": "Versions: ",
+        "years": "Years"
     }
 }

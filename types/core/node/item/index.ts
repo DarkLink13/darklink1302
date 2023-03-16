@@ -6,6 +6,7 @@ import { NodeItemDetails } from './detail'
 import { INodeItemLabel } from './label'
 import { NodeItemType } from './type'
 export * from './type'
+export * from './label'
 export * from './color/glow'
 
 export interface INodeItem {

@@ -6,7 +6,7 @@ export const Mode: INode = {
   item: {
     id: 'mode',
     type: NodeItemType.Root,
-    label: { name: 'Mode' },
+    label: { value: 'Mode' },
     icon: { key: 'fluent:dark-theme-20-filled' },
     colors: {
       primary: '#FFFFFF',

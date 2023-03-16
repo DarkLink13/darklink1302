@@ -3,5 +3,7 @@ export enum NodeItemLabelType {
     Years,
     Since,
     Version,
-    Link
+    Link,
+    Country,
+    WorkType
 }

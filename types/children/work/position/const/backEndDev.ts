@@ -4,7 +4,7 @@ export const BackEndDev: INode = {
   item: {
     id: 'backenddev',
     type: NodeItemType.Position,
-    label: { name: 'Back-End Developer' },
+    label: { value: 'Back-End Developer' },
     icon: { key: 'mdi:code-json' },
     colors: { primary: '#c0193e', secondary: '#d84346', hover: '#dca398' }
   }
