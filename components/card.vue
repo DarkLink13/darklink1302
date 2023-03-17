@@ -36,7 +36,7 @@
       <image
         v-if="item.background"
         clip-path="url(#image)"
-        :height="isParent ? item.background.full ? '86%' : '20%' : '25%'"
+        :height="isParent ? item.background.full ? '86%' : hasDescription ? '10%' : '20%' : '25%'"
         :xlink:href="item.background.src"
         preserveAspectRatio="xMidYMin slice"
         :x="backgroundPosition.x"
@@ -61,7 +61,7 @@
         v-if="item.icon"
         :class="{'hover': onHover }"
         :name="item.icon?.key"
-        :size="item.icon?.size ?? '4em'"
+        :size="item.icon?.size ?? hasDescription ? '2em' : '4em'"
         :x="iconPosition.x"
         :y="iconPosition.y"
       />
@@ -70,14 +70,19 @@
           <a
             xmlns="http://www.w3.org/1999/xhtml"
             class="label"
-            :href="item.label?.type === NodeItemLabelType.Link ? item.label?.subvalue : ''"
-            target="_blank"
+            v-bind="
+              item.label?.type === NodeItemLabelType.Link ?
+                { href: item.label?.subvalue, target: '_blank' } :
+                {}
+            "
             :style="labelStyle"
             @click.stop
-          > {{ $te(`${i18n}.label`) ? $t(`${i18n}.label`) : item.label?.value }} <Icon v-if="item.label?.subvalue" class="ml-1" size="12" name="material-symbols:link-sharp" /> </a>
+          > {{ $te(`${i18n}.label`) ? $t(`${i18n}.label`) : item.label?.value }}
+            <Icon v-if="item.label?.subvalue && isParent" class="!relative" size="12" name="material-symbols:link-sharp" /> </a>
           <p
             v-for="(sublabel, _index) in item.sublabels"
             :key="_index"
+            wrap="off"
             xmlns="http://www.w3.org/1999/xhtml"
             class="label"
             :style="{
@@ -136,11 +141,11 @@ const getSublabel = (sublabel: INodeItemLabel) => {
 }
 const hasDescription = computed(() => props.isParent && (props.item.description || te(`${props.i18n}.description`) || props.item.exp))
 const onHover = ref(false)
-const iconPosition = computed(() => hasDescription.value ? { x: '20%', y: '0' } : { x: '32%', y: '27%' })
+const iconPosition = computed(() => hasDescription.value ? { x: '23%', y: '3%' } : { x: '32%', y: '27%' })
 const textStyle = computed(() =>
   hasDescription.value
     ? {
-      x: '45%',
+      x: '35%',
       y: '4%',
       textAlign: 'left',
       textAnchor: 'middle'
@@ -157,11 +162,10 @@ const labelStyle = computed(() => ({
   ...(props.item.label?.color !== undefined ? { color: props.item.label?.color } : { color: props.item.label?.type === NodeItemLabelType.Link ? secondary.value : '' })
 }))
 const backgroundPosition = computed(() =>
-
   props.item.background?.full
     ? { x: 0, y: 0 }
     : hasDescription.value
-      ? { x: '23%', y: '2%' }
+      ? { x: '23%', y: '4%' }
       : { x: props.isParent ? '33%' : '31%', y: props.isParent ? '27%' : '22%' }
 )
 </script>
@@ -212,7 +216,7 @@ const backgroundPosition = computed(() =>
 
 .text {
   overflow: visible;
-  width: 24%;
+  width: 30%;
   height: 22%;
 }
 
@@ -231,9 +235,9 @@ const backgroundPosition = computed(() =>
   color: var(--color);
   font-size: .50em;
   text-justify: distribute;
-  width: 45%;
-  height: 30%;
-  x: 20%;
+  width: 61%;
+  height: 31%;
+  x: 13%;
   y: 25%;
 }
 
@@ -242,23 +246,13 @@ const backgroundPosition = computed(() =>
   height: 100%;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
+.description-wrapper::-webkit-scrollbar {
+  width: 7px;
 }
-
-::-webkit-scrollbar-thumb:vertical {
-  height: 5px;
-  background-color: var(--bg);
-  border: 1px solid v-bind(primary);
-  -webkit-border-radius: 6px;
-}
-
-.description-wrapper::before {
-  content:'';
-  width:100%;
-  height:100%;
-  position:absolute;
-  left:0;
-  top:0;
+.description-wrapper::-webkit-scrollbar-thumb:vertical {
+  width: 100%;
+  background-color: v-bind(primary);
+  /* border: 1px solid v-bind(primary); */
+  -webkit-border-radius: 5px;
 }
 </style>

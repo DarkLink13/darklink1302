@@ -19,7 +19,7 @@ export const OpsecSecurity: INode = {
         id: 'insight',
         type: NodeItemType.Project,
         sublabels: [{ value: '2021-11,2022-12', type: NodeItemLabelType.Date }, { value: 'us', type: NodeItemLabelType.Country }],
-        label: { value: 'Insight', type: NodeItemLabelType.Link, subvalue: 'https://insight.opsecsecurity.com/' },
+        label: { value: 'Insight' },
         background: { src: '/assets/img/opsecsecurity.png' },
         colors: { primary: '#181e41', secondary: '#003b78', hover: '#3d6292' }
       },

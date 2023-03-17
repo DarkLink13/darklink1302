@@ -6,7 +6,7 @@ export const CopSonic: INode = {
     type: NodeItemType.Work,
     label: { value: 'CopSonic', type: NodeItemLabelType.Link, subvalue: 'https://www.copsonic.com/' },
     sublabels: [
-      { value: '2020-09,2020-10', type: NodeItemLabelType.Date },
+      { value: '2020-07,2020-10', type: NodeItemLabelType.Date },
       { value: 'fr', type: NodeItemLabelType.Country },
       { value: NodeItemLabelWorkType.Remote, subvalue: NodeItemLabelworkSchedule.PartTime, type: NodeItemLabelType.WorkType }
     ],
