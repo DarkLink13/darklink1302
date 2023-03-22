@@ -1,11 +1,10 @@
 import { INode } from '~~/types/core'
 
-export const FullStackDev: INode = {
+export const FullStack: INode = {
   item: {
-    id: 'fullstackdev',
+    id: 'fullstack',
     type: NodeItemType.Position,
-    label: { value: 'Full-Stack Developer' },
-    icon: { key: 'ion:code-working' },
+    icon: { key: 'bi:braces-asterisk' },
     colors: { primary: '#043a32', secondary: '#01450f', hover: '#1aa177' }
   }
 }

@@ -24,7 +24,7 @@ export const IntellisysDCorp: INode = {
       },
       children: [
         {
-          ...BackEndDev,
+          ...BackEnd,
           children: [NodeJS, PostgreSQL, ExpressJS, NestJS]
         },
         {

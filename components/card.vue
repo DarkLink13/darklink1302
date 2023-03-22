@@ -133,6 +133,7 @@ const getSublabel = (sublabels: INodeItemLabel[]) => {
   for (const [index, sub] of sublabels.entries()) {
     if (index !== 0) sublabel += ' | '
     switch (sub.type) {
+      case NodeItemLabelType.Role: sublabel += t(`npre.role.${sub.value}`); break
       case NodeItemLabelType.Date: sublabel += sub.value; break
       case NodeItemLabelType.Country: sublabel += t('npre.country.' + sub.value); break
       case NodeItemLabelType.Since: sublabel += `${t('npre.since')} ${sub.value}`; break

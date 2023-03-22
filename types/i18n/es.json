@@ -20,15 +20,15 @@
                 "apklis": {
                     "description": "Apklis también conocida como la Play Store cubana, es una tienda online de aplicaciones desarrollada por la UCI para dispositivos Android.\nTiene su versión web y tambien su versión de aplicación para android.\nEstá diseñada para descargar todas las aplicaciones cubanas y las más populares del resto del mundo utilizando de la red de datos de ETECSA, Nauta u otro medio de navegación nacional.\nCuenta con un amplio catálogo de juegos, así como aplicaciones útiles, de las redes sociales, editores de fotografía, entre otras.",
                     "frontenddev": {
-                        "label": "Desarrollador front-end sénior",
+                        "label": "Desarrollador FrontEnd",
                         "description": "Participé en la primera versión de la administración, brindando una mejor usabilidad en un 10% para los usuarios finales.\nCreé la segunda versión de la administración usando la misma pila de la aplicación web, mejorando la interacción y el despliegue de front-office - back-office . Realicé mejoras en el cliente web, mejorando la usabilidad en un 15% utilizando recursos gráficos más atractivos e intuitivos para el usuario final.\nDesarrollé el módulo de pago del lado del cliente web y del lado de administración para los vendedores.\nDesarrollé el tercero versión de la administración, mejorando la usabilidad del sitio en más del 50% utilizando marcos modernos y mejores prácticas, mejorando más del 50% del tiempo de respuesta del backend, reduciendo la cantidad de solicitudes.\n Líder de equipo front-end."
                     },
                     "backenddev": {
-                        "label": "Desarrollador principal de back-end",
+                        "label": "Desarrollador BackEnd",
                         "description": "Mejoré el tiempo de respuesta de la aplicación en más del 50 %, reduciendo la cantidad de volumen de datos innecesarios que se intercambian desde el backend. Mejoré el rendimiento general de la aplicación al aumentar el modelado del sistema de búsqueda e indexación en más del 50 %. Desarrollé el pago sistema que proporciona soluciones a prueba de fallas para un sistema bancario asincrónico. Equipo de back-end Lear, Arquitecto de software, Diseñador de base de datos, Senior"
                     },
                     "devops": {
-                        "label": "Colaborador DevOps sénior",
+                        "label": "DevOps",
                         "description": "Ayudé con la configuración del deployment, integración continua, mejoré el rendimiento de la aplicación usando contenedores y balanceadores de carga, mediante el uso de script pude optimizar procesos y acceder a diferentes servicios de terceros"
                     }
                 }
@@ -71,6 +71,14 @@
             "fulltime": "Tiempo completo",
             "parttime": "Tiempo parcial",
             "flexible": "Flexible"
+        },
+        "role": {
+            "senior": "Sénior",
+            "junior": "Junior",
+            "midlevel": "Mid-Level",
+            "collaborator": "Colaborador",
+            "mainarchitect": "Arquitecto principal",
+            "teamlead": "Lider de equipo"
         },
         "since": "Desde",
         "versions": "Versiones: ",

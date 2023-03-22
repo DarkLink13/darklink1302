@@ -15,11 +15,11 @@ export const Work: INode = {
   },
   children: [
     UCI,
-    OpsecSecurity,
     CopSonic,
+    AugeTec,
     Cubacitas,
     IntellisysDCorp,
-    AugeTec,
+    OpsecSecurity,
     Payever
   ]
 }

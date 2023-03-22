@@ -28,7 +28,7 @@ export const Payever:INode = {
       },
       children: [
         {
-          ...FrontEndDev,
+          ...FrontEnd,
           children: [Angular2, Nx]
         }
       ]

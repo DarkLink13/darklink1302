@@ -5,7 +5,7 @@ export const Me: INodeItem = {
   type: NodeItemType.Default,
   label: {
     color: 'white',
-    name: 'darklink',
+    value: 'darklink',
     bottom: '70%'
   },
   background: { src: '/assets/img/avatar.jpg', full: true },

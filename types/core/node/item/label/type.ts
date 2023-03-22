@@ -5,5 +5,6 @@ export enum NodeItemLabelType {
     Version,
     Link,
     Country,
-    WorkType
+    WorkType,
+    Role
 }

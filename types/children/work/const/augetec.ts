@@ -11,9 +11,10 @@ export const AugeTec: INode = {
       { value: NodeItemLabelWorkType.Remote, subvalue: NodeItemLabelworkSchedule.Flexible, type: NodeItemLabelType.WorkType }
     ],
     background: { src: '/assets/img/auge.png' },
-    colors: { primary: '#0c4151', secondary: '#246d5f', hover: '#35973b' }
+    colors: { primary: '#828282', secondary: '#999999', hover: '#c3c3c3' }
   },
   children: [
+    undefined,
     {
       item: {
         id: 'augecrm',
@@ -24,11 +25,17 @@ export const AugeTec: INode = {
           { value: 'mx', type: NodeItemLabelType.Country }
         ],
         background: { src: '/assets/img/auge.png' },
-        colors: { primary: '#393939', secondary: '#828282', hover: '#c3c3c3' }
+        colors: { primary: '#020202', secondary: '#404040', hover: '#808080' }
       },
       children: [
         {
-          ...FrontEndDev,
+          item: {
+            ...FrontEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: '2020-01,2020-07', type: NodeItemLabelType.Date }
+            ]
+          },
           children: [
             {
               ...Nuxt,
@@ -38,7 +45,13 @@ export const AugeTec: INode = {
           ]
         },
         {
-          item: { ...BackEndDev.item, label: { value: 'Back-End Collaborator' } },
+          item: {
+            ...BackEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Collaborator, type: NodeItemLabelType.Role },
+              { value: '2020-01,2020-07', type: NodeItemLabelType.Date }
+            ]
+          },
           children: [Django, PostgreSQL, ElasticSearch]
         }
       ]
@@ -57,7 +70,13 @@ export const AugeTec: INode = {
       },
       children: [
         {
-          ...FrontEndDev,
+          item: {
+            ...FrontEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: '2020-07,2020-11', type: NodeItemLabelType.Date }
+            ]
+          },
           children: [
             {
               ...Nuxt,
@@ -69,11 +88,18 @@ export const AugeTec: INode = {
           ]
         },
         {
-          item: { ...BackEndDev.item, label: { value: 'Back-End Collaborator' } },
+          item: {
+            ...BackEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: '2020-07,2020-11', type: NodeItemLabelType.Date }
+            ]
+          },
           children: [GraphQL, Hasura, PostgreSQL]
         }
       ]
     },
+    undefined,
     {
       item: {
         id: 'evaluamax',
@@ -88,7 +114,13 @@ export const AugeTec: INode = {
       },
       children: [
         {
-          ...FrontEndDev,
+          item: {
+            ...FrontEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: '2020-11,2021-02', type: NodeItemLabelType.Date }
+            ]
+          },
           children: [
             {
               ...Nuxt,
@@ -103,7 +135,7 @@ export const AugeTec: INode = {
     },
     {
       item: {
-        id: 'mutillantasmax',
+        id: 'multillantasmax',
         sublabels: [
           { value: '2021-02,2021-03', type: NodeItemLabelType.Date },
           { value: 'mx', type: NodeItemLabelType.Country }
@@ -115,7 +147,13 @@ export const AugeTec: INode = {
       },
       children: [
         {
-          ...FullStackDev,
+          item: {
+            ...Web.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: '2021-02,2021-03', type: NodeItemLabelType.Date }
+            ]
+          },
           children: [Hugo]
         }
       ]

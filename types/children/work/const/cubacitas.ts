@@ -18,7 +18,7 @@ export const Cubacitas: INode = {
       item: { id: 'cubacitasweb', type: NodeItemType.Work, label: { value: 'Cubacitas Web' } },
       children: [
         {
-          ...FrontEndDev,
+          ...FrontEnd,
           children: [Angular2]
         }
       ]

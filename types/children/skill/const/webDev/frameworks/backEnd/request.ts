@@ -4,7 +4,7 @@ export const GraphQL: INode = {
   item: {
     id: 'graphql',
     exp: 90,
-    sublabels: [{ name: '3', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '3', type: NodeItemLabelType.Years }],
     type: NodeItemType.Skill,
     label: { value: 'GraphQL' },
     background: { src: '/assets/img/graphql.png' },
@@ -15,7 +15,7 @@ export const Apollo: INode = {
   item: {
     id: 'apollo',
     exp: 85,
-    sublabels: [{ name: '3', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '3', type: NodeItemLabelType.Years }],
     type: NodeItemType.Skill,
     label: { value: 'Apollo' },
     background: { src: '/assets/img/apollo.png' },
