@@ -12,10 +12,11 @@
           v-if="item.exp"
           :id="`${gradientExp}move`"
           :xlink:href="`#${gradientExp}`"
-          x1="106.13107"
-          y1="224.09465"
-          x2="238.26868"
-          y2="144.46466"
+          x1="101.99053"
+          y1="223.71323"
+          x2="175.53043"
+          y2="223.9131"
+          gradientTransform="matrix(1.0699239,0,0,0.99893676,-22.806422,3.002875)"
           gradientUnits="userSpaceOnUse"
         />
       </defs>
@@ -36,21 +37,21 @@
       <image
         v-if="item.background"
         clip-path="url(#image)"
-        :height="isParent ? item.background.full ? '86%' : hasDescription ? '10%' : '20%' : '25%'"
+        :height="isParent ? item.background.full ? '86%' : hasDetails ? '10%' : '20%' : '25%'"
         :xlink:href="item.background.src"
         preserveAspectRatio="xMidYMin slice"
         :x="backgroundPosition.x"
         :y="backgroundPosition.y"
       />
-      <switch v-if="hasDescription && (props.item.description || $te(`${i18n}.description`))">
+      <switch v-if="hasDetails && (props.item.description || hasI18nDescription)">
         <foreignObject class="description">
           <p class="description-wrapper" xmlns="http://www.w3.org/1999/xhtml">
-            {{ props.item.description || $t(`${i18n}.description`) }}
+            {{ props.item.description || i18nDescription }}
           </p>
         </foreignObject>
       </switch>
       <Exp
-        v-if="hasDescription && item.exp"
+        v-if="hasDetails && item.exp"
         :gradient="`url(#${gradientExp}move)`"
         :primary="primary"
         :hover="hover"
@@ -61,7 +62,7 @@
         v-if="item.icon"
         :class="{'hover': onHover }"
         :name="item.icon?.key"
-        :size="item.icon?.size ?? hasDescription ? '2em' : '4em'"
+        :size="item.icon?.size ?? hasDetails ? '2em' : '4em'"
         :x="iconPosition.x"
         :y="iconPosition.y"
       />
@@ -69,7 +70,7 @@
         <foreignObject class="text" :style="textStyle">
           <a
             xmlns="http://www.w3.org/1999/xhtml"
-            class="label"
+            class="label title"
             v-bind="
               item.label?.type === NodeItemLabelType.Link ?
                 { href: item.label?.subvalue, target: '_blank' } :
@@ -77,19 +78,17 @@
             "
             :style="labelStyle"
             @click.stop
-          > {{ $te(`${i18n}.label`) ? $t(`${i18n}.label`) : item.label?.value }}
-            <Icon v-if="item.label?.subvalue && isParent" class="!relative" size="12" name="material-symbols:link-sharp" /> </a>
+          > <Icon v-if="item.label?.subvalue && isParent" class="!relative" size="8" name="material-symbols:link-sharp" /> {{ $te(`${i18n}.label`) ? $t(`${i18n}.label`) : item.label?.value }}
+          </a>
           <p
-            v-for="(sublabel, _index) in item.sublabels"
-            :key="_index"
             wrap="off"
             xmlns="http://www.w3.org/1999/xhtml"
             class="label"
             :style="{
-              fontSize: props.item.label?.size ?? '.45em',
+              fontSize: '.5em',
               color: '#666666'
             }"
-            v-text="getSublabel(sublabel)"
+            v-text="getSublabel(item.sublabels ?? [])"
           />
 
         </foreignObject>
@@ -112,6 +111,8 @@ const props = defineProps({
 })
 const { t, te } = useI18n()
 // colors
+const hasI18nDescription = computed(() => te(`${props.i18n}.description`) || te(`${props.item.id}.description`))
+const i18nDescription = computed(() => te(`${props.i18n}.description`) ? t(`${props.i18n}.description`) : t(`${props.item.id}.description`))
 const primary = computed(() => props.item.colors?.primary ?? '#101010')
 const secondary = computed(() => props.item.colors?.secondary ?? '#202020')
 const hover = computed(() => props.item.colors?.hover ?? '#404040')
@@ -127,45 +128,50 @@ const stopsExp = computed(() => [
   { color: primary.value, offset: ((props.item.exp ?? 50) + 1) + '%', opacity: '1' },
   { color: primary.value, offset: '100%', opacity: '1' }
 ])
-const getSublabel = (sublabel: INodeItemLabel) => {
-  switch (sublabel.type) {
-    case NodeItemLabelType.Date: return sublabel.value
-    case NodeItemLabelType.Link: return `<a href=${sublabel.subvalue}> ${sublabel.value}</a>`
-    case NodeItemLabelType.Country: return t('npre.country.' + sublabel.value)
-    case NodeItemLabelType.Since: return `${t('npre.since')} ${sublabel.value}`
-    case NodeItemLabelType.Version: return `${t('npre.versions')} ${sublabel.value}`
-    case NodeItemLabelType.Years: return `${sublabel.value} ${t('npre.years')}`
-    case NodeItemLabelType.WorkType: return `${t('npre.workType.' + sublabel.value)} - ${t('npre.workSchedule.' + sublabel.subvalue)}`
-    default: return sublabel.value
+const getSublabel = (sublabels: INodeItemLabel[]) => {
+  let sublabel = ''
+  for (const [index, sub] of sublabels.entries()) {
+    if (index !== 0) sublabel += ' | '
+    switch (sub.type) {
+      case NodeItemLabelType.Date: sublabel += sub.value; break
+      case NodeItemLabelType.Country: sublabel += t('npre.country.' + sub.value); break
+      case NodeItemLabelType.Since: sublabel += `${t('npre.since')} ${sub.value}`; break
+      case NodeItemLabelType.Version: sublabel += `${t('npre.versions')} ${sub.value}`; break
+      case NodeItemLabelType.Years: sublabel += `${sub.value} ${t('npre.years')}`; break
+      case NodeItemLabelType.WorkType: sublabel += `${t('npre.workType.' + sub.value)} | ${t('npre.workSchedule.' + sub.subvalue)}`; break
+      default: sublabel += sub.value; break
+    }
   }
+  return sublabel
 }
-const hasDescription = computed(() => props.isParent && (props.item.description || te(`${props.i18n}.description`) || props.item.exp))
+const hasDetails = computed(() => props.isParent && (props.item.description || props.item.exp || hasI18nDescription.value))
 const onHover = ref(false)
-const iconPosition = computed(() => hasDescription.value ? { x: '23%', y: '3%' } : { x: '32%', y: '27%' })
+const iconPosition = computed(() => hasDetails.value ? { x: '21%', y: '3%' } : { x: '32%', y: '27%' })
 const textStyle = computed(() =>
-  hasDescription.value
+  hasDetails.value
     ? {
-      x: '35%',
+      x: '32%',
       y: '4%',
       textAlign: 'left',
       textAnchor: 'middle'
     } as CSSProperties
     : {
-      x: '31%',
+      x: '26%',
       y: props.item.label?.bottom ?? '50%',
       textAlign: 'center',
       textAnchor: 'middle'
     } as CSSProperties
 )
 const labelStyle = computed(() => ({
-  fontSize: props.item.label?.size ?? '.60em',
+  fontSize: props.item.label?.size ?? '.65em',
+  fontWeight: '600',
   ...(props.item.label?.color !== undefined ? { color: props.item.label?.color } : { color: props.item.label?.type === NodeItemLabelType.Link ? secondary.value : '' })
 }))
 const backgroundPosition = computed(() =>
   props.item.background?.full
     ? { x: 0, y: 0 }
-    : hasDescription.value
-      ? { x: '23%', y: '4%' }
+    : hasDetails.value
+      ? { x: '21%', y: '4%' }
       : { x: props.isParent ? '33%' : '31%', y: props.isParent ? '27%' : '22%' }
 )
 </script>
@@ -209,20 +215,27 @@ const backgroundPosition = computed(() =>
   transition: all .2s;
 }
 
+.title {
+  line-height: 1em !important;
+  padding-bottom: 3px;
+}
+
 .icon > * {
   stroke: none;
   fill: v-bind(gradientUrl) !important;
 }
 
 .text {
-  overflow: visible;
-  width: 30%;
-  height: 22%;
+  overflow: hidden;
+  width: 35%;
+  height: 15%;
+  max-height: 55%;
 }
 
 .label {
   color: var(--color);
   stroke: none;
+  overflow: hidden;
   line-height: 1.1em;
   display: block;
 }
@@ -233,12 +246,13 @@ const backgroundPosition = computed(() =>
 
 .description {
   color: var(--color);
-  font-size: .50em;
+  font-size: .60em;
+  overflow: hidden;
   text-justify: distribute;
-  width: 61%;
-  height: 31%;
+  width: 60%;
+  height: 42%;
   x: 13%;
-  y: 25%;
+  y: 19%;
 }
 
 .description-wrapper {

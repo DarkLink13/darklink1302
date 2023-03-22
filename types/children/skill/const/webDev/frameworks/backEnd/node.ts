@@ -4,7 +4,7 @@ export const NodeJS: INode = {
   item: {
     id: 'nodejs',
     exp: 85,
-    sublabels: [{ name: '3', type: NodeItemLabelType.Years }, { name: '12-18', type: NodeItemLabelType.Version }],
+    sublabels: [{ value: '3', type: NodeItemLabelType.Years }, { value: '12-18', type: NodeItemLabelType.Version }],
     type: NodeItemType.Skill,
     label: { value: 'NodeJS' },
     background: { src: '/assets/img/nodejs.png' },
@@ -15,7 +15,7 @@ export const ExpressJS: INode = {
   item: {
     id: 'expressjs',
     exp: 60,
-    sublabels: [{ name: '1', type: NodeItemLabelType.Years }, { name: '4.17', type: NodeItemLabelType.Version }],
+    sublabels: [{ value: '1', type: NodeItemLabelType.Years }, { value: '4.17', type: NodeItemLabelType.Version }],
     type: NodeItemType.Skill,
     label: { value: 'ExpressJS' },
     background: { src: '/assets/img/expressjs.png' },
@@ -26,7 +26,7 @@ export const NestJS: INode = {
   item: {
     id: 'nestjs',
     exp: 75,
-    sublabels: [{ name: '2', type: NodeItemLabelType.Years }, { name: '7.3-9.3', type: NodeItemLabelType.Version }],
+    sublabels: [{ value: '2', type: NodeItemLabelType.Years }, { value: '7.3-9.3', type: NodeItemLabelType.Version }],
     type: NodeItemType.Skill,
     label: { value: 'NestJS' },
     background: { src: '/assets/img/nestjs.png' },
@@ -38,7 +38,7 @@ export const Hasura: INode = {
   item: {
     id: 'hasura',
     exp: 60,
-    sublabels: [{ name: '1', type: NodeItemLabelType.Years }, { name: '1', type: NodeItemLabelType.Version }],
+    sublabels: [{ value: '1', type: NodeItemLabelType.Years }, { value: '1', type: NodeItemLabelType.Version }],
     type: NodeItemType.Skill,
     label: { value: 'Hasura' },
     background: { src: '/assets/img/hasura.png' },

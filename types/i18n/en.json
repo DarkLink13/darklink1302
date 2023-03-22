@@ -1,4 +1,52 @@
 {
+    "angular2": {
+        "description": "Angular (also referred to as \"Angular 2+\") is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. Angular is a Single Page Application Framework which is used for creating Fast Web Applications. It uses concepts of SPA in which UI is delivered in the beginning of application request and later only data is requested which makes SPA applications fast."
+    },
+    "angularjs": {
+        "description": "AngularJS is a discontinued free and open-source JavaScript-based web framework for developing single-page applications. It was maintained mainly by Google and a community of individuals and corporations. It aimed to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in web applications and progressive web applications."
+    },
+    "angularmaterial": {
+        "description": "Material Design components for Angular"
+    },
+    "elasticsearch": {
+        "description":"Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in Java and is dual-licensed under the source-available Server Side Public License and the Elastic license,[2] while other parts[3] fall under the proprietary (source-available) Elastic License. Official clients are available in Java,[4] .NET[5] (C#), PHP,[6] Python,[7] Ruby[8] and many other languages.[9] According to the DB-Engines ranking, Elasticsearch is the most popular enterprise search engine.[10]"
+    },
+    "django": {
+        "description": "Django (/ˈdʒæŋɡoʊ/ JANG-goh; sometimes stylized as django) is a free and open-source, Python-based web framework that follows the model–template–views (MTV) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent organization established in the US as a 501(c)(3) non-profit."
+    },
+    "djangorestframework": {
+        "description": "Django REST framework is a powerful and flexible toolkit for building Web APIs. Some reasons you might want to use REST framework: The Web browsable API is a huge usability win for your developers. Authentication policies including packages for OAuth1a and OAuth2."
+    },
+    "dotnet": {
+        "description": "ASP.NET is an open-source,[2] server-side web-application framework designed for web development to produce dynamic web pages. It was developed by Microsoft to allow programmers to build dynamic web sites, applications and services. The name stands for Active Server Pages Network Enabled Technologies."
+    },
+    "iviewui": {
+        "description": "An enterprise-level UI component library based on Vue.js 3 · Serve for thousands of developers."
+    },
+    "knockoutjs": {
+        "description": "Knockout is a standalone JavaScript implementation of the Model–View–ViewModel pattern with templates. The underlying principles are therefore: \na clear separation between domain data, view components and data to be displayed\n the presence of a clearly defined layer of specialized code to manage the relationships between the view components\n The latter leverages the native event management features of the JavaScript language."
+    },
+    "nuxt": {
+        "description": "Nuxt.js is a free and open source JavaScript library based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js. The framework is advertised as a \"Meta-framework for universal applications\"."
+    },
+    "pandas": { 
+        "description" : "pandas is a software library written for the Python programming language for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series. It is free software released under the three-clause BSD license. The name is derived from the term \"panel data\", an econometrics term for data sets that include observations over multiple time periods for the same individuals. Its name is a play on the phrase \"Python data analysis\" itself. Wes McKinney started building what would become pandas at AQR Capital while he was a researcher there from 2007 to 2010."
+    },
+    "postgresql": {
+        "description": "PostgreSQL (/ˈpoʊstɡrɛs ˌkjuː ˈɛl/, POHST-gres kyoo el), also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley. In 1996, the project was renamed to PostgreSQL to reflect its support for SQL. After a review in 2007, the development team decided to keep the name PostgreSQL and the alias Postgres."
+    },
+    "react": {
+        "description": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces based on components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies."
+    },
+    "redis": {
+        "description": "Redis (/ˈrɛdɪs/; Remote Dictionary Server) is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices. The project was developed and maintained by Salvatore Sanfilippo, starting in 2009.[8] From 2015 until 2020, he led a project core team sponsored by Redis Labs.[9] Salvatore Sanfilippo left Redis as the maintainer in 2020.[10] It is open-source software released under a BSD 3-clause license.[5] In 2021, not long after the original author and main maintainer left, Redis Labs dropped the Labs from its name and now is known simply as \"Redis\""
+    },
+    "vuejs": {
+        "description": "Vue.js (commonly referred to as Vue; pronounced \"view\") is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members."
+    },
+    "vuetify": {
+        "description": "Vuetify is a no design skills required UI Library with beautifully handcrafted Vue Components."
+    },
     "me": {
         "certification": {
             "label": "Certifications"
@@ -31,7 +79,21 @@
                 }
             },
             "opsecsecurity": {
-                "description": ""
+                "description": "OpSec Security is the leading provider of integrated online protection and on-product authentication solutions for brands and governments.",
+                "insight": {
+                    "description": "OpSec Insight™ product management solutions organize contract management, trademark distribution, and product design approvals in one intuitive platform, digitizing and streamlining product lifecycle from concept to phase-out.",
+                    "fullstackdev": {
+                        "label": "Full Stack Developer",
+                        "description": "I participated in the development of the company's insight system, providing optimized solutions that improved the customer's user experience."
+                    }
+                },
+                "ere": {
+                    "description": "Online Voting system for the Puerto Rican elections",
+                    "fullstackdev": {
+                        "label": "Full Stack Developer",
+                        "description": "I was part of the development of the voting system called eRE for the Puerto Rican elections. As a Full Stack senior developer These were my main activities in the development of it. \n- Participated in the development of the web application , using a range of technologies including Entity Framework, React, Tailwind CSS, ASP.NET, and Clean Architecture. \n- Worked closely with other developers, designers, and project managers to ensure that the eRE system was designed and implemented to meet the needs of Puerto Rican voters, incorporating feedback and input from a range of stakeholders.\n- Developed clear and comprehensive system architecture and data models to guide the implementation of the eRE system, ensuring that it was scalable, reliable, and secure, with appropriate controls in place to protect the integrity of the voting process.\n- Implemented the user interface for the eRE system using React and Tailwind CSS, creating an intuitive and user-friendly interface that made it easy for voters to cast their ballots and monitor the progress of the election in real-time.\n- Created clear and comprehensive documentation of the eRE system, including system architecture, data models, coding practices, and testing protocols, to facilitate ongoing maintenance and updates as needed, as well as provide training and support to new team members."
+                    }
+                }
             }
         },
         "like": {

@@ -1,3 +1,4 @@
+import { AngularJS } from '../../skill'
 import { INode } from '~~/types/core'
 
 export const UCI: INode = {
@@ -32,10 +33,16 @@ export const UCI: INode = {
               item: {
                 ...Angular2.item,
                 sublabels: [{ value: '6-10', type: NodeItemLabelType.Version }, { value: '3', type: NodeItemLabelType.Years }]
-              }
+              },
+              children: [{ item: { ...AngularMaterial.item, sublabels: [{ value: '6-10', type: NodeItemLabelType.Version }, { value: '3', type: NodeItemLabelType.Years }] } }]
             },
             undefined,
-            undefined,
+            {
+              item: {
+                ...AngularJS.item,
+                sublabels: [{ value: '1', type: NodeItemLabelType.Version }, { value: '<1', type: NodeItemLabelType.Years }]
+              }
+            },
             undefined,
             {
               item: { ...VueJS.item, sublabels: [{ value: '1,2', type: NodeItemLabelType.Version }, { value: '1', type: NodeItemLabelType.Years }] },

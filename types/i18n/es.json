@@ -1,4 +1,7 @@
 {
+    "angular2": {
+        "description": "Angular (también conocido como \"Angular 2+\") es un marco de aplicación web de código abierto, gratuito y basado en TypeScript dirigido por el equipo de Angular en Google y por una comunidad de individuos y corporaciones. Angular es una reescritura completa del mismo equipo que creó AngularJS. Angular es un marco de aplicación de una sola página que se utiliza para crear aplicaciones web rápidas. Utiliza conceptos de SPA en los que la interfaz de usuario se entrega al comienzo de la solicitud de la aplicación y luego solo se solicitan datos, lo que hace que las aplicaciones de SPA sean rápidas."
+    },
     "me": {
         "certification": {
             "label": "Certificaciones"
@@ -13,7 +16,7 @@
             "label": "Trabajos",
             "uci": {
                 "label": "Universidad de las Ciencias Informáticas",
-                "description": "La Universidad de las Ciencias Informáticas es un centro de investigación universitario cubano con sede en el barrio de Wajay, municipio de Boyeros, La Habana. nLa UCI tiene un currículo particular entre otras universidades del país, los estudiantes siguen el principio de vincular el trabajo y el estudio, lo que pone énfasis en la producción como parte del proceso de aprendizaje, a partir del segundo o tercer año de estudios los estudiantes pueden vincularse a actividades productivas. proyectos que contribuyen a la economía.",
+                "description": "La Universidad de las Ciencias Informáticas es un centro de investigación universitario cubano con sede en el barrio de Wajay, municipio de Boyeros, La Habana. \nLa UCI tiene un currículo particular entre otras universidades del país, los estudiantes siguen el principio de vincular el trabajo y el estudio, lo que pone énfasis en la producción como parte del proceso de aprendizaje, a partir del segundo o tercer año de estudios los estudiantes pueden vincularse a actividades productivas. proyectos que contribuyen a la economía.",
                 "apklis": {
                     "description": "Apklis también conocida como la Play Store cubana, es una tienda online de aplicaciones desarrollada por la UCI para dispositivos Android.\nTiene su versión web y tambien su versión de aplicación para android.\nEstá diseñada para descargar todas las aplicaciones cubanas y las más populares del resto del mundo utilizando de la red de datos de ETECSA, Nauta u otro medio de navegación nacional.\nCuenta con un amplio catálogo de juegos, así como aplicaciones útiles, de las redes sociales, editores de fotografía, entre otras.",
                     "frontenddev": {

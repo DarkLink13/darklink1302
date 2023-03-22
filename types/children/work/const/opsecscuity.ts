@@ -11,7 +11,7 @@ export const OpsecSecurity: INode = {
       { value: NodeItemLabelWorkType.Remote, subvalue: NodeItemLabelworkSchedule.FullTime, type: NodeItemLabelType.WorkType }
     ],
     background: { src: '/assets/img/opsecsecurity.png' },
-    colors: { primary: '#2b145e', secondary: '#54329d', hover: '#6742b7' }
+    colors: { primary: '#181e41', secondary: '#003369', hover: '#003369' }
   },
   children: [
     {
@@ -25,7 +25,7 @@ export const OpsecSecurity: INode = {
       },
       children: [
         {
-          ...FullStackDev,
+          item: { ...FullStackDev.item, exp: 50, sublabels: [{ value: '2021-11,2022-12', type: NodeItemLabelType.Date }, { value: 'us', type: NodeItemLabelType.Country }] },
           children: [DotNet, KnockoutJS]
         }
       ]
@@ -41,7 +41,7 @@ export const OpsecSecurity: INode = {
       },
       children: [
         {
-          ...FullStackDev,
+          item: { ...FullStackDev.item, exp: 50, sublabels: [{ value: '2023-01', type: NodeItemLabelType.Since }, { value: 'pr', type: NodeItemLabelType.Country }] },
           children: [DotNet, React]
         }
       ]

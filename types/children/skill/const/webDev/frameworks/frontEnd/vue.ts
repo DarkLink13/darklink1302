@@ -6,7 +6,7 @@ export const Nuxt: INode = {
     id: 'nuxt',
     exp: 90,
     type: NodeItemType.Skill,
-    sublabels: [{ name: '4', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '4', type: NodeItemLabelType.Years }],
     label: { value: 'Nuxt' },
     background: { src: '/assets/img/nuxt2.png' },
     colors: { primary: '#2b475e', secondary: '#078876', hover: '#00c68f' }
@@ -18,7 +18,7 @@ export const VueJS: INode = {
     id: 'vuejs',
     exp: 85,
     type: NodeItemType.Skill,
-    sublabels: [{ name: '4', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '4', type: NodeItemLabelType.Years }],
     label: { value: 'Vue.js' },
     background: { src: '/assets/img/vuejs.png' },
     colors: { primary: '#2b475e', secondary: '#078876', hover: '#00c68f' }
@@ -30,7 +30,7 @@ export const Vuetify: INode = {
     id: 'vuetify',
     exp: 85,
     type: NodeItemType.Skill,
-    sublabels: [{ name: '3', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '3', type: NodeItemLabelType.Years }],
     label: { value: 'Vuetify' },
     background: { src: '/assets/img/vuetify.png' },
     colors: { primary: '#1867c0', secondary: '#1697f6', hover: '#aeddff' }
@@ -42,7 +42,7 @@ export const IViewUI: INode = {
     id: 'iviewui',
     exp: 40,
     type: NodeItemType.Skill,
-    sublabels: [{ name: '1', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '1', type: NodeItemLabelType.Years }],
     label: { value: 'IView UI' },
     background: { src: '/assets/img/iview.png' },
     colors: { primary: '#296af6', secondary: '#50cee5', hover: '#85efbe' }

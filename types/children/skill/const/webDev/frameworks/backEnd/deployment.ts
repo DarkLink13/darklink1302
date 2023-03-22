@@ -4,7 +4,7 @@ export const GCP: INode = {
   item: {
     id: 'gcp',
     exp: 30,
-    sublabels: [{ name: '1', type: NodeItemLabelType.Years }],
+    sublabels: [{ value: '1', type: NodeItemLabelType.Years }],
     type: NodeItemType.Skill,
     label: { value: 'Google Cloud Platform' },
     background: { src: '/assets/img/gcp.png' },
