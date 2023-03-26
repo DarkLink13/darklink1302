@@ -1,5 +1,6 @@
 export enum NodeItemLabelWorkType {
     OnSite = 'onsite',
     Remote = 'remote',
-    Hybrid = 'hybrid'
+    Hybrid = 'hybrid',
+    Freelancer = 'freelancer'
 }

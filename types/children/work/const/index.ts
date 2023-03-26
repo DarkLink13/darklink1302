@@ -1,3 +1,4 @@
+import { Freelancer } from './freelancer'
 import { INode } from '~~/types/core'
 
 export const Work: INode = {
@@ -20,6 +21,10 @@ export const Work: INode = {
     Cubacitas,
     IntellisysDCorp,
     OpsecSecurity,
-    Payever
+    undefined,
+    Payever,
+    undefined,
+    undefined,
+    Freelancer
   ]
 }

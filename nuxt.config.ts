@@ -18,11 +18,11 @@ export default defineNuxtConfig({
     locales: [{
       code: 'en',
       iso: 'en-US',
-      file: 'en.json'
+      file: 'en.js'
     }, {
       code: 'es',
       iso: 'es-ES',
-      file: 'es.json'
+      file: 'es.js'
     }],
     lazy: true,
     langDir: 'types/i18n',

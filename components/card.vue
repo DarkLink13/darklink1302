@@ -111,8 +111,8 @@ const props = defineProps({
 })
 const { t, te } = useI18n()
 // colors
-const hasI18nDescription = computed(() => te(`${props.i18n}.description`) || te(`${props.item.id}.description`))
-const i18nDescription = computed(() => te(`${props.i18n}.description`) ? t(`${props.i18n}.description`) : t(`${props.item.id}.description`))
+const hasI18nDescription = computed(() => te(`${props.i18n}.description`) || te(`tech.${props.item.id}.description`))
+const i18nDescription = computed(() => te(`${props.i18n}.description`) ? t(`${props.i18n}.description`) : t(`tech.${props.item.id}.description`))
 const primary = computed(() => props.item.colors?.primary ?? '#101010')
 const secondary = computed(() => props.item.colors?.secondary ?? '#202020')
 const hover = computed(() => props.item.colors?.hover ?? '#404040')

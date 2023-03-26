@@ -15,7 +15,7 @@ export const Angular2: INode = {
 export const AngularJS: INode = {
   item: {
     id: 'angularjs',
-    exp: 85,
+    exp: 30,
     type: NodeItemType.Skill,
     label: { value: 'AngularJS' },
     sublabels: [{ value: '<1', type: NodeItemLabelType.Years }],

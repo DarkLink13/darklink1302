@@ -1,7 +1,4 @@
 {
-    "angular2": {
-        "description": "Angular (también conocido como \"Angular 2+\") es un marco de aplicación web de código abierto, gratuito y basado en TypeScript dirigido por el equipo de Angular en Google y por una comunidad de individuos y corporaciones. Angular es una reescritura completa del mismo equipo que creó AngularJS. Angular es un marco de aplicación de una sola página que se utiliza para crear aplicaciones web rápidas. Utiliza conceptos de SPA en los que la interfaz de usuario se entrega al comienzo de la solicitud de la aplicación y luego solo se solicitan datos, lo que hace que las aplicaciones de SPA sean rápidas."
-    },
     "me": {
         "certification": {
             "label": "Certificaciones"
@@ -50,38 +47,5 @@
                 "light": { "label": "Claro" }
             }
         }
-    },
-    "npre": {
-        "country": {
-            "title": "País:",
-            "de": "Alemania",
-            "cu": "Cuba",
-            "us": "Estados Unidos",
-            "pr": "Puerto Rico",
-            "dr": "República Dominicana",
-            "fr": "Francia",
-            "mx": "México"
-        },
-        "workType" :{
-            "hybrid": "Híbrido",
-            "remote": "Remoto",
-            "onsite": "Presencial"
-        },
-        "workSchedule" :{
-            "fulltime": "Tiempo completo",
-            "parttime": "Tiempo parcial",
-            "flexible": "Flexible"
-        },
-        "role": {
-            "senior": "Sénior",
-            "junior": "Junior",
-            "midlevel": "Mid-Level",
-            "collaborator": "Colaborador",
-            "mainarchitect": "Arquitecto principal",
-            "teamlead": "Lider de equipo"
-        },
-        "since": "Desde",
-        "versions": "Versiones: ",
-        "years": "Años"
     }
 }

@@ -15,11 +15,27 @@ export const Cubacitas: INode = {
   },
   children: [
     {
-      item: { id: 'cubacitasweb', type: NodeItemType.Work, label: { value: 'Cubacitas Web' } },
+      item: {
+        id: 'cubacitasweb',
+        type: NodeItemType.Work,
+        label: { value: 'Cubacitas Web' },
+        sublabels: [
+          { value: '2020-09,2020-10', type: NodeItemLabelType.Date },
+          { value: 'cu', type: NodeItemLabelType.Country }
+        ],
+        background: { src: '/assets/img/cubacitas.png' },
+        colors: { primary: '#fe4860', secondary: '#ff8548', hover: '#ffa542' }
+      },
       children: [
         {
-          ...FrontEnd,
-          children: [Angular2]
+          item: {
+            ...FrontEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: '2020-09,2020-10', type: NodeItemLabelType.Date }
+            ]
+          },
+          children: [Nuxt]
         }
       ]
     }

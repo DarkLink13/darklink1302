@@ -28,7 +28,13 @@ export const Payever:INode = {
       },
       children: [
         {
-          ...FrontEnd,
+          item: {
+            ...FrontEnd.item,
+            sublabels: [
+              { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
+              { value: NodeItemLabelWorkType.Remote, subvalue: NodeItemLabelworkSchedule.FullTime, type: NodeItemLabelType.WorkType }
+            ]
+          },
           children: [Angular2, Nx]
         }
       ]

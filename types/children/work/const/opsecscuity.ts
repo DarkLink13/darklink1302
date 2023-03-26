@@ -1,3 +1,4 @@
+import { TailwindCSS } from '../../skill'
 import { INode } from '~~/types/core'
 
 export const OpsecSecurity: INode = {
@@ -56,7 +57,7 @@ export const OpsecSecurity: INode = {
       children: [
         {
           item: { ...FullStack.item, exp: 50, sublabels: [{ value: '2023-01', type: NodeItemLabelType.Since }, { value: 'pr', type: NodeItemLabelType.Country }] },
-          children: [DotNet, React]
+          children: [DotNet, { item: React.item, children: [TailwindCSS] }]
         }
       ]
     }
