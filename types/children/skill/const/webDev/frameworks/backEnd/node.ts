@@ -9,7 +9,8 @@ export const NodeJS: INode = {
     label: { value: 'NodeJS' },
     background: { src: '/assets/img/nodejs.png' },
     colors: { primary: '#313131', secondary: '#4e8e49', hover: '#78c839' }
-  }
+  },
+  children: [Javascript, Typescript]
 }
 export const ExpressJS: INode = {
   item: {
@@ -20,7 +21,8 @@ export const ExpressJS: INode = {
     label: { value: 'ExpressJS' },
     background: { src: '/assets/img/expressjs.png' },
     colors: { hover: '#FFFFFF' }
-  }
+  },
+  children: [NodeJS]
 }
 export const NestJS: INode = {
   item: {
@@ -31,7 +33,8 @@ export const NestJS: INode = {
     label: { value: 'NestJS' },
     background: { src: '/assets/img/nestjs.png' },
     colors: { primary: '#a50101', secondary: '#d13e66', hover: '#e66161' }
-  }
+  },
+  children: [NodeJS, Apollo, GraphQL]
 }
 
 export const Hasura: INode = {
@@ -43,5 +46,6 @@ export const Hasura: INode = {
     label: { value: 'Hasura' },
     background: { src: '/assets/img/hasura.png' },
     colors: { primary: '#0f2750', secondary: '#0c5292', hover: '#1eb4d4' }
-  }
+  },
+  children: [NodeJS, GraphQL]
 }

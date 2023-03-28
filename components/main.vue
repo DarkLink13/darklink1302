@@ -35,7 +35,7 @@ const stepsHoverLight = [{ offset: '0%', color: '#CCCCCC' }, { offset: '100%', c
 
 const colorMode = useColorMode()
 const path = ref([] as Array<number>)
-const i18n = ref(['me'] as Array<string>)
+const i18n = ref(['tree'] as Array<string>)
 const item = ref(undefined as unknown as INodeItem)
 const children = ref(undefined as unknown as (INode | undefined)[])
 const level = ref(20)

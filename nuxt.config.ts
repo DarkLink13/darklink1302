@@ -49,7 +49,7 @@ export default defineNuxtConfig({
         { name: 'darklink', content: 'darklink dev Portfolio' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
         { property: 'og:title', content: 'Elk' },
-        { property: 'og:description', content: 'Brief neuronal connection to me' },
+        { property: 'og:description', content: 'Brief neuronal connection about Jorge Amado Hernandez Betancourt (darklink) dev.' },
         { property: 'og:image', content: 'https://www.darkiink.com/assets/img/avatar.jpg' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image:width', content: '500' },

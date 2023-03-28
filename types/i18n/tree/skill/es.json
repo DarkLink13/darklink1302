@@ -1,0 +1,21 @@
+{
+    "label": "Habilidades",
+    "frontend": {
+        "label": "Desarrollador Front-End"
+    },
+    "backend": {
+        "label": "Desarrollador Back-End"
+    },
+    "fullstack": {
+        "label": "Desarrollador FullStack"
+    },
+    "softwareengineer": {
+        "label": "Ingeniero de software"
+    },
+    "graphicdesigner": {
+        "label": "Diseñador gráfico"
+    },
+    "algorithmsdev": {
+        "label": "Desarrollador de Algoritmos"
+    }
+}

@@ -1,4 +1,3 @@
-import { TailwindCSS } from '../../skill'
 import { INode } from '~~/types/core'
 
 export const OpsecSecurity: INode = {

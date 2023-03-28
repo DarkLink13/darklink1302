@@ -1,4 +1,3 @@
-import { Freelancer } from './freelancer'
 import { INode } from '~~/types/core'
 
 export const Work: INode = {

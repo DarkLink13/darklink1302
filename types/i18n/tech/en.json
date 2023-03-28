@@ -1,4 +1,7 @@
 {
+    "adobephotoshop": {
+        "description": "Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS. It was originally created in 1987 by Thomas and John Knoll. Since then, the software has become the most used tool for professional digital art, especially in raster graphics editing."
+    },
     "angular2": {
         "description": "Angular (also referred to as \"Angular 2+\") is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. Angular is a Single Page Application Framework which is used for creating Fast Web Applications. It uses concepts of SPA in which UI is delivered in the beginning of application request and later only data is requested which makes SPA applications fast."
     },
@@ -20,6 +23,9 @@
     "djangorestframework": {
         "description": "Django REST framework is a powerful and flexible toolkit for building Web APIs. Some reasons you might want to use REST framework: The Web browsable API is a huge usability win for your developers. Authentication policies including packages for OAuth1a and OAuth2."
     },
+    "docker": {
+        "description": "Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker Engine. It was first started in 2013 and is developed by Docker, Inc."
+    },
     "dotnet": {
         "description": "ASP.NET is an open-source,[2] server-side web-application framework designed for web development to produce dynamic web pages. It was developed by Microsoft to allow programmers to build dynamic web sites, applications and services. The name stands for Active Server Pages Network Enabled Technologies."
     },
@@ -31,6 +37,15 @@
     },
     "gcp": {
         "description": "Google Cloud Platform (GCP), offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail, Google Drive, and YouTube.[2][disputed – discuss] Alongside a set of management tools, it provides a series of modular cloud services including computing, data storage, data analytics and machine learning.[3] Registration requires a credit card or bank account details.[4]"
+    },
+    "git": {
+        "description": "Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows."
+    },
+    "gitlab": {
+        "description": "GitLab Inc. is an open-core company that operates GitLab, a DevOps software package which can develop, secure, and operate software. The open source software project was created by Ukrainian developer Dmytro Zaporozhets and Dutch developer Sytse Sijbrandij."
+    },
+    "github": {
+        "description": "GitHub, Inc. is an Internet hosting service for software development and version control using Git. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project."
     },
     "graphql": {
         "description": "GraphQL is an open-source data query language and data manipulation language for APIs, and a query runtime engine."
@@ -44,23 +59,41 @@
     "hugo": {
         "description": "The world’s fastest framework for building websites Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
     },
+    "inkscape": {
+        "description": "Inkscape is a free and open-source vector graphics editor used to create vector images, primarily in the Scalable Vector Graphics format. Other formats can be imported and exported. Inkscape can render primitive vector shapes and text."
+    },
     "iviewui": {
         "description": "An enterprise-level UI component library based on Vue.js 3 · Serve for thousands of developers."
     },
     "javascript": {
         "description": "JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices."
     },
+    "jenkins": {
+        "description": "Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat."
+    },
     "knockoutjs": {
         "description": "Knockout is a standalone JavaScript implementation of the Model–View–ViewModel pattern with templates. The underlying principles are therefore: \na clear separation between domain data, view components and data to be displayed\n the presence of a clearly defined layer of specialized code to manage the relationships between the view components\n The latter leverages the native event management features of the JavaScript language."
     },
+    "linux": {
+        "description": "Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds."
+    },
     "nestjs": {
         "description": "NestJS is a framework for building efficient, scalable Node.js web applications. It uses modern JavaScript, is built with TypeScript and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming)."
+    },
+    "nginx": {
+        "description": "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004. Nginx is free and open-source software, released under the terms of the 2-clause BSD license"
     },
     "nodejs": {
         "description": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser."
     },
     "nuxt": {
         "description": "Nuxt.js is a free and open source JavaScript library based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js. The framework is advertised as a \"Meta-framework for universal applications\"."
+    },
+    "nuxt3": {
+        "description": "Nuxt.js is a free and open source JavaScript library based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js. The framework is advertised as a \"Meta-framework for universal applications\"."
+    },
+    "nx": {
+        "description": "Next generation build system with first class monorepo support and powerful integrations."
     },
     "pandas": { 
         "description" : "pandas is a software library written for the Python programming language for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series. It is free software released under the three-clause BSD license. The name is derived from the term \"panel data\", an econometrics term for data sets that include observations over multiple time periods for the same individuals. Its name is a play on the phrase \"Python data analysis\" itself. Wes McKinney started building what would become pandas at AQR Capital while he was a researcher there from 2007 to 2010."
@@ -77,16 +110,40 @@
     "sass": {
         "description": "Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself."
     },
+    "ssr": {
+        "description": "Server-side scripting is a technique used in web development which involves employing scripts on a web server which produces a response customized for each user's (client's) request to the website. The alternative is for the web server itself to deliver a static web page. Scripts can be written in any of a number of server-side scripting languages that are available (see below). Server-side scripting is distinguished from client-side scripting where embedded scripts, such as JavaScript, are run client-side in a web browser, but both techniques are often used together."
+    },
     "tailwindcss": {
         "description": "Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables"
     },
+    "threedsmax": {
+        "description": "Autodesk 3ds Max, formerly 3D Studio and 3D Studio Max, is a professional 3D computer graphics program for making 3D animations, models, games and images. It is developed and produced by Autodesk Media and Entertainment. "
+    },
     "typescript": {
         "description": "TypeScript is a free and open source high-level programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript.[5] As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs."
+    },
+    "ubuntu": {
+        "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots. All of the editions can run on a computer alone, or in a virtual machine."
+    },
+    "visualstudio": {
+        "description": "Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs including websites, web apps, web services and mobile apps."
+    },
+    "visualstudiocode": {
+        "description": "Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git."
     },
     "vuejs": {
         "description": "Vue.js (commonly referred to as Vue; pronounced \"view\") is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members."
     },
     "vuetify": {
         "description": "Vuetify is a no design skills required UI Library with beautifully handcrafted Vue Components."
+    },
+    "vuex": {
+        "description": "Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion."
+    },
+    "vuerouter": {
+        "description": "Expressive, configurable and convenient routing for Vue.js"
+    },
+    "windows": {
+        "description": "Windows is a group of several proprietary graphical operating system families developed and marketed by Microsoft. Each family caters to a certain sector of the computing industry. For example, Windows NT for consumers, Windows Server for servers, and Windows IoT for embedded systems."
     }
 }

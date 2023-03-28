@@ -38,7 +38,7 @@ const props = defineProps({
   children: { type: Object as PropType<Array<INode | undefined>>, default: () => null },
   lvl: { type: Number, default: 20 },
   idx: { type: Number, default: 0 },
-  i18n: { type: Array, default: () => ['me'] },
+  i18n: { type: Array, default: () => ['tree'] },
   isMoving: { type: Boolean, default: false }
 })
 

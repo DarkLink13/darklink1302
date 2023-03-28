@@ -1,5 +1,3 @@
-import { Dark } from './dark'
-import { Light } from './light'
 import { INode } from '~~/types/core'
 
 export const Mode: INode = {

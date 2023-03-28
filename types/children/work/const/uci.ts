@@ -1,5 +1,4 @@
-import { AngularJS } from '../../skill'
-import { FrontEnd } from '../position'
+import { Jenkis } from '../../skill/const/softwareEngineer'
 import { INode } from '~~/types/core'
 
 export const UCI: INode = {
@@ -104,7 +103,8 @@ export const UCI: INode = {
               { value: NodeItemLabelWorkType.Hybrid, subvalue: NodeItemLabelworkSchedule.FullTime, type: NodeItemLabelType.WorkType },
               { value: '2020-03,2021-10', type: NodeItemLabelType.Date }
             ]
-          }
+          },
+          children: [Linux, GitLab, Git, Jenkis]
         },
         {
           item: {

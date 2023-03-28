@@ -1,3 +1,4 @@
+import { CSS } from '../../../languages'
 import { INode } from '~~/types/core'
 
 export const React: INode = {
@@ -9,7 +10,8 @@ export const React: INode = {
     label: { value: 'React' },
     background: { src: '/assets/img/react.png' },
     colors: { primary: '#212121', secondary: '#00d2f7', hover: '#5ed3f3' }
-  }
+  },
+  children: [Typescript, CSS, HTML, NodeJS]
 }
 
 export const TailwindCSS: INode = {
@@ -21,5 +23,6 @@ export const TailwindCSS: INode = {
     label: { value: 'Tailwind CSS' },
     background: { src: '/assets/img/tailwindcss.png' },
     colors: { primary: '#3593a9', secondary: '#f2f2f2', hover: '#35b3eb' }
-  }
+  },
+  children: [CSS]
 }

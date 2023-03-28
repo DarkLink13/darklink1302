@@ -1,4 +1,3 @@
-import { AngularJS } from '../../skill'
 import { CSS } from '../../skill/const/languages'
 import { INode } from '~~/types/core'
 

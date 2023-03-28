@@ -21,10 +21,10 @@ export const Freelancer: INode = {
         label: { value: 'Oxygen' },
         sublabels: [
           { value: '2020-10,2020-11', type: NodeItemLabelType.Date },
-          { value: 'mx', type: NodeItemLabelType.Country }
+          { value: 'cu', type: NodeItemLabelType.Country }
         ],
         background: { src: '/assets/img/oxygen.png' },
-        colors: { primary: '#020202', secondary: '#404040', hover: '#808080' }
+        colors: { primary: '#0043ff', secondary: '#0090f9', hover: '#00efff' }
       },
       children: [
         {
@@ -41,16 +41,6 @@ export const Freelancer: INode = {
               children: [VueJS]
             }
           ]
-        },
-        {
-          item: {
-            ...BackEnd.item,
-            sublabels: [
-              { value: NodeItemLabelRole.Collaborator, type: NodeItemLabelType.Role },
-              { value: '2020-01,2020-07', type: NodeItemLabelType.Date }
-            ]
-          },
-          children: [Django, PostgreSQL, ElasticSearch]
         }
       ]
     },
@@ -58,13 +48,13 @@ export const Freelancer: INode = {
       item: {
         id: 'pbetta',
         type: NodeItemType.Project,
-        label: { value: 'PBetta' },
+        label: { value: 'PBetta', type: NodeItemLabelType.Link, subvalue: 'https://pbetta.vercel.app' },
         sublabels: [
-          { value: '2020-01,2020-07', type: NodeItemLabelType.Date },
-          { value: 'mx', type: NodeItemLabelType.Country }
+          { value: '2021-08,2021-09', type: NodeItemLabelType.Date },
+          { value: 'cu', type: NodeItemLabelType.Country }
         ],
         background: { src: '/assets/img/pbetta.png' },
-        colors: { primary: '#020202', secondary: '#404040', hover: '#808080' }
+        colors: { primary: '#0043ff', secondary: '#006cff', hover: '#0090f9' }
       },
       children: [
         {
@@ -82,16 +72,6 @@ export const Freelancer: INode = {
                 VueJS]
             }
           ]
-        },
-        {
-          item: {
-            ...BackEnd.item,
-            sublabels: [
-              { value: NodeItemLabelRole.Collaborator, type: NodeItemLabelType.Role },
-              { value: '2020-01,2020-07', type: NodeItemLabelType.Date }
-            ]
-          },
-          children: [Django, PostgreSQL, ElasticSearch]
         }
       ]
     },
@@ -100,49 +80,49 @@ export const Freelancer: INode = {
       item: {
         id: 'gymbro',
         sublabels: [
-          { value: '2021-02,2021-03', type: NodeItemLabelType.Date },
-          { value: 'mx', type: NodeItemLabelType.Country }
+          { value: '2023-02', type: NodeItemLabelType.Since },
+          { value: 'dr', type: NodeItemLabelType.Country }
         ],
         type: NodeItemType.Project,
-        label: { value: 'GymBro' },
+        label: { value: 'GymBro', type: NodeItemLabelType.Link, subvalue: 'https://www.gymbro.pro' },
         background: { src: '/assets/img/gymbro.png' },
-        colors: { primary: '#2867ab', secondary: '#c2230d', hover: '#ffffff' }
+        colors: { primary: '#4d1600', secondary: '#c25b00', hover: '#ffe4b7' }
       },
       children: [
         {
           item: {
-            ...Web.item,
+            ...FullStack.item,
             sublabels: [
               { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
               { value: '2021-02,2021-03', type: NodeItemLabelType.Date }
             ]
           },
-          children: [Hugo]
+          children: [undefined, NestJS, undefined, undefined, undefined, Nuxt3]
         }
       ]
     },
     {
       item: {
-        id: 'portfolio',
+        id: 'darklink',
         sublabels: [
           { value: '2021-02,2021-03', type: NodeItemLabelType.Date },
-          { value: 'mx', type: NodeItemLabelType.Country }
+          { value: 'dr', type: NodeItemLabelType.Country }
         ],
         type: NodeItemType.Project,
-        label: { value: 'PortFolio' },
+        label: { value: 'DarkLink', type: NodeItemLabelType.Link, subvalue: '/' },
         background: { src: '/assets/img/portfolio.png' },
-        colors: { primary: '#2867ab', secondary: '#c2230d', hover: '#ffffff' }
+        colors: { primary: '#3b3b3b', secondary: '#e9d96d', hover: '#f3ebab' }
       },
       children: [
         {
           item: {
-            ...Web.item,
+            ...FrontEnd.item,
             sublabels: [
               { value: NodeItemLabelRole.Senior, type: NodeItemLabelType.Role },
               { value: '2021-02,2021-03', type: NodeItemLabelType.Date }
             ]
           },
-          children: [Hugo]
+          children: [Nuxt3]
         }
       ]
     }

@@ -1,0 +1,28 @@
+{
+    "label": "Skills",
+    "description": "Main branches within which different abilities and technologies can be witnessed, click to access the child nodes to see details",
+    "frontend": {
+        "label": "FrontEnd Developer",
+        "description": "Main frameworks I have worked on as a FrontEnd developer, click inside to see what technologies these frameworks use"
+    },
+    "backend": {
+        "label": "BackEnd Developer",
+        "description": "Main frameworks I have worked on as a BackEnd developer, click inside to see what technologies these frameworks use"
+    },
+    "fullstack": {
+        "label": "FullStack Developer",
+        "description": "Main frameworks I have worked on as a FullStack developer, click inside to see what technologies these frameworks use"
+    },
+    "softwareengineer": {
+        "label": "Software Engineer",
+        "description": "Main soft skills, utils, environments and tools that I have used in the development"
+    },
+    "graphicdesigner": {
+        "label": "Graphic Designer",
+        "description": "Main tools I have worked on as a graphic design"
+    },
+    "algorithmsdev": {
+        "label": "Algorithms Developer",
+        "description": "Main branches inside algorithms that i have studied"
+    }
+}
