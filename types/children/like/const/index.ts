@@ -12,9 +12,9 @@ export const Like: INode = {
     }
   },
   children: [
-    LikeProgramming,
-    LikeGaming,
     LikeFitness,
+    LikeGaming,
+    LikeProgramming,
     LikeSoccer,
     LikeMusic,
     LikePainting

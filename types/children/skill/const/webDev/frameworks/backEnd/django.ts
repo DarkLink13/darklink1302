@@ -11,7 +11,8 @@ export const IDjango: INodeItem = {
 }
 
 export const Django: INode = {
-  item: IDjango
+  item: IDjango,
+  children: [Python]
 }
 export const DjangoRestFramework: INode = {
   item: {

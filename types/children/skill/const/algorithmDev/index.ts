@@ -9,5 +9,14 @@ export const AlgorithmDev: INode = {
       primary: '#1000b5', secondary: '#0043ff', hover: '#0090f9'
     }
   },
-  children: []
+  children: [
+    DynamicProgramming,
+    BruteForce,
+    GraphTheory,
+    NumberTheory,
+    GameTheory,
+    DataStructure,
+    Implementation,
+    Greedy
+  ]
 }
