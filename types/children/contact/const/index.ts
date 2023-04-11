@@ -1,4 +1,6 @@
 import { INode } from '../../../core'
+import { Instagram } from './instagram'
+import { LinkedIn } from './linkedin'
 
 export const Contact: INode = {
   item: {
@@ -12,7 +14,11 @@ export const Contact: INode = {
     }
   },
   children: [
+    undefined,
     ContactEmail,
-    ContactPhoneNumber
+    ContactPhoneNumber,
+    undefined,
+    LinkedIn,
+    Instagram
   ]
 }

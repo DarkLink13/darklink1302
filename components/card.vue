@@ -80,7 +80,9 @@
             @click.stop
           > <Icon v-if="item.label?.subvalue && isParent" class="!relative" size="8" name="material-symbols:link-sharp" /> {{ $te(`${i18n}.label`) ? $t(`${i18n}.label`) : item.label?.value }}
           </a>
-          <p
+          <component
+            :is="item.sublabels[0].type === NodeItemLabelType.Link ? 'a' : 'p'"
+            v-if="item.sublabels"
             wrap="off"
             xmlns="http://www.w3.org/1999/xhtml"
             class="label"
@@ -88,9 +90,13 @@
               fontSize: '.5em',
               color: '#666666'
             }"
-            v-text="getSublabel(item.sublabels ?? [])"
-          />
-
+            v-bind="
+              item.sublabels[0]?.type === NodeItemLabelType.Link ?
+                { href: item.sublabels[0]?.subvalue, target: '_blank' } :
+                {}
+            "
+            @click.stop
+          ><Icon v-if="item.sublabels[0]?.subvalue && isParent" class="!relative" size="8" name="material-symbols:link-sharp" /> {{ getSublabel(item.sublabels ?? []) }}</component>
         </foreignObject>
       </switch>
     </svg>
@@ -147,13 +153,13 @@ const getSublabel = (sublabels: INodeItemLabel[]) => {
 }
 const hasDetails = computed(() => props.isParent && (props.item.description || props.item.exp || hasI18nDescription.value))
 const onHover = ref(false)
-const iconPosition = computed(() => hasDetails.value ? { x: '21%', y: '3%' } : { x: '32%', y: '27%' })
+const iconPosition = computed(() => hasDetails.value ? { x: !props.item.sublabels ? '37%' : '21%', y: '3%' } : { x: '32%', y: '27%' })
 const textStyle = computed(() =>
   hasDetails.value
     ? {
-      x: '32%',
-      y: '4%',
-      textAlign: 'left',
+      x: !props.item.sublabels ? '25%' : '33%',
+      y: !props.item.sublabels ? '13.5%' : '4%',
+      textAlign: !props.item.sublabels ? 'center' : 'left',
       textAnchor: 'middle'
     } as CSSProperties
     : {
@@ -172,7 +178,7 @@ const backgroundPosition = computed(() =>
   props.item.background?.full
     ? { x: 0, y: 0 }
     : hasDetails.value
-      ? { x: '21%', y: '4%' }
+      ? { x: !props.item.sublabels ? '37%' : '21%', y: '4%' }
       : { x: props.isParent ? '33%' : '31%', y: props.isParent ? '27%' : '22%' }
 )
 </script>

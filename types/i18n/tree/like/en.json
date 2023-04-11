@@ -1,6 +1,6 @@
 {
     "label": "Likes",
-    "description": "Here is a quick view of my main tastes separated into branches, click on the nodes to see inside the branches",
+    "description": "Here is a quick view of my main likes separated into branches, click on the nodes to see inside the branches",
     "fitness": {
         "label": "Fitness",
         "description": "I really like to exercise, I do strength exercises 6 times a week and I do walking cardio 2-3 times a week."
@@ -33,7 +33,7 @@
             "description": "Futbol Club Barcelona, commonly referred to as Barcelona and colloquially known as Barça, is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top flight of Spanish football."
         },
         "brasilfc": {
-            "label": "Brazil national football team",
+            "label": "Brazil",
             "description": "The Brazil national football team, nicknamed Seleção Canarinha, represents Brazil in men's international football and is administered by the Brazilian Football Confederation, the governing body for football in Brazil. They have been a member of FIFA since 1923 and a member of CONMEBOL since 1916."
         }
     },
