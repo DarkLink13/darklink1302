@@ -25,11 +25,12 @@ import { INode, INodeItem } from '~~/types/core'
 
 const router = useRouter()
 const route = useRoute()
+
 const colorMode = useColorMode()
-const path = ref([] as Array<number>)
-const i18n = ref(['tree'] as Array<string>)
-const item = ref(undefined as unknown as INodeItem)
-const children = ref(undefined as unknown as (INode | undefined)[])
+const path = ref<Array<number>>([])
+const i18n = ref<Array<string>>(['tree'])
+const item = ref<INodeItem>()
+const children = ref<(INode | undefined)[]>()
 const level = ref(20)
 const index = ref(0)
 const isMoving = ref(false)
@@ -74,7 +75,7 @@ const rebuildTree = () => {
   setStyles()
 }
 const setStyles = () => {
-  item.value.style = { position: 'relative' }
+  item.value && (item.value.style = { position: 'relative' })
   children.value?.forEach((child, index) => {
     child && (child.style = {
       transform: useMove(index),
@@ -133,7 +134,6 @@ const goChildren = (idx: number) => {
     }, 300)
   })
 }
-
 </script>
 
 <style>
