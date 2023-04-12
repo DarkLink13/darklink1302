@@ -1,6 +1,6 @@
 <template>
   <svg
-    id="eCxi6lyFJTN1"
+    id="circuit"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 132.29166 132.29167"
@@ -78,3 +78,8 @@ const _animations = computed(() =>
   )
 )
 </script>
+<style>
+#circuit {
+  position: absolute
+}
+</style>

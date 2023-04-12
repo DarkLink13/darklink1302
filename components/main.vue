@@ -1,12 +1,9 @@
 <template>
   <div class="main">
-    <Gradient v-for="step in steps" :key="step.id" :idx="step.id" :lvl="'0'" :stops="step.stops" />
-    <Glow :lvl="0" :idx="0" :glows="[{ color: '#d773d6', blur: 1 }, { color: '#2ac7ec', blur: 2 }, { color: '#f0e5b1', blur: 5 }]" :size=".015" />
-    <Circuit v-bind="color" style="position: absolute" :colors="colors" />
-    <MoveTree
-      :index="index"
-      :enter="enter"
-    >
+    <Gradient v-for="step in mainSteps" :key="step.id" :idx="step.id" :lvl="'0'" :stops="step.stops" />
+    <Glow :lvl="0" :idx="0" :glows="mainGlows" :size=".015" />
+    <Circuit v-bind="colorTheme" :colors="colors" />
+    <MoveTree :index="index" :enter="enter">
       <Tree
         :key="level"
         :i18n="i18n"
@@ -23,14 +20,9 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { mainGlows, mainSteps } from '~~/types/consts'
 import { INode, INodeItem } from '~~/types/core'
 
-const steps = [
-  { id: '0dark', stops: [{ offset: '0%', color: '#070707' }, { offset: '100%', color: '#151515' }] },
-  { id: '1dark', stops: [{ offset: '0%', color: '#151515' }, { offset: '100%', color: '#252525' }] },
-  { id: '0light', stops: [{ offset: '0%', color: '#DDDDDD' }, { offset: '100%', color: '#FFFFFF' }] },
-  { id: '1light', stops: [{ offset: '0%', color: '#CCCCCC' }, { offset: '100%', color: '#EEEEEE' }] }
-]
 const router = useRouter()
 const route = useRoute()
 const colorMode = useColorMode()
@@ -43,10 +35,11 @@ const index = ref(0)
 const isMoving = ref(false)
 const enter = ref(false)
 
-const color = computed(() => ({
+const colorTheme = computed(() => ({
   primary: colorMode.value === 'light' ? '#DDDDDD' : '#202020',
   secondary: colorMode.value === 'light' ? '#DDDDDD20' : '#20202017'
 }))
+
 const colors = computed(() => ({
   parent: item.value?.colors?.secondary,
   ...(children.value ? Object.fromEntries(children.value.map((child, index) => [index, child?.item.colors?.secondary])) : {})
