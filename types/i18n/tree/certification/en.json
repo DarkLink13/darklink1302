@@ -1,6 +1,7 @@
 {
     "label": "Certifications",
     "hackerrank": {
+        "description": "HackerRank is the market-leading technical assessment and remote interview solution for hiring developers. Start hiring at the pace of innovation!",
         "angularintermediate": {
             "label": "Angular (Intermediate)",
             "description": "It covers topics like Routing, NgModules, Observables for data transmission and event handling, Dependency Injections, and APIs."

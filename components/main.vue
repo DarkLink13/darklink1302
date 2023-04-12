@@ -1,11 +1,8 @@
 <template>
   <div class="main">
-    <Gradient :lvl="'0'" :idx="'0dark'" :stops="stepsDark" />
-    <Gradient :lvl="'0'" :idx="'0light'" :stops="stepsLight" />
-    <Gradient :lvl="'0'" :idx="'1dark'" :stops="stepsHoverDark" />
-    <Gradient :lvl="'0'" :idx="'1light'" :stops="stepsHoverLight" />
+    <Gradient v-for="step in steps" :key="step.id" :idx="step.id" :lvl="'0'" :stops="step.stops" />
     <Glow :lvl="0" :idx="0" :glows="[{ color: '#d773d6', blur: 1 }, { color: '#2ac7ec', blur: 2 }, { color: '#f0e5b1', blur: 5 }]" :size=".015" />
-    <Circuit style="position: absolute" :colors="colors" :primary="getPrimary" :secondary="getSecondary" />
+    <Circuit v-bind="color" style="position: absolute" :colors="colors" />
     <MoveTree
       :index="index"
       :enter="enter"
@@ -28,11 +25,14 @@
 <script lang="ts" setup>
 import { INode, INodeItem } from '~~/types/core'
 
-const stepsDark = [{ offset: '0%', color: '#070707' }, { offset: '100%', color: '#151515' }]
-const stepsHoverDark = [{ offset: '0%', color: '#151515' }, { offset: '100%', color: '#252525' }]
-const stepsLight = [{ offset: '0%', color: '#DDDDDD' }, { offset: '100%', color: '#FFFFFF' }]
-const stepsHoverLight = [{ offset: '0%', color: '#CCCCCC' }, { offset: '100%', color: '#EEEEEE' }]
-
+const steps = [
+  { id: '0dark', stops: [{ offset: '0%', color: '#070707' }, { offset: '100%', color: '#151515' }] },
+  { id: '1dark', stops: [{ offset: '0%', color: '#151515' }, { offset: '100%', color: '#252525' }] },
+  { id: '0light', stops: [{ offset: '0%', color: '#DDDDDD' }, { offset: '100%', color: '#FFFFFF' }] },
+  { id: '1light', stops: [{ offset: '0%', color: '#CCCCCC' }, { offset: '100%', color: '#EEEEEE' }] }
+]
+const router = useRouter()
+const route = useRoute()
 const colorMode = useColorMode()
 const path = ref([] as Array<number>)
 const i18n = ref(['tree'] as Array<string>)
@@ -42,22 +42,41 @@ const level = ref(20)
 const index = ref(0)
 const isMoving = ref(false)
 const enter = ref(false)
-const getPrimary = computed(() => colorMode.value === 'light' ? '#DDDDDD' : '#202020')
-const getSecondary = computed(() => colorMode.value === 'light' ? '#DDDDDD20' : '#20202017')
+
+const color = computed(() => ({
+  primary: colorMode.value === 'light' ? '#DDDDDD' : '#202020',
+  secondary: colorMode.value === 'light' ? '#DDDDDD20' : '#20202017'
+}))
 const colors = computed(() => ({
   parent: item.value?.colors?.secondary,
   ...(children.value ? Object.fromEntries(children.value.map((child, index) => [index, child?.item.colors?.secondary])) : {})
 } || {}))
+
 onMounted(() => {
+  route.query.path && (path.value = (route.query.path as string).split(',').map(a => parseInt(a))) && (level.value = 20 - (route.query.path as string).split(',').length)
   rebuildTree()
 })
 
 const rebuildTree = () => {
   item.value = Tree.item || {}
   children.value = Tree.children as INode[] || []
+  i18n.value = ['tree']
   for (const node of path.value) {
-    item.value = Object.assign({}, (children && children.value[node]?.item) || Tree.item)
-    children.value = Object.assign([], (children.value[node]?.children) || Tree.children)
+    if (children && children.value[node]?.item) {
+      item.value = Object.assign({}, children.value[node]?.item)
+      children.value = Object.assign([], children.value[node]?.children)
+    } else {
+      path.value = []
+      router.push({
+        path: route.path,
+        query: { path: '' }
+      })
+      i18n.value = ['tree']
+      item.value = Object.assign({}, Tree.item)
+      children.value = Object.assign([], Tree.children)
+      break
+    }
+    i18n.value.push(item.value.id)
   }
   setStyles()
 }
@@ -85,14 +104,17 @@ const goBack = (idx: number) => {
   enter.value = true
   index.value = (idx + 3) % 6
   path.value.pop()
-  i18n.value.pop()
   nextTick(() => {
     isMoving.value = true
     level.value < 20 && level.value++
     rebuildTree()
     setTimeout(() => {
-      isMoving.value = false
       index.value = path.value[path.value.length - 1]
+      isMoving.value = false
+      router.push({
+        path: route.path,
+        query: { path: path.value.join(',') }
+      })
     }, 300)
   })
 }
@@ -111,6 +133,10 @@ const goChildren = (idx: number) => {
     level.value--
     setTimeout(() => {
       isMoving.value = false
+      router.push({
+        path: route.path,
+        query: { path: path.value.join(',') }
+      })
     }, 300)
   })
 }

@@ -41,6 +41,9 @@ const props = defineProps({
   i18n: { type: Array, default: () => ['tree'] },
   isMoving: { type: Boolean, default: false }
 })
+onMounted(() => {
+  console.log(props.children)
+})
 
 </script>
 

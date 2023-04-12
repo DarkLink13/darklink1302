@@ -157,12 +157,14 @@ const iconPosition = computed(() => hasDetails.value ? { x: !props.item.sublabel
 const textStyle = computed(() =>
   hasDetails.value
     ? {
-      x: !props.item.sublabels ? '25%' : '33%',
+      x: !props.item.sublabels ? '18%' : '33%',
       y: !props.item.sublabels ? '13.5%' : '4%',
+      width: !props.item.sublabels ? '50%' : '35%',
       textAlign: !props.item.sublabels ? 'center' : 'left',
       textAnchor: 'middle'
     } as CSSProperties
     : {
+      width: '35%',
       x: '26%',
       y: props.item.label?.bottom ?? '50%',
       textAlign: 'center',
@@ -234,7 +236,6 @@ const backgroundPosition = computed(() =>
 
 .text {
   overflow: hidden;
-  width: 35%;
   height: 15%;
   max-height: 55%;
 }
@@ -259,7 +260,7 @@ const backgroundPosition = computed(() =>
   width: 60%;
   height: 42%;
   x: 13%;
-  y: 19%;
+  y: 20%;
 }
 
 .description-wrapper {
