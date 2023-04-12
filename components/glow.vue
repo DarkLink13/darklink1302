@@ -1,5 +1,5 @@
 <template>
-  <svg style="position:absolute">
+  <svg class="glow">
     <defs>
       <filter
         :id="`glow${lvl}${idx}`"
@@ -15,33 +15,13 @@
           <feMerge result="blurMerged">
             <feMergeNode v-for="(glow, index) in glows" :key="'merge' + index" :in="'blur' + glow.blur" />
           </feMerge>
-          <feTurbulence :seed="24" type="fractalNoise" numOctaves="15" :baseFrequency="size" result="turbulence">
-            <!-- <animate attributeName="baseFrequency" from="0" to="0.01" dur="2s" repeatCount="indefinite" /> -->
-          </feTurbulence>
-          <!-- <feDisplacementMap
-            in2="turbulence"
-            in="SourceGraphic"
-            scale="50"
-            xChannelSelector="R"
-            yChannelSelector="G"
-          > -->
-
-          <!-- </feDisplacementMap> -->
-
-          <!-- v-for="(glow, index) in glows" -->
-          <!-- :key="'colorMatrix' + index" -->
+          <feTurbulence :seed="24" type="fractalNoise" numOctaves="15" :baseFrequency="size" result="turbulence" />
           <feColorMatrix
             in="turbulence"
             type="hueRotate"
             :result="'color'"
             values="0"
-          >
-            <!-- :values="`${glow.array[0]} ${glow.array[0]} ${glow.array[0]} 0 0
-                        ${glow.array[1]} ${glow.array[1]} ${glow.array[1]} 0 0
-                        ${glow.array[2]} ${glow.array[2]} ${glow.array[2]} 0 0
-                        ${(index === 0) ? '1' : '-1'} ${(index === 1) ? '1' : '-1'} ${(index === 2) ? '1' : '-1'} ${(index === 3) ? '1' : '-1'} 1`" -->
-          </feColorMatrix>
-          <!-- :key="'composite' + index" -->
+          />
           <feComposite
             in="color"
             in2="blurMerged"
@@ -64,9 +44,6 @@
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </template>
-        <template v-else>
-          <!-- <feMergeNode in="SourceGraphic" /> -->
-        </template>
       </filter>
     </defs>
   </svg>
@@ -83,3 +60,9 @@ defineProps({
   size: { type: Number, default: 0.0025 }
 })
 </script>
+
+<style>
+.glow {
+  position:absolute
+}
+</style>
