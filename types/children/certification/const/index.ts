@@ -1,4 +1,6 @@
 import { INode } from '../../../core'
+import { CertificationICPC } from './icpc'
+import { CertificationUIC } from './uic'
 
 export const Certification: INode = {
   item: {
@@ -12,6 +14,11 @@ export const Certification: INode = {
     }
   },
   children: [
-    CertificationHackerRank
+    undefined,
+    CertificationHackerRank,
+    undefined,
+    CertificationICPC,
+    undefined,
+    CertificationUIC
   ]
 }
