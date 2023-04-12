@@ -55,7 +55,7 @@
 
     </g>
     <g filter="url(#glowDot)">
-      <Circle
+      <BackgroundCircle
         v-for="(animation, index) of animations"
         :id="'circle' + index"
         :key="index"

@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-    <Gradient v-for="step in mainSteps" :key="step.id" :idx="step.id" :lvl="'0'" :stops="step.stops" />
-    <Glow :lvl="0" :idx="0" :glows="mainGlows" :size=".015" />
-    <Circuit v-bind="colorTheme" :colors="colors" />
-    <MoveTree :index="index" :enter="enter">
+    <EffectGradient v-for="step in mainSteps" :key="step.id" :idx="step.id" :lvl="'0'" :stops="step.stops" />
+    <EffectGlow :lvl="0" :idx="0" :glows="mainGlows" :size=".015" />
+    <Background v-bind="colorTheme" :colors="colors" />
+    <TreeTransition :index="index" :enter="enter">
       <Tree
         :key="level"
         :i18n="i18n"
@@ -16,7 +16,7 @@
         @go-children="goChildren"
         @go-back="goBack"
       />
-    </MoveTree>
+    </TreeTransition>
   </div>
 </template>
 <script lang="ts" setup>

@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     langDir: 'types/i18n',
     defaultLocale: 'en'
   },
-  css: ['/public/assets/css/main.scss'],
+  css: ['/main.scss'],
   postcss: {
     plugins: {
       'postcss-import': {},

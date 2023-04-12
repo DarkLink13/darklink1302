@@ -19,11 +19,11 @@ const scaleEnterIdx = computed(() => 1 + (-0.19 + (0.38 * +props.enter)))
 @keyframes move {
     0% {
       opacity: 1;
-      transform:  translate(0, 0) scale(1);
+      transform: translate(0, 0) scale(1);
     }
     100% {
       opacity: 0;
-      transform: translate(v-bind(leaveX), v-bind(leaveY))  scale(v-bind(scaleLeaveIdx))
+      transform: translate(v-bind(leaveX), v-bind(leaveY)) scale(v-bind(scaleLeaveIdx))
     }
 }
 @keyframes move-reverse {

@@ -1,18 +1,18 @@
 <template>
   <div class="parent">
-    <Card
+    <Node
       v-if="item"
+      is-parent
       filter="url(#glow00)"
       :i18n="i18n.join('.')"
       :item="item"
       :lvl="lvl"
       :idx="idx"
-      :is-parent="true"
       @click.stop="emit('goBack', props.idx)"
     />
     <div v-if="children && children.length" class="children">
       <div v-for="(child, index) in children" :key="'child' + index + lvl" :style="child && child.style">
-        <Card
+        <Node
           v-if="child?.item"
           :item="child.item"
           :lvl="lvl - 1"
@@ -40,9 +40,6 @@ const props = defineProps({
   idx: { type: Number, default: 0 },
   i18n: { type: Array, default: () => ['tree'] },
   isMoving: { type: Boolean, default: false }
-})
-onMounted(() => {
-  console.log(props.children)
 })
 
 </script>
