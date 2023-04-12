@@ -1,4 +1,4 @@
-export const animations = [
+export const circuitAnimations = [
   {
     0: {
       transform: {
