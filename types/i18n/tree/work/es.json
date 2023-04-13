@@ -28,7 +28,7 @@
         "insight": {
             "description": "Las soluciones de gestión de productos OpSec Insight™ organizan la gestión de contratos, la distribución de marcas registradas y las aprobaciones de diseño de productos en una plataforma intuitiva, digitalizando y agilizando el ciclo de vida del producto desde el concepto hasta la eliminación.",
             "fullstack": {
-                "label": "Desarrollador de pila completa",
+                "label": "Desarrollador full-stack",
                 "description": "Participé en el desarrollo del sistema de insights de la empresa, brindando soluciones optimizadas que mejoraron la experiencia de usuario del cliente."
             }
         },
@@ -41,134 +41,134 @@
         }
     },
     "copsonic": {
-        "description": "COPSONIC is a technology that allows communication and interaction between two devices through sound waves. The secure transfer is achieved through microphones and speakers. Now and in the future, mobile, tablets and smart devices will be able to exchange information without compatibility issues unlike Bluetooth LE, NFC.",
+        "description": "COPSONICes una tecnología que permite la comunicación e interacción entre dos dispositivos a través de ondas sonoras. La transferencia segura se logra a través de micrófonos y parlantes. Ahora y en el futuro, los dispositivos móviles, tabletas y dispositivos inteligentes podrán intercambiar información sin problemas de compatibilidad a diferencia de Bluetooth LE, NFC.",
         "sdk": {
-            "description": "The CopSonic SDK allows contactless multi-factor authentication based on ultrasounds or sounds. This SDK is the first to introduce an “airgap” with encrypted analog information into the digital circuit. The security level thus achieved by CopSonic reaches current military security levels.",
+            "description": "El SDK de CopSonic permite la autenticación multifactor sin contacto basada en ultrasonidos o sonidos. Este SDK es el primero en introducir un \"espacio de aire\" con información analógica cifrada en el circuito digital. El nivel de seguridad así alcanzado por CopSonic alcanza los niveles actuales de seguridad militar.",
             "softwareengineer": {
-                "label": "Software Engineer",
-                "description": "I mainly developed as a quality insurer, carried out project documentation, and quality tests."
+                "label": "Ingeniero de software",
+                "description": "Me desarrollé principalmente como asegurador de calidad, realicé documentación de proyectos y pruebas de calidad."
             }
         },
         "sonicqrcode": {
-            "description": "The same information as a QR code, but sent over ultrasounds. Increase the interaction distance. No more scanning difficulties.",
+            "description": "La misma información que un código QR, pero enviada por ultrasonidos. Aumentar la distancia de interacción. No más dificultades de escaneo.",
             "softwareengineer": {
-                "label": "Software Engineer",
-                "description": "I mainly developed as a quality insurer, carried out project documentation, and quality tests."
+                "label": "Ingeniero de software",
+                "description": "Me desarrollé principalmente como aseguradora de calidad, realicé documentación de proyectos y pruebas de calidad."
             }
         },
         "sharebill": {
-            "description": "This demo is an instance of how a payment service could be implemented using the characteristics of the Copsonic SDK. Using ultrasound, it transferred information once a session is created between the buyer and the host.",
+            "description": "Esta demostración es un ejemplo de cómo se podría implementar un servicio de pago utilizando las características del SDK de Copsonic. Usando ultrasonido, transfirió información una vez que se crea una sesión entre el comprador y el anfitrión.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I was a junior developer of the web application. Providing precise and simple solutions."
+                "label": "Desarrollador front-end",
+                "description": "Yo era un desarrollador junior de la aplicación web. Aportando soluciones precisas y sencillas."
             },
             "softwareengineer": {
-                "label": "Software Engineer",
-                "description": "I mainly developed as a quality insurer, carried out project documentation, and quality tests."
+                "label": "Ingeniero de software",
+                "description": "Me desarrollé principalmente como aseguradora de calidad, realicé documentación de proyectos y pruebas de calidad."
             }
         }
     },
     "augetec": {
-        "description": "The company started as automotive repair system. Nowadays are a team of passionate people whose goal is to improve everyone's lives through revolutionary products. Creating great products to solve business problems.The products are designed for small and medium-sized businesses willing to optimize their performance.",
+        "description": "La empresa comenzó como un sistema de reparación de automóviles. Hoy en día somos un equipo de personas apasionadas cuyo objetivo es mejorar la vida de todos a través de productos revolucionarios. Creando excelentes productos para resolver problemas comerciales. Los productos están diseñados para pequeñas y medianas empresas que desean optimizar su rendimiento.",
         "augecrm": {
-            "description": "CRM system to allowed the company control the main clients of automotive repair system",
+            "description": "Sistema CRM que permitió a la empresa controlar los principales clientes del sistema de reparación automotriz",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I started working on the project already started, that is, the legacy code. From an initial version with errors and lacking in design patterns, I gradually converted it and made it fully functional, developing innovative solutions and improving usability by more than 50%, helping the client to have better interaction with the platform."
+                "label": "Desarrollador front-end",
+                "description": "Empecé a trabajar en el proyecto ya iniciado, es decir, el código heredado. De una versión inicial con errores y carente de patrones de diseño, la convertí gradualmente y la hice completamente funcional, desarrollando soluciones innovadoras y mejorando la usabilidad en más de un 50%, ayudando al cliente a tener una mejor interacción con la plataforma."
             },
             "backend": {
-                "label": "Backend Developer",
-                "description": "I helped in some queries, and improve the filters to improve response time in the client-server."
+                "label": "Desarrollador back-end",
+                "description": "Ayudé en algunas consultas, y mejoré los filtros para mejorar el tiempo de respuesta en el cliente-servidor."
             }
         },
         "augecs": {
-            "description": "Car sales control system. The system made it possible to control the stocks of car parts as well as take care of the sale. Customer payment plan system and direct support",
+            "description": "Sistema de control de ventas de automóviles. El sistema permitía controlar los stocks de autopartes así como encargarse de la venta. Sistema de plan de pago del cliente y soporte directo.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I started the project from scratch using the latest technologies related to the company. Providing a transparent and usable design, I was able to carry out the application in record time."
+                "label": "Desarrollador front-end",
+                "description": "Empecé el proyecto desde cero utilizando las últimas tecnologías afines a la empresa. Aportando un diseño transparente y usable, pude realizar la aplicación en un tiempo récord."
             },
             "backend": {
-                "label": "Backend Developer",
-                "description": "I helped in some queries, and improve the filters to improve response time in the client-server."
+                "label": "Desarrollador back-end",
+                "description": "Ayudé en algunas consultas, y mejoré los filtros para mejorar el tiempo de respuesta en el cliente-servidor."
             }
         },
         "evaluamax": {
-            "description": "Survey system for mexican companies. The system allows the control of payment plans, manage statistics and control the flow of cargo from the client.",
+            "description": "Sistema de encuestas para empresas mexicanas. El sistema permite el control de planes de pago, gestionar estadísticas y controlar el flujo de carga del cliente.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I started the project from scratch using the latest technologies related to the company. Providing a transparent and usable design, I was able to carry out the application in record time."
+                "label": "Desarrollador front-end",
+                "description": "Empecé el proyecto desde cero utilizando las últimas tecnologías afines a la empresa. Aportando un diseño transparente y usable, pude realizar la aplicación en un tiempo récord."
             },
             "backend": {
-                "label": "Backend Developer",
-                "description": "I helped in some queries, and improve the filters to improve response time in the client-server."
+                "label": "Desarrollador back-end",
+                "description": "Ayudé en algunas consultas, y mejoré los filtros para mejorar el tiempo de respuesta en el cliente-servidor."
             }
         },
         "multillantasmax": {
-            "description": "Find quality tires at the best price for cars, vans, trucks and motorcycles. Tire services, tuning, brakes, suspension, shock absorbers and mechanics in general.",
+            "description": "Encuentra neumáticos de calidad al mejor precio para coches, furgonetas, camiones y motos. Servicios de llantas, afinación, frenos, suspensión, amortiguadores y mecánica en general.",
             "web": {
-                "label": "Web Developer",
-                "description": "I started the project from scratch using the latest technologies related to the company. Providing a transparent and usable design, I was able to carry out the application in record time."
+                "label": "Desarrollador web",
+                "description": "Empecé el proyecto desde cero utilizando las últimas tecnologías afines a la empresa. Aportando un diseño transparente y usable, pude realizar la aplicación en un tiempo récord."
             }
         }
     },
     "cubacitas": {
         "cubacitasweb": {
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I entered the project as the main developer of what would be the web front end of the application. Developing the front end from scratch, present a demo with the basic structure exactly the same as the android application in record time. The web project was discontinued due to lack of design and backend."
+                "label": "Desarrollador front-end",
+                "description": "Entré al proyecto como desarrollador principal de lo que sería el front end web de la aplicación. Desarrollando el front end desde cero, presente una demo con la estructura básica exactamente igual a la aplicación android en un tiempo record. El proyecto web se suspendió por falta de diseño y backend."
             }
         }
     },
     "intellisysdcorp": {
-        "description": "Intellisys provides Full-Stack software development, Project Management, and QA outsourcing services. We partner with technology businesses globally helping them to build successful engineering teams and create innovative software products through Self-Managed or Embedded delivery teams.",
+        "description": "Intellisys proporciona servicios de externalización de control de calidad, gestión de proyectos y desarrollo de software Full-Stack. Nos asociamos con empresas de tecnología a nivel mundial ayudándolas a construir equipos de ingeniería exitosos y crear productos de software innovadores a través de equipos de entrega integrados o autogestionados.",
         "vacunaterd": {
-            "description": "The application belong to the dominican goverment and is part of the healthcare system of the Dominican Republic, and the main strategy was to manage the vaccination process efficiently. Given the global impact of the pandemic, the application was launched into production in record time, and was a great help to the Dominican government.VacunateRD is currently being used by millions of citizens in the Dominican Republic for vaccination appointment scheduling. The application was recognized and approved by the president of the republic, giving thanks and positive feedback to the developers.",
+            "description": "La aplicación pertenece al gobierno dominicano y es parte del sistema de salud de la República Dominicana, y la estrategia principal fue administrar el proceso de vacunación de manera eficiente. Dado el impacto global de la pandemia, la aplicación se puso en producción en un tiempo récord y fue de gran ayuda para el gobierno dominicano. Actualmente, VacunateRD está siendo utilizado por millones de ciudadanos en República Dominicana para programar citas de vacunación. La aplicación fue reconocida y aprobada por el presidente de la república, dando gracias y comentarios positivos a los desarrolladores.",
             "backend": {
-                "label": "Backend Developer",
-                "description": "As backend lead here are the main tasks in which I participated:\n - Developed the backend of the vaccination appointment system of the Dominican Republic, VacunateRD, serving as the Main REST/RESTful APIs for the pre-appointment system.\n- Improved the consultation time of the citizen system by 20% and the vaccination center system by 50% through the use of data structures and optimized database queries.\n- Prepared the migration of the initial project to newer technologies, including NestJS and TypeORM ORMs.\n- Provided support to junior developers."
+                "label": "Desarrollador back-end",
+                "description": "Como líder de backend, estas son las principales tareas en las que participé:\n - Desarrollé el backend del sistema de citas de vacunación de la República Dominicana, VacunateRD, sirviendo como las principales API REST/RESTful para el sistema de citas previas.\n- Mejorado el tiempo de consulta del sistema ciudadano en un 20% y el sistema del centro de vacunación en un 50% mediante el uso de estructuras de datos y consultas optimizadas de bases de datos.\n- Preparé la migración del proyecto inicial a nuevas tecnologías, incluidos NestJS y TypeORM ORM.\n- Brindó soporte a desarrolladores junior."
             },
             "devops": {
-                "label": "DevOps",
-                "description": "As main architect and devops, here are the main tasks in which I participated: \n- Modeled and architected the database, and integrated and deployed the application in Google Cloud Platform using Node.js and TypeScript.\n- Contributed to the continuous improvement of the application's performance and security, using DevOps practices and PostgreSQL for data management."
+                "label": "Main Architect & DevOps",
+                "description": "Como arquitecto principal y devops, estas son las principales tareas en las que participé: \n- Modelé y diseñé la base de datos, e integré e implementé la aplicación en Google Cloud Platform usando Node.js y TypeScript.\n- Contribuí a la mejora continua del rendimiento y seguridad de la aplicación, utilizando prácticas DevOps y PostgreSQL para la gestión de datos."
             }
         }
     },
     "payever": {
         "commerceos": {
-            "description": "The project is a unique e-commerce solution that covers the entire sales cycle, from the online store, point-of-sale software, to payments, customer relationship management, marketing, inventory, and tracking tools. shipment. The intuitive platform seamlessly integrates all aspects of e-commerce and grows with the company's e-commerce needs. The platform removes reliance on market giants, allowing SMBs to have their own independent, robust, company-branded and connected e-commerce platform. This application is used by millions of users and have direct impact in German ecommerce industry. The application was presented in Finovate Europe 2020 achieving significant results.",
+            "description": "El proyecto es una solución de comercio electrónico única que cubre todo el ciclo de ventas, desde la tienda en línea, el software de punto de venta, hasta los pagos, la gestión de relaciones con los clientes, el marketing, el inventario y las herramientas de seguimiento. envío. La plataforma intuitiva integra a la perfección todos los aspectos del comercio electrónico y crece con las necesidades de comercio electrónico de la empresa. La plataforma elimina la dependencia de los gigantes del mercado, lo que permite a las pymes tener su propia plataforma de comercio electrónico independiente, sólida, con la marca de la empresa y conectada. Esta aplicación es utilizada por millones de usuarios y tiene un impacto directo en la industria del comercio electrónico alemán. La aplicación se presentó en Finovate Europe 2020 logrando resultados significativos.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "My main activities as a senior front end developer were:\n- Worked collaboratively with other developers, designers, and project managers to ensure that the applications were developed to meet the needs of millions of users in the German fashion industry, with a focus on delivering high-quality user experiences and reliable functionality.\n- Made significant contributions to the code of the message application, reducing the total time of requests to the server by 20%, which improved overall performance and responsiveness for users.\n- Increased the performance of the chat application by 50% through the implementation of background processes, optimizing the application's processing and improving its reliability.\n- Participated in the development of the contact, appointment, and product applications within the CommerceOS platform,  working primarily as a FrontEnd developer using Angular 2+, nx, Typescript, HTML, CSS, GraphQL, Angular 2+, Node.js, and others.. Contributing to the overall functionality and user experience of the platform.\n- Worked closely with other developers to ensure that code was clean, efficient, and easy to maintain, with a strong focus on code quality and testing to ensure that the applications met high standards of performance and reliability."
+                "label": "Desarrollador front-end",
+                "description": "Mis actividades principales como desarrollador front-end sénior fueron:\n- Trabajé en colaboración con otros desarrolladores, diseñadores y gerentes de proyectos para garantizar que las aplicaciones se desarrollaran para satisfacer las necesidades de millones de usuarios en la industria de la moda alemana, con un enfoque en brindando experiencias de usuario de alta calidad y funcionalidad confiable.\n- Hizo contribuciones significativas al código de la aplicación de mensajes, reduciendo el tiempo total de las solicitudes al servidor en un 20%, lo que mejoró el rendimiento general y la capacidad de respuesta para los usuarios.\n- Incrementado el desempeño de la aplicación de chat en un 50% a través de la implementación de procesos en segundo plano, optimizando el procesamiento de la aplicación y mejorando su confiabilidad.\n- Participó en el desarrollo de las aplicaciones de contacto, citas y productos dentro de la plataforma CommerceOS, trabajando principalmente como Desarrollador FrontEnd que usa Angular 2+, nx, Typescript, HTML, CSS, GraphQL, Angular 2+, Node.js y otros. Contribuye a la funcionalidad general y la experiencia del usuario de la plataforma.\n- Trabajó en estrecha colaboración con otros desarrolladores para garantizar que el código sea limpio, eficiente y fácil de mantener, con un fuerte enfoque en la calidad del código y las pruebas para garantizar que las aplicaciones cumplan con altos estándares de rendimiento y confiabilidad."
             }
         }
     },
     "freelancer": {
         "oxygen": {
-            "description": "Social network that allows connectivity with other networks such as Instagram, Facebook. FrontEnd developer.",
+            "description": "Red social que permite la conectividad con otras redes como Instagram, Facebook. Desarrollador FrontEnd.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I entered the project as the main developer of what would be the web front end of the application. Developing the front end from scratch, present a demo with the basic structure in record time. The web project was discontinued due to lack of design and backend."
+                "label": "Desarrollador front-end",
+                "description": "Entré al proyecto como desarrollador principal de lo que sería el front end web de la aplicación. Desarrollando el front end desde cero, presenta una demo con la estructura básica en tiempo récord. El proyecto web se suspendió por falta de diseño y backend."
             }
         },
         "pbetta": {
-            "description": "Web client for medical training and learning system.",
+            "description": "Cliente web para sistema de formación y aprendizaje médico.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "I entered the project as the main developer of what would be the web front end of the application. The project was released ad expected"
+                "label": "Desarrollador front-end",
+                "description": "Entré al proyecto como desarrollador principal de lo que sería el front end web de la aplicación. El proyecto fue lanzado anuncio esperado"
             }
         },
         "darklink": {
-            "description": "Brief neuronal connection about Jorge Amado Hernandez Betancourt (darklink) dev.",
+            "description": "Breve conexión neuronal sobre Jorge Amado Hernández Betancourt (darklink) dev.",
             "frontend": {
-                "label": "FrontEnd Developer",
-                "description": "Project made by my own hand, entirely: design, code, etc."
+                "label": "Desarrollador front-end",
+                "description": "Proyecto realizado por mi propia mano, íntegramente: diseño, código, etc."
             }
         },
         "gymbro": {
-            "description": "Social network for lovers of fitness and healthy life",
+            "description": "Red social para amantes del fitness y la vida sana",
             "fullstack": {
-                "label": "FullStack Developer",
-                "description": "CEO and Founder of the project, FullStack developer"
+                "label": "Desarrollador full-stack",
+                "description": "CEO y Fundador del proyecto, desarrollador FullStack"
             }
         }
     }

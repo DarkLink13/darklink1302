@@ -23,8 +23,8 @@
       <image
         v-if="item.background"
         v-bind="{ ...backgroundPosition, ...imageCardAttrs }"
-        :height="isParent ? item.background.full ? '86%' : hasDetails ? '10%' : '20%' : '25%'"
-        :xlink:href="item.background.src"
+        :height="isParent ? item.background.full ? '80%' : hasDetails ? '10%' : '20%' : '25%'"
+        :xlink:href="backgroundResponsive"
       />
       <switch v-if="hasDetails && (props.item.description || hasI18nDescription)">
         <foreignObject class="description">
@@ -124,6 +124,10 @@ const getSublabel = (sublabels: INodeItemLabel[]) => {
   }
   return sublabel
 }
+const { width } = useBreakpoints()
+
+// background
+const backgroundResponsive = computed(() => props.item.background?.src.replace('.png', (width.value < 500 ? '48' : '256') + '.png'))
 
 // colors
 const primary = computed(() => props.item.colors?.primary ?? '#101010')
