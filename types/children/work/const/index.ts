@@ -20,8 +20,9 @@ export const Work: INode = {
     Cubacitas,
     IntellisysDCorp,
     OpsecSecurity,
-    undefined,
     Payever,
+    undefined,
+    undefined,
     undefined,
     undefined,
     Freelancer

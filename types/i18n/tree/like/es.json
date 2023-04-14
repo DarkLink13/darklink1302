@@ -23,7 +23,25 @@
     },
     "programming": {
         "label": "Programación",
-        "description": "Estas son las principales tecnologías y áreas dentro de la programación que más me gustan, haz click para ver detalles dentro de cada una"
+        "description": "Estas son las principales tecnologías y áreas dentro de la programación que más me gustan, haz click para ver detalles dentro de cada una",
+        "algorithmsdev": {
+            "label": "Desarrollador de algoritmos",
+            "graphtheory": {
+                "label": "Teoría de grafos"
+            },
+            "numbertheory": {
+                "label": "Teoría de números"
+            },
+            "dp": {
+                "label": "Programación dinámica"
+            }
+        },
+        "backend": {
+            "label": "Desarrollador back-end"
+        },
+        "frontend": {
+            "label": "Desarrollador front-end"
+        }
     },
     "soccer": {
         "label": "Fútbol",

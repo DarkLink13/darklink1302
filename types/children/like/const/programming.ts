@@ -12,9 +12,11 @@ export const LikeProgramming: INode = {
     }
   },
   children: [
-    { item: FrontEnd.item, children: [Nuxt, Angular2, Typescript] },
-    { item: BackEnd.item, children: [Django, Python, NestJS, Typescript] },
-    { item: DevOps.item, children: [PostgreSQL, ElasticSearch] },
-    { item: AlgorithmDev.item, children: [DynamicProgramming, NumberTheory, GraphTheory] }
+    undefined,
+    { item: FrontEnd.item, children: [undefined, Nuxt, undefined, Angular2, undefined, Typescript] },
+    { item: BackEnd.item, children: [undefined, Django, Python, undefined, NestJS, Typescript] },
+    undefined,
+    { item: DevOps.item, children: [undefined, PostgreSQL, undefined, undefined, undefined, ElasticSearch] },
+    { item: AlgorithmDev.item, children: [undefined, DynamicProgramming, undefined, NumberTheory, undefined, GraphTheory] }
   ]
 }

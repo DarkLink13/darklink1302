@@ -23,7 +23,25 @@
     },
     "programming": {
         "label": "Programming",
-        "description": "These are the main technologies and areas within the programming that I like the most, click to see details within each one"
+        "description": "These are the main technologies and areas within the programming that I like the most, click to see details within each one",
+        "algorithmsdev": {
+            "label": "Algorithms Developer",
+            "graphtheory": {
+                "label": "Graph Theory"
+            },
+            "numbertheory": {
+                "label": "Number Theory"
+            },
+            "dp": {
+                "label": "Dynamic Programming"
+            }
+        },
+        "backend": {
+            "label": "Back-End Developer"
+        },
+        "frontend": {
+            "label": "Front-End Developer"
+        }
     },
     "soccer": {
         "label": "Soccer",
